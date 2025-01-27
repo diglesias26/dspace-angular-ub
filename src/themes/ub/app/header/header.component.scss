@@ -1,0 +1,15 @@
+header{
+    background-color: $gray-200;
+    .logo-dd{
+        float: left;
+    }
+    .logo-ub{
+        float: right;
+    }
+    .navbar-brand img{
+        width: 10rem;
+    }
+    .logo-ub.navbar-brand img{
+        width: 13rem;
+    }
+}
