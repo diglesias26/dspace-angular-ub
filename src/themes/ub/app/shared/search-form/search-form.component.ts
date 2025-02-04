@@ -7,8 +7,8 @@ import {
   selector: 'ds-search-form',
   // styleUrls: ['./search-form.component.scss'],
   styleUrls: ['../../../../../app/shared/search-form/search-form.component.scss'],
-  // templateUrl: './search-form.component.html',
-  templateUrl: '../../../../../app/shared/search-form/search-form.component.html',
+  templateUrl: './search-form.component.html',
+  // templateUrl: '../../../../../app/shared/search-form/search-form.component.html',
 })
 export class SearchFormComponent extends BaseComponent {
 }
