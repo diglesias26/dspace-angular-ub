@@ -8,6 +8,7 @@
   "menu.header.image.ublogo": "Universitat de Barcelona",
   // DSpace default: "All of DSpace",
   "menu.section.browse_global": "Browse DD",
+
   // DSpace default: "DSpace Angular :: "
   "repository.title.prefix": "Dipòsit Digital de la Universitat de Barcelona :: ",
   // text news home
@@ -18,4 +19,18 @@
     // footer
   "footer.lv1.coordinacio": "Coordinació: ",
   "footer.lv1.avis": "Avís legal",
+
+
+  "menu.section.how_to_publish": "How to publish",
+
+  "footer.link.feedback": "Contact us",
+
+  "info.feedback.breadcrumbs": "Contact Form",
+
+  "info.feedback.head": "Contact Form",
+
+  "info.feedback.title": "Contact Form",
+
+  "info.feedback.send": "Send",
+
 }
