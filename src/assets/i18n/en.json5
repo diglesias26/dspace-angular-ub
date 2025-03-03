@@ -5374,9 +5374,11 @@
 
   "home.news.text": "El dipòsit",
 
-  "footer.lv1.coordinacio": "Coordinació: ",
+  "footer.lv1.coordinacio": "Coordination: ",
 
-  "footer.lv1.avis": "Avís legal",
+  "footer.lv1.avis": "Legal notice",
 
   "menu.section.how_to_publish": "How to publish",
+
+  "footer.lv1.metadades": "Metadata subject to: ",
 }

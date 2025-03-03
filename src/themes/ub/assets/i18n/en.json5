@@ -17,9 +17,9 @@
   "menu.header.image.ublogo": "Universitat de Barcelona",
 
     // footer
-  "footer.lv1.coordinacio": "Coordinació: ",
-  "footer.lv1.avis": "Avís legal",
-
+  "footer.lv1.coordinacio": "Coordination: ",
+  "footer.lv1.avis": "Legal notice",
+  "footer.lv1.metadades": "Metadata subject to: ",
 
   "menu.section.how_to_publish": "How to publish",
 

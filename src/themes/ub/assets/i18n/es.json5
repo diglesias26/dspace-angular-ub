@@ -18,9 +18,9 @@
   "login.form.oidc": "Identificación UB",
 
     // footer
-  "footer.lv1.coordinacio": "Coordinació: ",
-  "footer.lv1.avis": "Avís legal",
-
+  "footer.lv1.coordinacio": "Coordinación: ",
+  "footer.lv1.avis": "Aviso legal",
+  "footer.lv1.metadades": "Metadatos sujecos a: ",
 
   "menu.section.how_to_publish": "Cómo publicar",
 

@@ -5226,9 +5226,11 @@
 
   "home.news.text": "Prova text cutre",
 
-  "footer.lv1.coordinacio": "Coordinació: ",
+  "footer.lv1.coordinacio": "Coordinación: ",
 
-  "footer.lv1.avis": "Avís legal",
+  "footer.lv1.avis": "Aviso legal",
 
   "menu.section.how_to_publish": "Cómo publicar",
+
+  "footer.lv1.metadades": "Metadatos sujecos a: ",
 }
