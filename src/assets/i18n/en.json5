@@ -1684,7 +1684,7 @@
 
   "footer.link.end-user-agreement": "End User Agreement",
 
-  "footer.link.feedback": "Send Feedback",
+  "footer.link.feedback": "Contact us",
 
   "forgot-email.form.header": "Forgot Password",
 
@@ -1930,17 +1930,17 @@
 
   "info.privacy.title": "Privacy Statement",
 
-  "info.feedback.breadcrumbs": "Feedback",
+  "info.feedback.breadcrumbs": "Contact Form",
 
-  "info.feedback.head": "Feedback",
+  "info.feedback.head": "Contact Form",
 
-  "info.feedback.title": "Feedback",
+  "info.feedback.title": "Contact Form",
 
   "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
 
   "info.feedback.email_help": "This address will be used to follow up on your feedback.",
 
-  "info.feedback.send": "Send Feedback",
+  "info.feedback.send": "Send",
 
   "info.feedback.comments": "Comments",
 
@@ -2920,7 +2920,7 @@
 
   "menu.section.browse_community_by_title": "By Title",
 
-  "menu.section.browse_global": "All of DSpace",
+  "menu.section.browse_global": "Browse DD",
 
   "menu.section.browse_global_by_author": "By Author",
 
@@ -3612,7 +3612,7 @@
 
   "repository.title": "DSpace Repository",
 
-  "repository.title.prefix": "DSpace Repository :: ",
+  "repository.title.prefix": "Dipòsit Digital de la Universitat de Barcelona :: ",
 
   "resource-policies.add.button": "Add",
 
@@ -4886,7 +4886,7 @@
 
   "thumbnail.person.placeholder": "No Profile Picture Available",
 
-  "title": "DSpace",
+  title: "DSpace",
 
   "vocabulary-treeview.header": "Hierarchical tree view",
 
@@ -5402,6 +5402,7 @@
 
   "browse.search-form.placeholder": "Search the repository",
 
+<<<<<<< HEAD
   "file-download-link.download": "Download ",
 
   "register-page.registration.aria.label": "Enter your e-mail address",
@@ -5420,3 +5421,19 @@
 
   "dynamic-form-array.sortable-list.label": "Sortable list",
 }
+=======
+  "info.about.title": "About DD",
+
+  "menu.header.image.ublogo": "Universitat de Barcelona",
+
+  "home.news.text": "El dipòsit",
+
+  "footer.lv1.coordinacio": "Coordination: ",
+
+  "footer.lv1.avis": "Legal notice",
+
+  "menu.section.how_to_publish": "How to publish",
+
+  "footer.lv1.metadades": "Metadata subject to: ",
+}
+>>>>>>> ub_theme

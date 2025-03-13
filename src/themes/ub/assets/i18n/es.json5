@@ -1,0 +1,37 @@
+
+{
+
+  // ub theme
+  "info.about.title": "Sobre el DD",
+  "menu.header.image.ublogo": "Universitat de Barcelona",
+  // DSpace default: "All of DSpace"
+  "menu.section.browse_global": "Navega por el DD",
+
+  // DSpace default: "DSpace Angular :: "
+  "repository.title.prefix": "Dipòsit Digital de la Universitat de Barcelona :: ",
+  // text news home
+  //"home.news.text": "El <strong>Dipòsit Digital de la Universitat de Barcelona</strong> és el repositori institucional que conté en format digital les publicacions en accés obert derivades de l'activitat docent, investigadora i institucional del professorat i d'altres membres de la comunitat universitària. Els documents d'aquest repositori també es recullen en els repositoris cooperatius de Catalunya segons el tipus de document: <a href=\"https://www.recercat.cat/\" target=\"_blank\">RECERCAT</a>, <a href=\"https://mdx.cat/\" target=\"_blank\">Materials Docents en Xarxa (MDX)</a> i <a href=\"https://tdx.cat/\" target=\"_blank\">Tesis Doctorals en Xarxa (TDX)</a>.",
+  "home.news.text": "Prova text cutre",
+  "menu.header.image.ublogo": "Universitat de Barcelona",
+
+    // "login.form.oidc": "Log in with OIDC",
+  "login.form.oidc": "Identificación UB",
+
+    // footer
+  "footer.lv1.coordinacio": "Coordinación: ",
+  "footer.lv1.avis": "Aviso legal",
+  "footer.lv1.metadades": "Metadatos sujetos a: ",
+
+  "menu.section.how_to_publish": "Cómo publicar",
+
+  "footer.link.feedback": "Contacto",
+
+  "info.feedback.breadcrumbs": "Formulario de contacto",
+
+  "info.feedback.head": "Formulario de contacto",
+
+  "info.feedback.title": "Formulario de contacto",
+
+  "info.feedback.send": "Enviar",
+
+}
