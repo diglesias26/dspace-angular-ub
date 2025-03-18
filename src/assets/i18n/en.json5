@@ -5402,7 +5402,6 @@
 
   "browse.search-form.placeholder": "Search the repository",
 
-<<<<<<< HEAD
   "file-download-link.download": "Download ",
 
   "register-page.registration.aria.label": "Enter your e-mail address",
@@ -5420,8 +5419,7 @@
   "live-region.ordering.dropped": "{{ itemName }}, dropped at position {{ index }} of {{ length }}.",
 
   "dynamic-form-array.sortable-list.label": "Sortable list",
-}
-=======
+
   "info.about.title": "About DD",
 
   "menu.header.image.ublogo": "Universitat de Barcelona",
@@ -5432,8 +5430,7 @@
 
   "footer.lv1.avis": "Legal notice",
 
-  "menu.section.how_to_publish": "How to publish",
-
   "footer.lv1.metadades": "Metadata subject to: ",
+
+  "menu.section.how_to_publish": "How to publish",
 }
->>>>>>> ub_theme
