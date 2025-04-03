@@ -8,7 +8,7 @@ import { PublicationComponent as BaseComponent } from '../../../../../../../app/
  * Component that represents a publication Item page
  */
 
-@listableObjectComponent('Publication', ViewMode.StandalonePage, Context.Any, 'udg')
+@listableObjectComponent('Publication', ViewMode.StandalonePage, Context.Any, 'ub')
 @Component({
   selector: 'ds-publication',
   // styleUrls: ['./publication.component.scss'],

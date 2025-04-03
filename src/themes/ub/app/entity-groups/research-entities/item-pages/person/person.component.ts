@@ -10,7 +10,7 @@ import { Context } from '../../../../../../../app/core/shared/context.model';
 
 
 
-@listableObjectComponent('Person', ViewMode.StandalonePage, Context.Any, 'udg')
+@listableObjectComponent('Person', ViewMode.StandalonePage, Context.Any, 'ub')
 @Component({
   selector: 'ds-person',
   // styleUrls: ['./person.component.scss'],
