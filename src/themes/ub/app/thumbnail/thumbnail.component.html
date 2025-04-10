@@ -1,8 +1,6 @@
 <div class="thumbnail" [class.limit-width]="limitWidth">
 
   <!-- don't use *ngIf="!isLoading" so the thumbnail can load in while the animation is playing -->
-  <img *ngIf="src !== null" class="thumbnail-content img-fluid" [ngClass]="{'d-none': isLoading}"
-       [src]="src | dsSafeUrl" [alt]="alt | translate" (error)="errorHandler()" (load)="successHandler()">
   <div class="thumbnail-content outer">
     <div class="inner">
       <div class="thumbnail-placeholder centered lead">
