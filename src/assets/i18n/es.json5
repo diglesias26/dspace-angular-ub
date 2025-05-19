@@ -5241,4 +5241,10 @@
   "footer.lv1.metadades": "Metadatos sujetos a: ",
 
   "menu.section.how_to_publish": "Cómo publicar",
+
+  "form.date-picker.placeholder.year": "Año",
+
+  "form.date-picker.placeholder.month": "Mes",
+
+  "form.date-picker.placeholder.day": "Día",
 }

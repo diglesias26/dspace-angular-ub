@@ -34,4 +34,8 @@
 
   "info.feedback.send": "Enviar",
 
+  "form.date-picker.placeholder.year": "Año",
+  "form.date-picker.placeholder.month": "Mes",
+  "form.date-picker.placeholder.day": "Día",
+
 }

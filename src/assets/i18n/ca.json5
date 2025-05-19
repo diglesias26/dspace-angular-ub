@@ -6901,4 +6901,10 @@
   "register-page.registration.aria.label": "Introduïu la vostra adreça de correu electrònic",
 
   "forgot-email.form.aria.label": "Introduïu la vostra adreça de correu electrònic",
+
+  "form.date-picker.placeholder.year": "Any",
+
+  "form.date-picker.placeholder.month": "Mes",
+
+  "form.date-picker.placeholder.day": "Dia",
 }

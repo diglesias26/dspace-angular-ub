@@ -22,6 +22,23 @@
       <ds-themed-media-viewer [item]="object"></ds-themed-media-viewer>
     </div>
 
+<!-- 2025-04-16 hernandez
+mediaViewer.image i mediaViewer.video configurats a
+/dades/dspace-ui-deploy/config/config.yaml
+/dades/dspace-ui-deploy/config/config.prod.yaml
+
+# Whether to enable media viewer for image and/or video Bitstreams (i.e. Bitstreams whose MIME type starts with 'image' or 'video').
+# For images, this enables a gallery viewer where you can zoom or page through images.
+# For videos, this enables embedded video streaming
+mediaViewer:
+  image: false
+  #video: false
+  #image: true
+  video: true
+
+(sembla que els fitxers config* de /dades/git-repo/dspace-angular-ub/config no tenen efecte)
+-->
+
 <!--
     <ng-container>
       <ds-metadata-field-wrapper [hideIfNoTextContent]="true">
