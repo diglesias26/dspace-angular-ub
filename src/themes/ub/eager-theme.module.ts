@@ -63,6 +63,9 @@ import { LangSwitchComponent } from './app/shared/lang-switch/lang-switch.compon
 // oriol - 20240426 - intentant crear nou component
 import { ItemPageOrcidFieldComponent } from './app/item-page/simple/field-components/specific-field/orcid/item-page-orcid-field.component';
 
+// oriol - 20240426 - intentant crear nou component
+//import { ItemPageCCrightsFieldComponent } from './app/item-page/simple/field-components/specific-field/ccrights/item-page-ccrights-field.component';
+
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
@@ -104,6 +107,7 @@ const DECLARATIONS = [
 //  LangSwitchComponent,
 // oriol - 20240426 - intentant crear nou component
 ItemPageOrcidFieldComponent,
+//ItemPageCCrightsFieldComponent,
 ];
 
 @NgModule({
