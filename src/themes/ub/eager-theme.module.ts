@@ -107,7 +107,7 @@ const DECLARATIONS = [
 //  LangSwitchComponent,
 // oriol - 20240426 - intentant crear nou component
 ItemPageOrcidFieldComponent,
-//ItemPageCCrightsFieldComponent,
+ItemPageCCrightsFieldComponent,
 ];
 
 @NgModule({
