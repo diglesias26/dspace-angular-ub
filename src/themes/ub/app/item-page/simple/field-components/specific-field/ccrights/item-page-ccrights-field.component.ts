@@ -10,9 +10,12 @@ import {
   templateUrl: './item-page-ccrights-field.component.html',
 })
 export class ItemPageCCrightsFieldComponent extends ItemPageUriFieldComponent {
-  others = 'https://creativecommons.org/ ...';
+/*  others = 'https://creativecommons.org/ ...'; */
+  others = '';
 
+  /* img preses de https://creativecommons.org/mission/downloads/ */
   images = {
+/*
     zero: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/cc-zero.png',
     mark: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/png/publicdomain.png',
     by: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png',
@@ -21,6 +24,16 @@ export class ItemPageCCrightsFieldComponent extends ItemPageUriFieldComponent {
     by_sa: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png',
     by_nc_nd: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png',
     by_nc_sa: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png',
+*/
+    // SVG versions of the Creative Commons icons
+    zero: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg',
+    mark: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/publicdomain.svg',
+    by: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg',
+    by_nc: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg',
+    by_nd: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nd.svg',
+    by_sa: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg',
+    by_nc_nd: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg',
+    by_nc_sa: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg',
 };
 
 /**
