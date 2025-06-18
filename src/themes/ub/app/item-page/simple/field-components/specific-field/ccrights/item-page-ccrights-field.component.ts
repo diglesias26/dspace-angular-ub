@@ -11,7 +11,7 @@ import {
 })
 export class ItemPageCCrightsFieldComponent extends ItemPageUriFieldComponent {
 /*  others = 'https://creativecommons.org/ ...'; */
-  others = '';
+  others = 'https://mirrors.creativecommons.org/presskit/cc.srr.primary.svg';
 
   /* img preses de https://creativecommons.org/mission/downloads/ */
   images = {
