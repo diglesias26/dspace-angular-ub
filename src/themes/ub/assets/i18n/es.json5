@@ -22,6 +22,15 @@
   "footer.lv1.avis": "Aviso legal",
   "footer.lv1.metadades": "Metadatos sujetos a: ",
 
+// estadístiques
+  "statistics.table.title.TopCountries": "Visitas por país",
+  "statistics.table.title.TopCities": "Visitas por ciudad",
+
+// formulari de contacte
+  "info.feedback.info": "Consultas y comentarios",
+  "info.feedback.email-label": "Su dirección de correo electrónico:",
+  "info.feedback.comments": "Mensaje",
+
   "menu.section.how_to_publish": "Cómo publicar",
 
   "footer.link.feedback": "Contacto",

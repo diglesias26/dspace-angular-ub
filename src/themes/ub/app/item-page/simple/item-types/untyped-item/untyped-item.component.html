@@ -32,9 +32,9 @@ mediaViewer.image i mediaViewer.video configurats a
 # For videos, this enables embedded video streaming
 mediaViewer:
   image: false
-  #video: false
+  video: false
   #image: true
-  video: true
+  #video: true
 
 (sembla que els fitxers config* de /dades/git-repo/dspace-angular-ub/config no tenen efecte)
 -->
@@ -57,7 +57,7 @@ mediaViewer:
     [rightsUri]="object?.firstMetadataValue('dc.rights.uri')"
     [rights]="object?.firstMetadataValue('dc.rights')"
     ></ds-item-page-ccrights-field>
-    
+
 </div>
 
 <div class="col-xs-12 col-md-6">

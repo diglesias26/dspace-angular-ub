@@ -1862,15 +1862,15 @@
 
   "info.feedback.title": "Formulari de contacte",
 
-  "info.feedback.info": "Gràcies per compartir els vostres suggeriments sobre el repositori. Tindrem en compte els vostres comentaris!",
+  "info.feedback.info": "Consultes i comentaris",
 
   "info.feedback.email_help": "Aquesta adreça s'utilitzarà per al seguiment del vostre suggeriment.",
 
   "info.feedback.send": "Envia",
 
-  "info.feedback.comments": "Comentaris",
+  "info.feedback.comments": "Missatge",
 
-  "info.feedback.email-label": "El vostre correu electrònic",
+  "info.feedback.email-label": "La vostra adreça de correu electrònic:",
 
   "info.feedback.create.success": "Enviament exitós de suggeriment",
 
@@ -3750,9 +3750,9 @@
 
   "statistics.table.title.TotalDownloads": "Visites del fitxer",
 
-  "statistics.table.title.TopCountries": "Vistes principals per país",
+  "statistics.table.title.TopCountries": "Visites per país",
 
-  "statistics.table.title.TopCities": "Visites principals per ciutat",
+  "statistics.table.title.TopCities": "Visites per ciutat",
 
   "statistics.table.header.views": "Visites",
 

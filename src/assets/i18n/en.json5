@@ -1936,15 +1936,15 @@
 
   "info.feedback.title": "Contact Form",
 
-  "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
+  "info.feedback.info": "Queries and comments",
 
   "info.feedback.email_help": "This address will be used to follow up on your feedback.",
 
   "info.feedback.send": "Send",
 
-  "info.feedback.comments": "Comments",
+  "info.feedback.comments": "Message",
 
-  "info.feedback.email-label": "Your Email",
+  "info.feedback.email-label": "Your Email Address:",
 
   "info.feedback.create.success": "Feedback Sent Successfully!",
 
@@ -4062,9 +4062,9 @@
 
   "statistics.table.title.TotalDownloads": "File Visits",
 
-  "statistics.table.title.TopCountries": "Top country views",
+  "statistics.table.title.TopCountries": "Country Views",
 
-  "statistics.table.title.TopCities": "Top city views",
+  "statistics.table.title.TopCities": "City Views",
 
   "statistics.table.header.views": "Views",
 

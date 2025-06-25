@@ -18,6 +18,15 @@
   "footer.lv1.avis": "Legal notice",
   "footer.lv1.metadades": "Metadata subject to: ",
 
+// estadístiques
+  "statistics.table.title.TopCountries": "Country Views",
+  "statistics.table.title.TopCities": "City Views",
+
+// formulari de contacte
+  "info.feedback.info": "Queries and comments",
+  "info.feedback.email-label": "Your Email Address:",
+  "info.feedback.comments": "Message",
+
   "menu.section.how_to_publish": "How to publish",
 
   "footer.link.feedback": "Contact us",

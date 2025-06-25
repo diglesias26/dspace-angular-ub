@@ -1870,15 +1870,15 @@
 
   "info.feedback.title": "Formulario de contacto",
 
-  "info.feedback.info": "Gracias por compartir sus sugerencias sobre el repositorio. ¡Tendremos en cuenta sus comentarios!",
+  "info.feedback.info": "Consultas y comentarios",
 
   "info.feedback.email_help": "Esta dirección se usará para el seguimiento de su sugerencia.",
 
   "info.feedback.send": "Enviar",
 
-  "info.feedback.comments": "Comentarios",
+  "info.feedback.comments": "Mensaje",
 
-  "info.feedback.email-label": "Su correo electrónico",
+  "info.feedback.email-label": "Su dirección de correo electrónico:",
 
   "info.feedback.create.success": "Envío exitoso de sugerencia",
 
@@ -3906,9 +3906,9 @@
 
   "statistics.table.title.TotalDownloads": "Visitas de archivo",
 
-  "statistics.table.title.TopCountries": "Vistas principales por país",
+  "statistics.table.title.TopCountries": "Visitas por país",
 
-  "statistics.table.title.TopCities": "Visitas principales por ciudad",
+  "statistics.table.title.TopCities": "Visitas por ciudad",
 
   "statistics.table.header.views": "Visitas",
 
