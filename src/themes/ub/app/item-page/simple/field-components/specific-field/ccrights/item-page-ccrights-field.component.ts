@@ -9,13 +9,17 @@ import {
   styleUrls: ['./item-page-ccrights-field.component.scss'],
   templateUrl: './item-page-ccrights-field.component.html',
 })
+
 export class ItemPageCCrightsFieldComponent extends ItemPageUriFieldComponent {
-/*  others = 'https://creativecommons.org/ ...'; */
+  /*
+  others = 'https://creativecommons.org/ ...';
   others = 'https://mirrors.creativecommons.org/presskit/cc.srr.primary.svg';
+  */
+  others = '';
 
   /* img preses de https://creativecommons.org/mission/downloads/ */
   images = {
-/*
+  /*
     zero: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/cc-zero.png',
     mark: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/png/publicdomain.png',
     by: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png',
@@ -24,7 +28,7 @@ export class ItemPageCCrightsFieldComponent extends ItemPageUriFieldComponent {
     by_sa: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png',
     by_nc_nd: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png',
     by_nc_sa: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png',
-*/
+  */
     // SVG versions of the Creative Commons icons
     zero: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg',
     mark: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/publicdomain.svg',
@@ -34,9 +38,9 @@ export class ItemPageCCrightsFieldComponent extends ItemPageUriFieldComponent {
     by_sa: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg',
     by_nc_nd: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg',
     by_nc_sa: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg',
-};
+  };
 
-/**
+  /**
    * Separator string between multiple values of the metadata fields defined
    * @type {string}
    */
@@ -48,7 +52,7 @@ export class ItemPageCCrightsFieldComponent extends ItemPageUriFieldComponent {
    */
   @Input() rightsUri: string;
 
-parseUri():string {
+  parseUri():string {
     if (this.rightsUri) {
       const uri = this.rightsUri.trim();
       const licencePattern = /creativecommons.*\/licenses\/(by|by-nc|by-nc-sa|by-sa)\//;
@@ -66,13 +70,12 @@ parseUri():string {
     return 'other';
   }
 
-getImageSrc(): string {
+  getImageSrc(): string {
     const uri = this.parseUri();
     if (uri && this.images[uri]) {
       return this.images[uri];
     }
     return this.others;
   }
-
 
 }

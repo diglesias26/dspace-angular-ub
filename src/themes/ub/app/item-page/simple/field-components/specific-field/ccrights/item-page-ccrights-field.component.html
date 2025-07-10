@@ -1,3 +1,5 @@
 <div class="item-page-field">
-  <a class="item-page-field-ccrights" [href]="rightsUri" target="_blank" [title]="rights"><img class="img-item-page-field-ccrights" [src]="getImageSrc()" [alt]="rights"/></a>
+  <a class="item-page-field-ccrights" [href]="rightsUri" target="_blank" [title]="rights">
+    <img *ngIf="getImageSrc()" class="img-item-page-field-ccrights" [src]="getImageSrc()" [alt]="rights"/>
+  </a>
 </div>
