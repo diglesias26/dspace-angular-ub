@@ -33,11 +33,11 @@ export class ItemPageCCrightsFieldComponent extends ItemPageUriFieldComponent {
     zero: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg',
     mark: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/publicdomain.svg',
     by: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg',
-    by_nc: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg',
-    by_nd: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nd.svg',
-    by_sa: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg',
-    by_nc_nd: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg',
-    by_nc_sa: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg',
+    'by-nc': 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg',
+    'by-nd': 'https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nd.svg',
+    'by-sa': 'https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg',
+    'by-nc-nd': 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg',
+    'by-nc-sa': 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg',
   };
 
   /**
@@ -55,7 +55,7 @@ export class ItemPageCCrightsFieldComponent extends ItemPageUriFieldComponent {
   parseUri():string {
     if (this.rightsUri) {
       const uri = this.rightsUri.trim();
-      const licencePattern = /creativecommons.*\/licenses\/(by|by-nc|by-nc-sa|by-sa)\//;
+      const licencePattern = /creativecommons.*\/licenses\/(by|by-nc|by-nc-sa|by-nc-nd|by-sa|by-nd)\//;
       const licencePattern2 = /creativecommons.*\/publicdomain\/(zero|mark)\//;
       const matches = uri.match(licencePattern);
       if (matches) {
@@ -72,6 +72,7 @@ export class ItemPageCCrightsFieldComponent extends ItemPageUriFieldComponent {
 
   getImageSrc(): string {
     const uri = this.parseUri();
+  //  return uri;
     if (uri && this.images[uri]) {
       return this.images[uri];
     }
