@@ -42,6 +42,9 @@
     [rights]="object?.firstMetadataValue('dc.rights')"
     ></ds-item-page-ccrights-field>
 
+
+
+
 </div>
 
 <div class="col-xs-12 col-md-6">
@@ -94,7 +97,18 @@
       [fields]="['dc.identifier.uri']"
       [label]="'item.page.uri'">
   </ds-item-page-uri-field>
+
+
+      <!-- Oriol - Citation Export Component -->
+      <ds-citation-export [item]="object"></ds-citation-export>
+      <h1>Citation Export Component</h1>
+      <!-- End Oriol - Citation Export Component -->
+
+
   <ds-item-page-collections [item]="object"></ds-item-page-collections>
+
+
+
 <div>
 
       <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button">

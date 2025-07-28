@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+// oriol - 20250728 - citation export
+import { FormsModule } from '@angular/forms';
+import { ClipboardModule } from '@angular/cdk/clipboard';
+// end oriol - 20250728 - citation export
+
 import { SharedModule } from '../../app/shared/shared.module';
 import { HomeNewsComponent } from './app/home-page/home-news/home-news.component';
 import { NavbarComponent } from './app/navbar/navbar.component';
@@ -66,6 +72,10 @@ import { ItemPageOrcidFieldComponent } from './app/item-page/simple/field-compon
 // oriol - 20240426 - intentant crear nou component
 import { ItemPageCCrightsFieldComponent } from './app/item-page/simple/field-components/specific-field/ccrights/item-page-ccrights-field.component';
 
+// oriol - 20250728 - citation export
+import { CitationExportComponent } from './app/item-page/simple/field-components/specific-field/citation-export/citation-export.component';
+// end oriol - 20250728 - citation export
+
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
@@ -108,6 +118,9 @@ const DECLARATIONS = [
 // oriol - 20240426 - intentant crear nou component
 ItemPageOrcidFieldComponent,
 ItemPageCCrightsFieldComponent,
+// oriol - 20250728 - citation export
+CitationExportComponent,
+// end oriol - 20250728 - citation export
 ];
 
 @NgModule({
@@ -121,6 +134,10 @@ ItemPageCCrightsFieldComponent,
     ItemPageModule,
     ItemSharedModule,
     DsoPageModule,
+    // oriol - 20250728 - citation export
+    FormsModule,
+    ClipboardModule,
+    // end oriol - 20250728 - citation export
   ],
   declarations: DECLARATIONS,
   providers: [
