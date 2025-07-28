@@ -34,8 +34,8 @@ export class CitationExportComponent implements OnInit {
     { value: 'iso690', label: 'ISO 690' },
     { value: 'apa', label: 'APA' },
     { value: 'mla', label: 'MLA' },
-    { value: 'chicago', label: 'Chicago' },
-    { value: 'turabian', label: 'Turabian' },
+    { value: 'chicago', label: 'Chicago/Turabian' },
+    //{ value: 'turabian', label: 'Turabian' },
     { value: 'ieee', label: 'IEEE' },
     { value: 'bibtex', label: 'BibTeX' },
     { value: 'ris', label: 'RIS' }
@@ -373,7 +373,7 @@ EJEMPLO
   }
 
   private generateTurabian(): string {
-    // Turabian is similar to Chicago
+    // Turabian is the same as Chicago??
     return this.generateChicago();
   }
 
