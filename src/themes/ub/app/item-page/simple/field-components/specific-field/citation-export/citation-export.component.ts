@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Clipboard } from '@angular/cdk/clipboard';
 import { Item } from '../../../../../../../../app/core/shared/item.model';
+import { isDefined } from '@ng-bootstrap/ng-bootstrap/util/util';
 
 export interface CitationFormat {
   value: string;
@@ -21,11 +22,14 @@ export class CitationExportComponent implements OnInit {
 
   @Input() item: Item;
 
+  // copiat de D:\dspace7-source\dspace-angular-ub\src\app\item-page\field-components\collections\collections.component.ts
+  label = 'citation-export.title';
+
   constructor(private clipboard: Clipboard) {}
 
   //electedFormat = 'apa';
   selectedFormat = 'iso690';
-  isExpanded = false;
+  isExpanded = true;
 
   locale = 'ca'; // TODO: get the locale from the user
 
@@ -41,23 +45,20 @@ export class CitationExportComponent implements OnInit {
     { value: 'ris', label: 'RIS' }
   ];
 
-  /*
-  ngOnInit(): void {
-    // Component initialization
-  }
-  */
    /**
    * Get the user's locale from the browser.
-   * 
+   *
    * The browser provides a property called `navigator.language` (or `navigator.languages`)
    * which tells us the user's preferred language/locale setting.
-   * 
+   *
    * Example values: 'en-US', 'ca', 'es-ES'
    */
    getUserLocale(): string {
     // navigator.language returns the browser's primary language setting
     // If not available, default to 'ca_ES'
-    return navigator.language || 'ca_ES';
+    let locale = navigator.language || 'ca';
+    locale = locale.substring(0, 2);
+    return locale;
   }
 
   ngOnInit(): void {
@@ -104,7 +105,7 @@ export class CitationExportComponent implements OnInit {
   copyToClipboard(): void {
     const citation = this.generateCitation(this.selectedFormat);
     const successful = this.clipboard.copy(citation);
-    
+
     if (successful) {
       // TODO: Add success notification
       console.log('Citation copied to clipboard');
@@ -146,6 +147,7 @@ export class CitationExportComponent implements OnInit {
    * @returns text
    */
   private generateISO690(): string {
+
     // TODO: Implement ISO 690 citation generation
     /*
     *MODELO DE ESTRUCTURA
@@ -174,9 +176,9 @@ EJEMPLO
     // Use toLocaleString to get the month name in the user's language
     const monthName = today.toLocaleString(this.locale, { month: 'long' });
     let formattedDate = '';
-    if (this.locale == 'ca_ES' || this.locale == 'ca') {
+    if (this.locale == 'ca') {
       formattedDate = `[consulta: ${day} de ${monthName} de ${year}]`;
-    } else if (this.locale == 'es_ES' || this.locale == 'es') {
+    } else if (this.locale == 'es') {
       formattedDate = `[consulta: ${day} de ${monthName} de ${year}]`;
     } else {
       formattedDate = `[consulted: ${day} of ${monthName} of ${year}]`;
@@ -193,40 +195,71 @@ EJEMPLO
 
     // Cursive _journal title_
     // substitute the underscores by <i> in html
+
     if (relationIsPartOf) {
       const parts = relationIsPartOf.split(',');
-      const journalTitle = parts[0];
-      const year = parts[1];
-      let volume = parts[2];
+
+      const journalTitle = parts[0] || '';
+      if (journalTitle) {
+        citation += `_${journalTitle}_. `;
+      }
+
+      let year = parts[1] || '';
+      if (year) {
+        year = year.trim();
+        citation += `${year}. `;
+      }
+
+      let volume = parts[2] || '';
       // if . is in the volume, remove it
       if (volume.includes('.')) {
         volume = volume.split('.')[1];
         // remove the first space
         volume = volume.trim();
       }
-      let number = parts[3];
+      if (volume) {
+        citation += `Vol. ${volume}, `;
+      }
+
+      let num = 'num';
+      let pag = 'pags';
+      if (this.locale == 'ca') {
+        num = 'núm';
+        pag = 'pàgs';
+      } else if (this.locale == 'es') {
+        num = 'nº';
+        pag = 'págs';
+      }
+
+      let number = parts[3] || '';
       // if . is in the number, remove it
       if (number.includes('.')) {
         number = number.split('.')[1];
         // remove the first space
         number = number.trim();
       }
-      let pages = parts[4];
+      if (number) {
+        number = number.trim();
+        citation += `${num}. ${number}, `;
+      }
+
+      let pages = parts[4] || '';
       // if . is in the pages, remove it
       if (pages.includes('.')) {
         pages = pages.split('.')[1];
         // remove the first space
         pages = pages.trim();
       }
-      if (this.locale == 'ca_ES' || this.locale == 'ca') {
-        citation += `_${journalTitle}_. ${year}. Vol. ${volume}, núm. ${number}, pàgs. ${pages}. `;
-      } else if (this.locale == 'es_ES' || this.locale == 'es') {
-        citation += `_${journalTitle}_. ${year}. Vol. ${volume}, nº. ${number}, págs. ${pages}. `;
-      } else {
-        citation += `_${journalTitle}_. ${year}. Vol. ${volume}, num. ${number}, pags. ${pages}. `;
+      if (pages) {
+        pages = pages.trim();
+        citation += `${pag}. ${pages}. `;
+      }
+
+      if (citation.endsWith(', ')) {
+        citation = citation.slice(0, -2);
+        citation += '. ';
       }
     }
-
 
     // consulted
     if (formattedDate) {
@@ -241,9 +274,9 @@ EJEMPLO
 
     // handle
     if (handle) {
-      if (this.locale == 'ca_ES' || this.locale == 'ca') {
+      if (this.locale == 'ca') {
         citation += `[Disponible a: ${handle}]`;
-      } else if (this.locale == 'es_ES' || this.locale == 'es') {
+      } else if (this.locale == 'es') {
         citation += `[Disponible en: ${handle}]`;
       } else {
         citation += `[Available at: ${handle}]`;
@@ -254,7 +287,7 @@ EJEMPLO
   }
 
   /**
-   * iso690 text to html  
+   * iso690 text to html
    * @param text
    * @returns html
    */
@@ -377,7 +410,7 @@ EJEMPLO
     return this.generateChicago();
   }
 
-  /** 
+  /**
    * Generate the IEEE citation
    */
   private generateIEEE(): string {

@@ -5433,4 +5433,18 @@
   "footer.lv1.metadades": "Metadata subject to: ",
 
   "menu.section.how_to_publish": "How to publish",
+
+  "citation-export.title": "Citation",
+
+  "citation-export.format.label": "Citation format",
+
+  "citation-export.copy.tooltip": "Copy citation",
+
+  "citation-export.copy.label": "Copy citation",
+
+  "citation-export.download.tooltip": "Download citation",
+
+  "citation-export.download.label": "Download citation",
+
+  "citation-export.preview.title": "This citation was generated automatically",
 }

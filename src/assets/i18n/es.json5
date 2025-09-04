@@ -5247,4 +5247,18 @@
   "form.date-picker.placeholder.month": "Mes",
 
   "form.date-picker.placeholder.day": "Día",
+
+  "citation-export.title": "Citación",
+
+  "citation-export.format.label": "Formato de la citación",
+
+  "citation-export.copy.tooltip": "Copiar la citación",
+
+  "citation-export.copy.label": "Copiar la citación",
+
+  "citation-export.download.tooltip": "Bajar la citación",
+
+  "citation-export.download.label": "Bajar la citación",
+
+  "citation-export.preview.title": "Esta cita se ha generado automáticamente",
 }

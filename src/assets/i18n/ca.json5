@@ -6907,4 +6907,18 @@
   "form.date-picker.placeholder.month": "Mes",
 
   "form.date-picker.placeholder.day": "Dia",
+
+  "citation-export.title": "Citació",
+
+  "citation-export.format.label": "Format de la citació",
+
+  "citation-export.copy.tooltip": "Copia la citació",
+
+  "citation-export.copy.label": "Copia la citació",
+
+  "citation-export.download.tooltip": "Baixa la citació",
+
+  "citation-export.download.label": "Baixa la citació",
+
+  "citation-export.preview.title": "Aquesta citació s'ha generat automàticament",
 }
