@@ -1,10 +1,10 @@
 :host {
     display: block;
-  
+
     div.background-image-container {
       color: white;
       position: relative;
-  
+
       .background-image > img {
         background-color: var(--bs-info);
         position: absolute;
@@ -16,11 +16,11 @@
         object-fit: cover;
         object-position: top;
       }
-  
+
       .container {
         position: relative;
         text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
-  
+
         &:before, &:after {
           content: '';
           display: block;
@@ -29,46 +29,48 @@
           top: 0;
           position: absolute;
         }
-  
+
         &:before {
           background: linear-gradient(to left, var(--ds-banner-text-background), transparent);
           left: calc(-1 * var(--ds-banner-background-gradient-width));
-  
+
         }
-  
+
         &:after {
           background: linear-gradient(to right, var(--ds-banner-text-background), transparent);
           right: calc(-1 * var(--ds-banner-background-gradient-width));
         }
-  
+
         background-color: var(--ds-banner-text-background);
       }
-  
-  
+
+
       small.credits {
         a {
           color: inherit;
         }
-  
+
         opacity: 0.3;
         position: absolute;
         right: var(--bs-spacer);
         bottom: 0;
       }
     }
-  
+
     .jumbotron {
       background-color: transparent;
     }
-  
+
     a {
       color: var(--ds-home-news-link-color);
-  
+
       @include hover {
         color: var(--ds-home-news-link-hover-color);
       }
     }
   }
-  
-  
-  
+
+
+.display-3 {
+    font-size: 2.5rem;
+}
