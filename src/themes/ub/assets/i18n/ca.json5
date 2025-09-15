@@ -474,6 +474,7 @@
   "menu.section.access_control_bulk": "Gestió massiva d'accés",
   "menu.section.browse_global_by_srsc": "Per categoria de matèria",
   "menu.section.browse_global_by_nsi": "Per Norwegian Science Index",
+  "menu.section.browse_global_by_subject": "Per matèria",
   "menu.section.icon.notifications": "Secció del menú de notificacions",
   "menu.section.notifications": "Notificacions",
   "menu.section.quality-assurance": "Assegurament de la Qualitat",
