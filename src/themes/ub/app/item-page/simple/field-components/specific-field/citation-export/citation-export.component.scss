@@ -39,8 +39,13 @@
   }
 
   .citation-export-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: flex-end;
+
     .form-group {
-      margin-bottom: 1rem;
+      margin-bottom: 0rem;
 
       .form-label {
         font-weight: 500;
@@ -89,8 +94,9 @@
   }
 
   .citation-preview {
-    border-top: 1px solid #dee2e6;
-    padding-top: 1rem;
+    /* border-top: 1px solid #dee2e6; */
+    /* padding-top: 1rem; */
+    margin-top: 0.5rem;
 
     h6 {
       color: #495057;
@@ -118,6 +124,10 @@
       }
     }
   }
+}
+
+#citationFormat {
+  width:111px;
 }
 
 // Animations

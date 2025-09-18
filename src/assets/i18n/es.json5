@@ -2384,7 +2384,7 @@
 
   "item.page.collections.load-more": "Cargar más",
 
-  "item.page.date": "Fecha",
+  "item.page.date": "Fecha de publicación",
 
   "item.page.edit": "Editar este ítem",
 
@@ -5261,4 +5261,6 @@
   "citation-export.download.label": "Bajar la citación",
 
   "citation-export.preview.title": "Esta cita se ha generado automáticamente",
+
+  "item.page.ccrights": "Licencia de publicación",
 }

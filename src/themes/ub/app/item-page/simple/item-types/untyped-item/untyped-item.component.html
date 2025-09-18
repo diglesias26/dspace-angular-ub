@@ -11,7 +11,7 @@
 
 
 <div class="row">
-  <div class="col-xs-12 col-md-4">
+  <div class="col-xs-12 col-md-3">
 
     <ng-container *ngIf="!(mediaViewer.image || mediaViewer.video)">
       <ds-metadata-field-wrapper [hideIfNoTextContent]="true">
@@ -22,37 +22,32 @@
       <ds-themed-media-viewer [item]="object"></ds-themed-media-viewer>
     </div>
 
-
 <!--
-    <ng-container>
-      <ds-metadata-field-wrapper [hideIfNoTextContent]="true">
-        <ds-themed-thumbnail [thumbnail]="object?.thumbnail | async"></ds-themed-thumbnail>
-      </ds-metadata-field-wrapper>
-    </ng-container>
-    <div>
-      <ds-themed-media-viewer [item]="object"></ds-themed-media-viewer>
-    </div>
+    <ds-themed-thumbnail [thumbnail]="object?.thumbnail | async"></ds-themed-thumbnail>
+    <ds-themed-media-viewer [item]="object"></ds-themed-media-viewer>
 -->
 
+    <!-- files section -->
     <ds-themed-item-page-file-section [item]="object"></ds-themed-item-page-file-section>
+
+    <!-- date -->
+    <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
+
 
     <!-- ccrights image -->
     <ds-item-page-ccrights-field
     [rightsUri]="object?.firstMetadataValue('dc.rights.uri')"
     [rights]="object?.firstMetadataValue('dc.rights')"
+    [label]="'item.page.ccrights' | translate">
     ></ds-item-page-ccrights-field>
 
+  </div>
 
-
-
-</div>
-
-<div class="col-xs-12 col-md-6">
+  <div class="col-xs-12 col-md-5">
 
   <ds-themed-item-page-title-field [item]="object" class="mr-auto">
   </ds-themed-item-page-title-field>
   <ds-dso-edit-menu></ds-dso-edit-menu>
-  <p></p>
 
   <ds-themed-metadata-representation-list class="ds-item-page-mixed-author-field"
     [parentItem]="object"
@@ -72,11 +67,13 @@
     [fields]="['journalvolume.identifier.name']"
     [label]="'item.page.volume-title'">
   </ds-generic-item-page-field>
+
+  <!--- hernandez "Treure la metadada Editor d’aquesta vista"
   <ds-generic-item-page-field [item]="object"
     [fields]="['dc.publisher']"
     [label]="'item.page.publisher'">
   </ds-generic-item-page-field>
-  <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
+  --->
 
   <ds-item-page-abstract-field [item]="object"></ds-item-page-abstract-field>
   <ds-generic-item-page-field [item]="object"
@@ -98,21 +95,23 @@
       [label]="'item.page.uri'">
   </ds-item-page-uri-field>
 
-
-  <!-- Oriol - Citation Export Component -->
-  <ds-citation-export [item]="object"></ds-citation-export>
-  <!-- End Oriol - Citation Export Component -->
-
-
   <ds-item-page-collections [item]="object"></ds-item-page-collections>
 
-
-
-<div>
-
+    <div>
       <a class="btn btn-outline-primary" [routerLink]="[itemPageRoute + '/full']" role="button">
         <i class="fas fa-info-circle"></i> {{"item.page.link.full" | translate}}
       </a>
     </div>
+
+
   </div>
+
+  <!-- columna 3 -->
+  <div class="col-xs-12 col-md-4">
+
+    <!-- Oriol - Citation Export Component -->
+    <ds-citation-export [item]="object"></ds-citation-export>
+
+  </div>
+
 </div>

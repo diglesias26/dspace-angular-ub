@@ -1,4 +1,4 @@
-<h4>{{ 'citation-export.title' | translate }}</h4>
+<h4 class="simple-view-element-header">{{ 'citation-export.title' | translate }}</h4>
 
 <!-- copiat de D:\dspace7-source\dspace-angular-ub\src\app\item-page\field-components\collections\collections.component.html -->
 <!-- però no funciona -->
@@ -17,9 +17,7 @@
   <div class="citation-export-content" *ngIf="isExpanded">
     <div class="citation-export-form">
     <div class="form-group">
-      <label for="citationFormat" class="form-label">
-        {{ 'citation-export.format.label' | translate }}
-      </label>
+      <!-- label for="citationFormat" class="form-label">{{ 'citation-export.format.label' | translate }}</label -->
       <select
         id="citationFormat"
         class="form-select form-control"
@@ -38,7 +36,7 @@
         (click)="copyToClipboard()"
         [title]="'citation-export.copy.tooltip' | translate">
         <i class="fas fa-copy" aria-hidden="true"></i>
-        {{ 'citation-export.copy.label' | translate }}
+        <!-- {{ 'citation-export.copy.label' | translate }} -->
       </button>
       <button
         type="button"
@@ -46,13 +44,13 @@
         (click)="downloadCitation()"
         [title]="'citation-export.download.tooltip' | translate">
         <i class="fas fa-download" aria-hidden="true"></i>
-        {{ 'citation-export.download.label' | translate }}
+        <!-- {{ 'citation-export.download.label' | translate }} -->
       </button>
     </div>
   </div>
 
-  <div class="citation-preview mt-3" *ngIf="selectedFormat">
-    <h6>{{ 'citation-export.preview.title' | translate }}</h6>
+  <div class="citation-preview" *ngIf="selectedFormat">
+    <!-- h6>{{ 'citation-export.preview.title' | translate }}</h6 -->
     <div class="citation-preview-content">
       <pre>{{ getCitationPreview() }}</pre>
     </div>

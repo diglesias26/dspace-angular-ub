@@ -2302,7 +2302,7 @@
 
   "item.page.collections.load-more": "Carregar més",
 
-  "item.page.date": "Data",
+  "item.page.date": "Data de publicació",
 
   "item.page.edit": "Editar aquest ítem",
 
@@ -6921,4 +6921,6 @@
   "citation-export.download.label": "Baixa la citació",
 
   "citation-export.preview.title": "Aquesta citació s'ha generat automàticament",
+
+  "item.page.ccrights": "Llicència de publicació",
 }

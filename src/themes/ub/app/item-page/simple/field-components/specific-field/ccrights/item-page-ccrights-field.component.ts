@@ -46,6 +46,9 @@ export class ItemPageCCrightsFieldComponent extends ItemPageUriFieldComponent {
    */
   @Input() rights: string;
 
+  @Input() label: string;
+
+
   /**
    * Separator string between multiple values of the metadata fields defined
    * @type {string}
