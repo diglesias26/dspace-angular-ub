@@ -13,6 +13,7 @@
 <div class="row">
   <div class="col-xs-12 col-md-3">
 
+<!--
     <ng-container *ngIf="!(mediaViewer.image || mediaViewer.video)">
       <ds-metadata-field-wrapper [hideIfNoTextContent]="true">
         <ds-themed-thumbnail [thumbnail]="object?.thumbnail | async"></ds-themed-thumbnail>
@@ -21,11 +22,17 @@
     <div *ngIf="mediaViewer.image || mediaViewer.video" class="mb-2">
       <ds-themed-media-viewer [item]="object"></ds-themed-media-viewer>
     </div>
+-->
 
-<!--
+    <!-- thumbnail
+     D:\dspace7-source\dspace-angular-ub\config\config.development.yml
+     /dades/dspace-ui-deploy/config/config.prod.yml
+      mediaViewer:
+        image: false
+        video: false
+     -->
     <ds-themed-thumbnail [thumbnail]="object?.thumbnail | async"></ds-themed-thumbnail>
     <ds-themed-media-viewer [item]="object"></ds-themed-media-viewer>
--->
 
     <!-- files section -->
     <ds-themed-item-page-file-section [item]="object"></ds-themed-item-page-file-section>
