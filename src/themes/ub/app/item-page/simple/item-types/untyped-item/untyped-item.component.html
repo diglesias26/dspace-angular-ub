@@ -45,9 +45,9 @@
 
     <!-- ccrights image -->
     <ds-item-page-ccrights-field
-    [rightsUri]="object?.firstMetadataValue('dc.rights.uri')"
-    [rights]="object?.firstMetadataValue('dc.rights')"
-    [label]="'item.page.ccrights' | translate">
+      [rightsUri]="object?.firstMetadataValue('dc.rights.uri')"
+      [rights]="object?.firstMetadataValue('dc.rights')"
+      [label]="'item.page.ccrights' | translate">
     ></ds-item-page-ccrights-field>
 
   </div>
@@ -55,8 +55,19 @@
   <!-- columna 2 -->
   <div class="col-xs-12 col-md-5">
 
-    <ds-themed-item-page-title-field [item]="object" class="mr-auto">
-    </ds-themed-item-page-title-field>
+    <div class="use_identifier">
+      {{ 'item.page.use_identifier' | translate }}:
+      <a href="{{ object?.firstMetadataValue('dc.identifier.uri') }}">{{ object?.firstMetadataValue('dc.identifier.uri') }}</a>
+    </div>
+
+
+    <!-- ds-item-page-uri-field [item]="object"
+        [fields]="['dc.identifier.uri']"
+        [label]="'item.page.uri'">
+    </ds-item-page-uri-field> -->
+
+
+    <ds-themed-item-page-title-field [item]="object" class="mr-auto"></ds-themed-item-page-title-field>
     <ds-dso-edit-menu></ds-dso-edit-menu>
 
     <ds-generic-item-page-field [item]="object"
@@ -105,11 +116,6 @@
         [fields]="['dc.identifier.citation']"
         [label]="'item.page.citation'">
     </ds-generic-item-page-field>
-
-    <ds-item-page-uri-field [item]="object"
-        [fields]="['dc.identifier.uri']"
-        [label]="'item.page.uri'">
-    </ds-item-page-uri-field>
 
     <ds-item-page-collections [item]="object"></ds-item-page-collections>
 

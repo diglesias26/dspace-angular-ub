@@ -6923,4 +6923,6 @@
   "citation-export.preview.title": "Aquesta citació s'ha generat automàticament",
 
   "item.page.ccrights": "Llicència de publicació",
+
+  "item.page.use_identifier": "Si us plau utilitzeu sempre aquest identificador per citar o enllaçar aquest document",
 }

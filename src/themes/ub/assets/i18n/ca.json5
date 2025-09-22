@@ -411,6 +411,8 @@
   "item.page.image.alt.ROR": "ROR logo",
   "item.page.date": "Data de publicació",
   "item.page.ccrights": "Llicència de publicació",
+  "item.page.use_identifier": "Si us plau utilitzeu sempre aquest identificador per citar o enllaçar aquest document",
+
   "item.preview.dc.publisher": "Editorial:",
   "item.preview.oairecerif.identifier.url": "URL",
   "item.preview.organization.address.addressCountry": "País",
