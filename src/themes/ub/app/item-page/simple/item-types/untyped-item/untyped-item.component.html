@@ -147,6 +147,13 @@
     <!-- Oriol - Citation Export Component -->
     <ds-citation-export [item]="object"></ds-citation-export>
 
+    <div>
+      <!-- oriol - Statistics Link - all users -->
+      <a class="btn btn-outline-secondary"
+         [routerLink]="['/statistics','items', object?.id]">
+        <i class="fas fa-chart-bar"></i> {{ 'menu.section.statistics' | translate }}
+      </a>
+    </div>
 
   </div>
 
