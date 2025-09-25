@@ -74,7 +74,9 @@ import { ItemPageCCrightsFieldComponent } from './app/item-page/simple/field-com
 
 // oriol - 20250728 - citation export
 import { CitationExportComponent } from './app/item-page/simple/field-components/specific-field/citation-export/citation-export.component';
-// end oriol - 20250728 - citation export
+
+// oriol - 20250925 - export json i mets
+import { ItemPageExportFieldComponent } from './app/item-page/simple/field-components/specific-field/export/item-page-export-field.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -121,6 +123,9 @@ ItemPageCCrightsFieldComponent,
 // oriol - 20250728 - citation export
 CitationExportComponent,
 // end oriol - 20250728 - citation export
+
+// oriol - 20250925 - export json i mets
+ItemPageExportFieldComponent,
 ];
 
 @NgModule({

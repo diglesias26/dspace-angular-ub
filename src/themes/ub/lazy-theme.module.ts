@@ -163,10 +163,7 @@ import { BrowseByComponent } from './app/shared/browse-by/browse-by.component';
 import { RegisterEmailFormComponent } from './app/register-email-form/register-email-form.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
-/** oriol - override menu component */
-import { MenuComponent as ThemedMenuComponent } from './app/shared/menu/menu.component';
-import { MenuService as ThemedMenuService } from './app/shared/menu/menu.service';
-// 
+//
 // oriol orcid
 /*
 import {
@@ -261,8 +258,6 @@ const DECLARATIONS = [
   RegisterEmailFormComponent,
 // oriol orcid
 //ItemPageOrcidFieldComponent,
-/** oriol - override menu component - no funciona */
-ThemedMenuComponent,
 ];
 
 @NgModule({
@@ -328,10 +323,6 @@ ThemedMenuComponent,
   declarations: DECLARATIONS,
   exports: [
     CommunityPageSubCollectionListComponent
-  ],
-  /** oriol - override menu service - tampoc funciona */
-  providers: [
-    { provide: /* core */ require('../../app/shared/menu/menu.service').MenuService, useClass: ThemedMenuService }
   ],
 //  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

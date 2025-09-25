@@ -1,0 +1,7 @@
+<p></p>
+<h4 class="simple-view-element-header">{{ label }}</h4>
+
+<div>
+  <a [routerLink]="['/server/api/core','items', item?.id]">JSON</a> -
+  <a href="/server/oai/request?verb=GetRecord&identifier=oai:localhost:{{item?.handle}}&metadataPrefix=mets">METS</a>
+</div>

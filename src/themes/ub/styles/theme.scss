@@ -10,3 +10,8 @@
 @import '../../../styles/bootstrap_variables_mapping.scss';
 @import '../../../styles/_truncatable-part.component.scss';
 @import './_global-styles.scss';
+
+/* miquel 2025-09-25 Hide statistics section */
+div[id^="navbar-section-statistics"] {
+  display: none;
+}
