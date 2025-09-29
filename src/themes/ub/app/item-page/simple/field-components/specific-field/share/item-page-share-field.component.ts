@@ -1,85 +1,121 @@
 //import { Component } from '@angular/core';
 import { Component, Input } from '@angular/core';
+import { Item } from '../../../../../../../../app/core/shared/item.model';
+
 import {
   ItemPageUriFieldComponent
 } from '../../../../../../../../app/item-page/simple/field-components/specific-field/uri/item-page-uri-field.component';
 
 @Component({
-  selector: 'ds-item-page-ccrights-field',
-  styleUrls: ['./item-page-ccrights-field.component.scss'],
-  templateUrl: './item-page-ccrights-field.component.html',
+  selector: 'ds-item-page-share-field',
+  styleUrls: ['./item-page-share-field.component.scss'],
+  templateUrl: './item-page-share-field.component.html',
 })
 
-export class ItemPageCCrightsFieldComponent extends ItemPageUriFieldComponent {
-  /*
-  others = 'https://creativecommons.org/ ...';
-  others = 'https://mirrors.creativecommons.org/presskit/cc.srr.primary.svg';
-  */
-  others = '';
+export class ItemPageShareFieldComponent extends ItemPageUriFieldComponent {
 
-  /* img preses de https://creativecommons.org/mission/downloads/ */
-  images = {
-  /*
-    zero: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/cc-zero.png',
-    mark: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/png/publicdomain.png',
-    by: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by.png',
-    by_nc: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc.png',
-    by_nd: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nd.png',
-    by_sa: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-sa.png',
-    by_nc_nd: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-nd.png',
-    by_nc_sa: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/png/by-nc-sa.png',
-  */
-    // SVG versions of the Creative Commons icons
-    zero: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg',
-    mark: 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/publicdomain.svg',
-    by: 'https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg',
-    'by-nc': 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc.svg',
-    'by-nd': 'https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nd.svg',
-    'by-sa': 'https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-sa.svg',
-    'by-nc-nd': 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-nd.svg',
-    'by-nc-sa': 'http://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by-nc-sa.svg',
-  };
+  // todo: get the handle prefix from the configuration
+handlePrefix = 'hdl.handle.net/' + '123456789';
+  /**
+   * The item to display metadata for
+   */
+  @Input() item: Item;
 
   /**
    * Separator string between multiple values of the metadata fields defined
    * @type {string}
-   */
-  @Input() rights: string;
+   */  
 
   @Input() label: string;
 
-
-  /**
-   * Separator string between multiple values of the metadata fields defined
-   * @type {string}
-   */
-  @Input() rightsUri: string;
-
-  parseUri():string {
-    if (this.rightsUri) {
-      const uri = this.rightsUri.trim();
-      const licencePattern = /creativecommons.*\/licenses\/(by|by-nc|by-nc-sa|by-nc-nd|by-sa|by-nd)\//;
-      const licencePattern2 = /creativecommons.*\/publicdomain\/(zero|mark)\//;
-      const matches = uri.match(licencePattern);
-      if (matches) {
-        return matches[1];
-      } else {
-        const matches2 = uri.match(licencePattern2);
-        if (matches2) {
-          return matches2[1];
-        }
+/** dc.title **/
+getTitle(): string { 
+  return this.item.firstMetadataValue('dc.title');
+}
+/** dc.identifier.uri - handle  */
+getHandle(): string {
+  // filter the handle to have the required format
+  const handle = this.item.firstMetadataValue('dc.identifier.uri');
+  if (handle) {
+    // check if hdl.handle.net/prefix is present
+    const prefix = this.handlePrefix;
+    if (handle.startsWith(prefix)) {
+      return handle;
+    }
+    else {
+      // check more metadata values for the handle and return the first one that starts with the prefix
+      const handles = this.item.allMetadataValues('dc.identifier.uri');
+      if (handles) {
+        return handles.find(h => h.startsWith(prefix)) || '';
       }
     }
-    return 'other';
   }
+  // if no handle is found, return an empty string
+  return '';
+}
 
-  getImageSrc(): string {
-    const uri = this.parseUri();
-  //  return uri;
-    if (uri && this.images[uri]) {
-      return this.images[uri];
-    }
-    return this.others;
-  }
+/** dc.description.abstract */
+getAbstract(): string {
+  return this.item.firstMetadataValue('dc.description.abstract');
+}
+
+/** gen url for mendeley */
+getMendeleyUrl(): string {
+  return 'http://www.mendeley.com/import/?url=' + this.getHandle();
+}
+
+/** gen print url */
+getPrintScript(): string {
+  return 'window.print();return false;';
+}
+
+/** event on click for print */
+onPrintClick(): boolean {
+  window.print();
+  // return false to prevent the default behavior of the link
+  return false;
+}
+
+/** event on click for x */
+onXClick(): boolean {
+  window.open('https://x.com/share?text=' + this.getTitle() + ' ' + this.getHandle(), '_blank');
+  // return false to prevent the default behavior of the link
+  return false;
+}
+
+/** event on click for bluesky */
+onBlueskyClick(): boolean {
+  window.open('https://bsky.app/profile/bsky.social/' + this.getHandle(), '_blank');
+  // return false to prevent the default behavior of the link
+  return false;
+}
+
+/** event on click for linkedin */
+onLinkedinClick(): boolean {
+  window.open('https://www.linkedin.com/shareArticle?mini=true&url=' + this.getHandle(), '_blank');
+  // return false to prevent the default behavior of the link
+  return false;
+}
+
+/** event on click for facebook */
+onFacebookClick(): boolean {
+  window.open('https://www.facebook.com/sharer/sharer.php?u=' + this.getHandle(), '_blank');
+  // return false to prevent the default behavior of the link
+  return false;
+}
+
+/** event on click for telegram */
+onTelegramClick(): boolean {
+  window.open('https://telegram.me/share/url?url=' + this.getHandle(), '_blank');
+  // return false to prevent the default behavior of the link
+  return false;
+}
+
+/** event on click for whatsapp */
+onWhatsappClick(): boolean {
+  window.open('https://wa.me/?text=' + this.getTitle() + ' ' + this.getHandle(), '_blank');
+  // return false to prevent the default behavior of the link
+  return false;
+}
 
 }
