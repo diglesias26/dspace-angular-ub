@@ -1,5 +1,6 @@
 .row{
         div{
+                /*
                 // Use a palette of harmonious pastel colors for a pleasant look
                 &:nth-child(1) .card{
                     background-color: #fceabb; // soft yellow
@@ -18,26 +19,88 @@
                 }
                 &:nth-child(6) .card{
                     background-color: #f7d6e0; // pale pink
-                }               
+                }      
+                */   
+                // Use bolder, more vibrant but still pleasant colors for each card
+                &:nth-child(1) .card:hover .card-body{
+                    background-color: #ffd600; // bold yellow
+                    color: #000 !important;
+                }
+                &:nth-child(2) .card:hover .card-body{
+                    background-color: #a259f7; // vibrant purple
+                    color: #fff !important;
+                }
+                &:nth-child(3) .card:hover .card-body{
+                    background-color: #00b894; // strong teal green
+                    color: #fff;
+                }
+                &:nth-child(4) .card:hover .card-body{
+                    background-color: #ff7675; // vivid coral red
+                    color: #fff;
+                }
+                &:nth-child(5) .card:hover .card-body{
+                    background-color: #0984e3; // bright blue
+                    color: #fff !important;
+                }
+                &:nth-child(6) .card:hover .card-body{
+                    background-color: #fd79a8; // bold pink
+                    color: #fff;
+                }       
                 .card {
+                    &:hover, &:focus-within {
+                        transform: translateY(-8px) scale(1.04);
+                        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+                        transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+                    }
 
                     margin-bottom: 1rem;
+                    border-radius: 2px;
+
                     .card-body {
-                        // the height of the card should be the same as the width to make it square
-                        min-height: 4rem;
+                        // Make the card body a perfect square using aspect-ratio
+                        aspect-ratio: 1 / 1;
                         width: 100%;
+                        min-width: 0;
+                        min-height: 0;
+                        position: relative; // Needed for absolute positioning of h2
+                        display: flex;
+                        align-items: stretch;
+                        justify-content: stretch;
+                        padding: 0;
+                        background-color: #ccc;
+
                         a {
                             text-decoration: none;
                             color: #000;
-                            height: 4rem;
+                            display: block;
                             width: 100%;
                             height: 100%;
+                            position: relative;
                         }
+
                         h2 {
-                            font-size: 1.5rem;
+                            font-size: 1.2rem;
                             font-weight: 600;
+                            margin: 0;
+                            position: absolute;
+                            bottom: 0.5rem;
+                            right: 0.75rem;
+                            text-align: right;
+                            //background: rgba(255,255,255,0.7); // subtle background for readability
+                            padding: 0.25rem 0.5rem;
+                            border-radius: 0.5rem;
                         }
                     }
-                }
+
+                    // Add a pop-up effect on hover
+                    .card:hover, .card:focus-within {
+                        transform: translateY(-8px) scale(1.04);
+                        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+                        transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+                    }
+                    .card {
+                        transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+                    }
          }
     }
+}
