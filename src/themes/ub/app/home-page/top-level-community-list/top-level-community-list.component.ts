@@ -23,11 +23,14 @@ getCommunityTitle(community: any) {
 
 getCommunityLink(community: any) {
   let link = community['_links']['self'];
+  //uuid millor
+  let uuid = community['uuid'];
   // if no title, return an empty string
-  if (!link) {
-    return '';
+  //if (!link) {
+  if (!uuid) {
+    return '/';
   }
-  return link.href;
+  return '/communities/' + uuid;
 }
 
 
