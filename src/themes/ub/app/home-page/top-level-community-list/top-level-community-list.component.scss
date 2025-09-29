@@ -1,0 +1,43 @@
+.row{
+        div{
+                // Use a palette of harmonious pastel colors for a pleasant look
+                &:nth-child(1) .card{
+                    background-color: #fceabb; // soft yellow
+                }
+                &:nth-child(2) .card{
+                    background-color: #e0c3fc; // light lavender
+                }
+                &:nth-child(3) .card{
+                    background-color: #b5ead7; // mint green
+                }
+                &:nth-child(4) .card{
+                    background-color: #ffb7b2; // light coral
+                }
+                &:nth-child(5) .card{
+                    background-color: #b2cefe; // soft blue
+                }
+                &:nth-child(6) .card{
+                    background-color: #f7d6e0; // pale pink
+                }               
+                .card {
+
+                    margin-bottom: 1rem;
+                    .card-body {
+                        // the height of the card should be the same as the width to make it square
+                        min-height: 4rem;
+                        width: 100%;
+                        a {
+                            text-decoration: none;
+                            color: #000;
+                            height: 4rem;
+                            width: 100%;
+                            height: 100%;
+                        }
+                        h2 {
+                            font-size: 1.5rem;
+                            font-weight: 600;
+                        }
+                    }
+                }
+         }
+    }

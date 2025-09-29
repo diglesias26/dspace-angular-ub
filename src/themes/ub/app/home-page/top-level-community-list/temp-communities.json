@@ -1,0 +1,378 @@
+{
+    "timeCompleted": 1759140504277,
+    "msToLive": 900000,
+    "lastUpdated": 1759140504277,
+    "state": "Success",
+    "errorMessage": null,
+    "payload": {
+      "type": {
+        "value": "paginated-list"
+      },
+      "pageInfo": {
+        "elementsPerPage": 5,
+        "totalElements": 9,
+        "totalPages": 2,
+        "currentPage": 1
+      },
+      "_links": {
+        "first": {
+          "href": "https://dipositpre.ub.edu/server/api/core/communities/search/top?page=0&size=5&sort=dc.title,asc"
+        },
+        "self": {
+          "href": "https://dipositpre.ub.edu/server/api/core/communities/search/top?page=0&size=5&sort=dc.title,ASC"
+        },
+        "next": {
+          "href": "https://dipositpre.ub.edu/server/api/core/communities/search/top?page=1&size=5&sort=dc.title,asc"
+        },
+        "last": {
+          "href": "https://dipositpre.ub.edu/server/api/core/communities/search/top?page=1&size=5&sort=dc.title,asc"
+        },
+        "page": [
+          {
+            "href": "https://dipositpre.ub.edu/server/api/core/communities/4130d4c1-9d7d-46c3-8495-e7ab23bf0ff3"
+          },
+          {
+            "href": "https://dipositpre.ub.edu/server/api/core/communities/be77a67a-6ed1-405a-bc27-a4d32fc65728"
+          },
+          {
+            "href": "https://dipositpre.ub.edu/server/api/core/communities/ccec3a7d-26f7-4342-8f67-55af62faf65e"
+          },
+          {
+            "href": "https://dipositpre.ub.edu/server/api/core/communities/13e06f39-2934-4a8a-978b-207e4218492c"
+          },
+          {
+            "href": "https://dipositpre.ub.edu/server/api/core/communities/efdba6f1-77c9-4e6f-b224-44ac703837f5"
+          }
+        ]
+      },
+      "page": [
+        {
+          "archivedItemsCount": -1,
+          "_links": {
+            "collections": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/4130d4c1-9d7d-46c3-8495-e7ab23bf0ff3/collections"
+            },
+            "logo": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/4130d4c1-9d7d-46c3-8495-e7ab23bf0ff3/logo"
+            },
+            "subcommunities": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/4130d4c1-9d7d-46c3-8495-e7ab23bf0ff3/subcommunities"
+            },
+            "parentCommunity": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/4130d4c1-9d7d-46c3-8495-e7ab23bf0ff3/parentCommunity"
+            },
+            "adminGroup": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/4130d4c1-9d7d-46c3-8495-e7ab23bf0ff3/adminGroup"
+            },
+            "self": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/4130d4c1-9d7d-46c3-8495-e7ab23bf0ff3"
+            }
+          },
+          "_name": "Comunitat educativa",
+          "id": "4130d4c1-9d7d-46c3-8495-e7ab23bf0ff3",
+          "uuid": "4130d4c1-9d7d-46c3-8495-e7ab23bf0ff3",
+          "type": "community",
+          "metadata": {
+            "dc.identifier.uri": [
+              {
+                "uuid": "0c94a60a-e5c5-4c00-8b59-69bcb1fd6fc9",
+                "language": null,
+                "value": "https://dipositpre.ub.edu/handle/123456789/220244",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ],
+            "dc.title": [
+              {
+                "uuid": "4e41e18f-9834-45cf-a83c-ac8bf395d853",
+                "language": null,
+                "value": "Comunitat educativa",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ]
+          }
+        },
+        {
+          "archivedItemsCount": -1,
+          "_links": {
+            "collections": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/be77a67a-6ed1-405a-bc27-a4d32fc65728/collections"
+            },
+            "logo": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/be77a67a-6ed1-405a-bc27-a4d32fc65728/logo"
+            },
+            "subcommunities": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/be77a67a-6ed1-405a-bc27-a4d32fc65728/subcommunities"
+            },
+            "parentCommunity": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/be77a67a-6ed1-405a-bc27-a4d32fc65728/parentCommunity"
+            },
+            "adminGroup": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/be77a67a-6ed1-405a-bc27-a4d32fc65728/adminGroup"
+            },
+            "self": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/be77a67a-6ed1-405a-bc27-a4d32fc65728"
+            }
+          },
+          "_name": "Dades",
+          "id": "be77a67a-6ed1-405a-bc27-a4d32fc65728",
+          "uuid": "be77a67a-6ed1-405a-bc27-a4d32fc65728",
+          "type": "community",
+          "metadata": {
+            "dc.description": [
+              {
+                "uuid": "29ea0f90-6ea2-4c80-8c14-d5c67abafaa8",
+                "language": null,
+                "value": "<p align=\"left\">Si sou membres UB i esteu interessats en publicar-hi, poseu-vos en contacte amb nosaltres enviant un missatge a <a href=\"mailto:dipositdigital@ub.edu\">dipositdigital@ub.edu</a>.</p>",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ],
+            "dc.description.abstract": [
+              {
+                "uuid": "3af1db92-f0ec-488b-8445-ca250bb48b44",
+                "language": null,
+                "value": "Dades primàries que acompanyen a documents publicats en les comunitats de Recerca i Institucional.",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ],
+            "dc.identifier.uri": [
+              {
+                "uuid": "7dfc0f00-493e-4e42-8e9d-5720eaaad1a3",
+                "language": null,
+                "value": "https://dipositpre.ub.edu/handle/2445/56364",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ],
+            "dc.title": [
+              {
+                "uuid": "8ab80196-a175-4b36-9616-8ba5d6bd6ffb",
+                "language": null,
+                "value": "Dades",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ]
+          }
+        },
+        {
+          "archivedItemsCount": -1,
+          "_links": {
+            "collections": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/ccec3a7d-26f7-4342-8f67-55af62faf65e/collections"
+            },
+            "logo": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/ccec3a7d-26f7-4342-8f67-55af62faf65e/logo"
+            },
+            "subcommunities": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/ccec3a7d-26f7-4342-8f67-55af62faf65e/subcommunities"
+            },
+            "parentCommunity": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/ccec3a7d-26f7-4342-8f67-55af62faf65e/parentCommunity"
+            },
+            "adminGroup": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/ccec3a7d-26f7-4342-8f67-55af62faf65e/adminGroup"
+            },
+            "self": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/ccec3a7d-26f7-4342-8f67-55af62faf65e"
+            }
+          },
+          "_name": "Docència",
+          "id": "ccec3a7d-26f7-4342-8f67-55af62faf65e",
+          "uuid": "ccec3a7d-26f7-4342-8f67-55af62faf65e",
+          "type": "community",
+          "metadata": {
+            "dc.description": [
+              {
+                "uuid": "b078da19-c77e-42d6-91ce-be3bd393d624",
+                "language": null,
+                "value": "<p align=\"left\"><font size=\"2\">Publicacions en accés obert derivades de l'activitat docent del professorat i documents informatius sobre docència publicats per les unitats administratives i acadèmiques de la Universitat de Barcelona.<br>\r\nEls materials docents de la UB a <a href=\"http://www.mdx.cat\">MDX</a> (Materials Docents en Xarxa - repositori cooperatiu (CBUC)) s'obtenen de les col·leccions de Docència del Dipòsit Digital de la UB.</font></p>",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ],
+            "dc.description.abstract": [
+              {
+                "uuid": "8574093d-948a-43bb-8224-9bc066fdca09",
+                "language": null,
+                "value": "Publicacions en accés obert derivades de l'activitat docent del professorat i documents informatius sobre docència publicats per les unitats administratives i acadèmiques de la Universitat.",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ],
+            "dc.identifier.uri": [
+              {
+                "uuid": "11ea15dc-4e3c-4d5f-bbd3-da4989907a1d",
+                "language": null,
+                "value": "https://dipositpre.ub.edu/handle/2445/1",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ],
+            "dc.title": [
+              {
+                "uuid": "4c78ef91-9acd-49ff-a737-f09171da1c51",
+                "language": null,
+                "value": "Docència",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ]
+          }
+        },
+        {
+          "archivedItemsCount": -1,
+          "_links": {
+            "collections": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/13e06f39-2934-4a8a-978b-207e4218492c/collections"
+            },
+            "logo": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/13e06f39-2934-4a8a-978b-207e4218492c/logo"
+            },
+            "subcommunities": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/13e06f39-2934-4a8a-978b-207e4218492c/subcommunities"
+            },
+            "parentCommunity": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/13e06f39-2934-4a8a-978b-207e4218492c/parentCommunity"
+            },
+            "adminGroup": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/13e06f39-2934-4a8a-978b-207e4218492c/adminGroup"
+            },
+            "self": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/13e06f39-2934-4a8a-978b-207e4218492c"
+            }
+          },
+          "_name": "Institucional",
+          "id": "13e06f39-2934-4a8a-978b-207e4218492c",
+          "uuid": "13e06f39-2934-4a8a-978b-207e4218492c",
+          "type": "community",
+          "metadata": {
+            "dc.description": [
+              {
+                "uuid": "8edfc3df-8e9a-4a94-9582-5b101498a319",
+                "language": null,
+                "value": "<p align=\"left\">Si sou membres UB i esteu interessats en publicar-hi, envieu un missatge a l'adreça <a href=\"mailto:dipositdigital@ub.edu\">dipositdigital@ub.edu</a>.</p>",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ],
+            "dc.description.abstract": [
+              {
+                "uuid": "33479685-7c54-4718-bad8-b6060ae93d75",
+                "language": null,
+                "value": "Documentació institucional i/o administrativa de diferents òrgans de govern i gestió de la Universitat. Documentació de les Facultats",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ],
+            "dc.identifier.uri": [
+              {
+                "uuid": "dfd57ff5-7c87-42d3-b93f-7418ea9f4fdb",
+                "language": null,
+                "value": "https://dipositpre.ub.edu/handle/2445/41",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ],
+            "dc.title": [
+              {
+                "uuid": "9f32046a-455c-4a6f-bfb3-dda9ed708b82",
+                "language": null,
+                "value": "Institucional",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ]
+          }
+        },
+        {
+          "archivedItemsCount": -1,
+          "_links": {
+            "collections": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/efdba6f1-77c9-4e6f-b224-44ac703837f5/collections"
+            },
+            "logo": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/efdba6f1-77c9-4e6f-b224-44ac703837f5/logo"
+            },
+            "subcommunities": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/efdba6f1-77c9-4e6f-b224-44ac703837f5/subcommunities"
+            },
+            "parentCommunity": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/efdba6f1-77c9-4e6f-b224-44ac703837f5/parentCommunity"
+            },
+            "adminGroup": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/efdba6f1-77c9-4e6f-b224-44ac703837f5/adminGroup"
+            },
+            "self": {
+              "href": "https://dipositpre.ub.edu/server/api/core/communities/efdba6f1-77c9-4e6f-b224-44ac703837f5"
+            }
+          },
+          "_name": "Mediateca",
+          "id": "efdba6f1-77c9-4e6f-b224-44ac703837f5",
+          "uuid": "efdba6f1-77c9-4e6f-b224-44ac703837f5",
+          "type": "community",
+          "metadata": {
+            "dc.description": [
+              {
+                "uuid": "ef225103-f0c1-4cdb-97a7-c720876da66a",
+                "language": null,
+                "value": "<p align=\"left\">Si sou membres UB i esteu interessats en publicar-hi, poseu-vos en contacte amb nosaltres enviant un missatge a <a href=\"mailto:dipositdigital@ub.edu\">dipositdigital@ub.edu</a>.</p>",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ],
+            "dc.description.abstract": [
+              {
+                "uuid": "4d85853f-5a88-4717-905e-0e0c2c3e7923",
+                "language": null,
+                "value": "Documents audiovisuals.",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ],
+            "dc.identifier.uri": [
+              {
+                "uuid": "a51f3266-6ac8-4f6b-98aa-407e04989f8c",
+                "language": null,
+                "value": "https://dipositpre.ub.edu/handle/2445/5221",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ],
+            "dc.title": [
+              {
+                "uuid": "868039fe-da6d-4fcf-9805-99188746159b",
+                "language": null,
+                "value": "Mediateca",
+                "place": 0,
+                "authority": null,
+                "confidence": -1
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "statusCode": 200
+  }
+  
