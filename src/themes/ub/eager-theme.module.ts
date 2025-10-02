@@ -78,6 +78,9 @@ import { CitationExportComponent } from './app/item-page/simple/field-components
 // oriol - 20250925 - export json i mets
 import { ItemPageExportFieldComponent } from './app/item-page/simple/field-components/specific-field/export/item-page-export-field.component';
 
+// oriol - 20251002 - types
+import { ItemPageTypeFieldComponent } from './app/item-page/simple/field-components/specific-field/type/item-page-type-field.component';
+
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
@@ -126,6 +129,9 @@ CitationExportComponent,
 
 // oriol - 20250925 - export json i mets
 ItemPageExportFieldComponent,
+
+// oriol - 20251002 - types
+ItemPageTypeFieldComponent,
 ];
 
 @NgModule({

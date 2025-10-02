@@ -17,7 +17,10 @@
         <div class="card">
             <div class="card-body">
         <a [href]="getCommunityLink(community)">
+            <div class="community-card">
                 <h2>{{getCommunityTitle(community)}}</h2>
+                <div class="community-description">{{getCommunityDescription(community)}}</div>
+            </div>
         </a>
             </div>
         </div>
@@ -49,7 +52,7 @@
   </div>
   <ds-error *ngIf="communitiesRD?.hasFailed " message="{{'error.top-level-communities' | translate}}"></ds-error>
   <ds-loading *ngIf="communitiesRD?.isLoading " message="{{'loading.top-level-communities' | translate}}"></ds-loading>
-  
+
 
 <!--
 <div class="row">
@@ -60,6 +63,6 @@
             </div>
         </div>
     </div>
-</div>  
+</div>
 -->
 </ng-container>

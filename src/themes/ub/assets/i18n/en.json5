@@ -52,4 +52,22 @@
   "item.page.use_identifier": "Please use this identifier to cite or link to this item",
   "item.page.export": "Export",
 
+  "item.page.type": "Document type",
+  "item.page.type.article": "Article",
+  "item.page.type.bachelorthesis": "Bachelor thesis",
+  "item.page.type.masterthesis": "Master thesis",
+  "item.page.type.doctoralthesis": "Doctoral thesis",
+  "item.page.type.book": "Book",
+  "item.page.type.bookpart": "Book part",
+  "item.page.type.review": "Review",
+  "item.page.type.conferenceobject": "Conference object",
+  "item.page.type.lecture": "Lecture",
+  "item.page.type.workingpaper": "Working paper",
+  "item.page.type.preprint": "Preprint",
+  "item.page.type.report": "Report",
+  "item.page.type.annotation": "Annotation",
+  "item.page.type.contributiontoperiodical": "Contribution to periodical",
+  "item.page.type.patent": "Patent",
+  "item.page.type.other": "Other",
+
 }

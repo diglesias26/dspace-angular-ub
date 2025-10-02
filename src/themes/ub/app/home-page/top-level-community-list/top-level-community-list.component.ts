@@ -33,7 +33,13 @@ getCommunityLink(community: any) {
   return '/communities/' + uuid;
 }
 
-
-
+getCommunityDescription(community: any) {
+  let description = community.metadata['dc.description.abstract'] ? community.metadata['dc.description.abstract'][0] : null;
+  // if no description, return an empty string
+  if (!description) {
+    return '';
+  }
+  return description.value;
 }
 
+}

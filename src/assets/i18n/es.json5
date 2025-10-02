@@ -5267,4 +5267,38 @@
   "item.page.use_identifier": "Por favor, use este identificador para citar o enlazar este documento",
 
   "item.page.export": "Exportar",
+
+  "item.page.type": "Tipo de documento",
+
+  "item.page.type.article": "Artículo",
+
+  "item.page.type.bachelorthesis": "Trabajo de fin de grado",
+
+  "item.page.type.masterthesis": "Trabajo de fin de máster",
+
+  "item.page.type.doctoralthesis": "Tesis",
+
+  "item.page.type.book": "Libro",
+
+  "item.page.type.bookpart": "Parte del libro",
+
+  "item.page.type.review": "Reseña",
+
+  "item.page.type.conferenceobject": "Objeto de conferencia",
+
+  "item.page.type.lecture": "Conferencia",
+
+  "item.page.type.workingpaper": "Documento de trabajo",
+
+  "item.page.type.preprint": "Prepublicación",
+
+  "item.page.type.report": "Informe",
+
+  "item.page.type.annotation": "Anotación",
+
+  "item.page.type.contributiontoperiodical": "Contribución a publicación periódica",
+
+  "item.page.type.patent": "Patente",
+
+  "item.page.type.other": "Otro",
 }

@@ -19,8 +19,8 @@
                 }
                 &:nth-child(6) .card{
                     background-color: #f7d6e0; // pale pink
-                }      
-                */   
+                }
+                */
                 // Use bolder, more vibrant but still pleasant colors for each card
                 &:nth-child(1) .card:hover .card-body{
                     background-color: #ffd600; // bold yellow
@@ -45,7 +45,7 @@
                 &:nth-child(6) .card:hover .card-body{
                     background-color: #fd79a8; // bold pink
                     color: #fff;
-                }       
+                }
                 .card {
                     &:hover, &:focus-within {
                         transform: translateY(-8px) scale(1.04);
@@ -77,7 +77,7 @@
                             height: 100%;
                             position: relative;
                         }
-
+/*
                         h2 {
                             font-size: 1.2rem;
                             font-weight: 600;
@@ -89,6 +89,30 @@
                             //background: rgba(255,255,255,0.7); // subtle background for readability
                             padding: 0.25rem 0.5rem;
                             border-radius: 0.5rem;
+                        }
+*/
+                        .community-card {
+                            margin: 0;
+                            position: absolute;
+                            // bottom: 0.5rem;
+                            right: 0.75rem;
+                            padding: 0.25rem 0.5rem;
+                            // background: rgba(255,255,255,0.7); // subtle background for readability
+                            h2 {
+                                font-size: 1.2rem;
+                                font-weight: 600;
+                                margin: 1rem;
+                                text-align: left;
+                            }
+                            .community-description {
+                                padding: 1rem;
+                                font-size: 0.9rem;
+                                margin-top: 0.25rem;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                            }
                         }
                     }
 
