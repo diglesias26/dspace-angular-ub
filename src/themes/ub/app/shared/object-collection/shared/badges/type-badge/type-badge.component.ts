@@ -47,19 +47,15 @@ export class TypeBadgeComponent extends BaseComponent {
   }
 
   getType() {
-    let type = this.object?.firstMetadataValue('dc.type');
-    // if no type, return an empty string
-    if (!type) {
-      return this.prefix + 'other';
+    for (const type of this.object.allMetadata('dc.type')) {
+      let parts = type.value.split('/');
+      let last = parts[parts.length - 1];
+      last = last.toLowerCase();
+      if (this.types.includes(last)) {
+        return this.prefix + last;
+      }
     }
-    let parts = type.split('/');
-    type = parts[parts.length - 1];
-    type = type.toLowerCase();
-    if (!this.types.includes(type)) {
-      type = 'other';
-    }
-
-    return this.prefix + type;
+    return this.prefix + 'other';
   }
 
 }

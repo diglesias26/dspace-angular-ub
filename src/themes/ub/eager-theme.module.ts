@@ -75,11 +75,14 @@ import { ItemPageCCrightsFieldComponent } from './app/item-page/simple/field-com
 // oriol - 20250728 - citation export
 import { CitationExportComponent } from './app/item-page/simple/field-components/specific-field/citation-export/citation-export.component';
 
-// oriol - 20250925 - export json i mets
+// oriol i miquel - 20250925 - export json i mets
 import { ItemPageExportFieldComponent } from './app/item-page/simple/field-components/specific-field/export/item-page-export-field.component';
 
-// oriol - 20251002 - types
+// oriol i miquel - 20251002 - types
 import { ItemPageTypeFieldComponent } from './app/item-page/simple/field-components/specific-field/type/item-page-type-field.component';
+
+// oriol i miquel - 20251002 - types
+import { ItemPageVersionFieldComponent } from './app/item-page/simple/field-components/specific-field/version/item-page-version-field.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -119,19 +122,23 @@ const DECLARATIONS = [
   EditCommunitySelectorComponent,
   EditItemSelectorComponent,
   LogInComponent,
-//  LangSwitchComponent,
-// oriol - 20240426 - intentant crear nou component
-ItemPageOrcidFieldComponent,
-ItemPageCCrightsFieldComponent,
-// oriol - 20250728 - citation export
-CitationExportComponent,
-// end oriol - 20250728 - citation export
 
-// oriol - 20250925 - export json i mets
-ItemPageExportFieldComponent,
+  //  LangSwitchComponent,
+  // oriol - 20240426 - intentant crear nou component
+  ItemPageOrcidFieldComponent,
+  ItemPageCCrightsFieldComponent,
+  // oriol - 20250728 - citation export
+  CitationExportComponent,
+  // end oriol - 20250728 - citation export
 
-// oriol - 20251002 - types
-ItemPageTypeFieldComponent,
+  // oriol i miquel - 20250925 - export json i mets
+  ItemPageExportFieldComponent,
+
+  // oriol i miquel - 20251002 - types
+  ItemPageTypeFieldComponent,
+
+  // oriol i miquel - 20251002 - types
+  ItemPageVersionFieldComponent,
 ];
 
 @NgModule({

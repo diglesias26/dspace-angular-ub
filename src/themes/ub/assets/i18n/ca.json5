@@ -432,6 +432,13 @@
   "item.page.type.patent": "Patent",
   "item.page.type.other": "Altres",
 
+  "item.page.version": "Versió",
+  "item.page.version.publishedversion": "Versió publicada",
+  "item.page.version.acceptedversion": "Versió acceptada",
+  "item.page.version.submittedversion": "Versió enviada",
+  "item.page.version.draftversion": "Versió esborrany",
+  "item.page.version.otherversion": "Altra versió",
+
   "item.preview.dc.publisher": "Editorial:",
   "item.preview.oairecerif.identifier.url": "URL",
   "item.preview.organization.address.addressCountry": "País",

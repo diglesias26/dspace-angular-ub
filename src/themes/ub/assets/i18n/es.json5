@@ -80,4 +80,11 @@
   "item.page.type.patent": "Patente",
   "item.page.type.other": "Otro",
 
+  "item.page.version": "Versión",
+  "item.page.version.publishedversion": "Versión publicada",
+  "item.page.version.acceptedversion": "Versión aceptada",
+  "item.page.version.submittedversion": "Versión enviada",
+  "item.page.version.draftversion": "Versión borrador",
+  "item.page.version.otherversion": "Otra versión",
+
 }
