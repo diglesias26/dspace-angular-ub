@@ -1,15 +1,14 @@
+<div class="simple-view-share">
 <h4 class="simple-view-element-header">{{ label }}</h4>
 
 <!-- share button -->
  <div class="sharebox">
 
-    <h3>{{label}}</h3>
-
     <div class="row">
 
     <!-- X -->
       <div class="col-2 ng-star-inserted">
-        <a 
+        <a
         (click)="onXClick()"
          href="#" class="eventX">
           <i class="fa-brands fa-2x fa-x-twitter text-dark"></i>
@@ -18,7 +17,7 @@
 
       <!-- bluesky -->
       <div class="col-2 ng-star-inserted">
-        <a 
+        <a
         (click)="onBlueskyClick()"
          href="#" class="eventBluesky">
           <i class="fa-brands fa-2x fa-bluesky text-dark"></i>
@@ -27,36 +26,36 @@
 
   <!-- linkedin -->
   <div class="col-2 ng-star-inserted">
-    <a 
+    <a
     (click)="onLinkedinClick()"
          href="#" class="eventLinkedin">
       <i class="fa-brands fa-2x fa-linkedin text-dark"></i>
     </a>
   </div>
-  
+
   <!-- facebook -->
   <div class="col-2 ng-star-inserted">
     <a href="#" class="eventFacebook">
       <i class="fa-brands fa-2x fa-facebook text-dark"></i>
     </a>
   </div>
-  
+
   <!-- telegram -->
   <div class="col-2 ng-star-inserted">
     <a href="#" class="eventTelegram">
       <i class="fa-brands fa-2x fa-telegram text-dark"></i>
     </a>
   </div>
-   
+
     <!-- whatsapp -->
     <div class="col-2 ng-star-inserted">
-      <a 
+      <a
       (click)="onWhatsappClick()"
          href="#" class="eventWhatsapp">
         <i class="fa-brands fa-2x fa-whatsapp text-dark"></i>
       </a>
     </div>
-  
+
   <!-- mendeley -->
     <div class="col-2 ng-star-inserted">
       <a target="_blank" [href]="getMendeleyUrl()">
@@ -65,7 +64,7 @@
     </div>
     <!-- print -->
     <div class="col-2 ng-star-inserted">
-      <a 
+      <a
         (click)="onPrintClick()"
          href="#" class="print">
         <i class="fa-2x fa-solid fa-print text-dark"></i>
@@ -74,4 +73,5 @@
 
   </div>
 
+</div>
 </div>
