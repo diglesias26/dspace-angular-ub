@@ -84,6 +84,8 @@ import { ItemPageTypeFieldComponent } from './app/item-page/simple/field-compone
 // oriol i miquel - 20251002 - types
 import { ItemPageVersionFieldComponent } from './app/item-page/simple/field-components/specific-field/version/item-page-version-field.component';
 
+// oriol - 20250925 - share field
+import { ItemPageShareFieldComponent } from './app/item-page/simple/field-components/specific-field/share/item-page-share-field.component';
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
@@ -139,6 +141,8 @@ const DECLARATIONS = [
 
   // oriol i miquel - 20251002 - types
   ItemPageVersionFieldComponent,
+// oriol - 20250925 - share field
+ItemPageShareFieldComponent,
 ];
 
 @NgModule({
