@@ -162,6 +162,8 @@ import {UserMenuComponent} from './app/shared/auth-nav-menu/user-menu/user-menu.
 import { BrowseByComponent } from './app/shared/browse-by/browse-by.component';
 import { RegisterEmailFormComponent } from './app/register-email-form/register-email-form.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+// oriol - 20251016 - statistics table
+import { EagerThemeModule as UBEagerThemeModule } from './eager-theme.module';
 
 //
 // oriol orcid
@@ -319,6 +321,8 @@ const DECLARATIONS = [
     FormModule,
     RequestCopyModule,
     NgxSkeletonLoaderModule
+    // oriol - 20251016 - statistics table
+    , UBEagerThemeModule
   ],
   declarations: DECLARATIONS,
   exports: [

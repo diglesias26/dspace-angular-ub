@@ -86,6 +86,10 @@ import { ItemPageVersionFieldComponent } from './app/item-page/simple/field-comp
 
 // oriol - 20250925 - share field
 import { ItemPageShareFieldComponent } from './app/item-page/simple/field-components/specific-field/share/item-page-share-field.component';
+
+// oriol - 20251016 - statistics table
+import { StatisticsTable2Component } from './app/statistics-page/statistics-table/statistics-table2.component';
+
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
@@ -143,6 +147,9 @@ const DECLARATIONS = [
   ItemPageVersionFieldComponent,
 // oriol - 20250925 - share field
 ItemPageShareFieldComponent,
+
+// oriol - 20251016 - statistics table
+StatisticsTable2Component,
 ];
 
 @NgModule({
@@ -165,6 +172,11 @@ ItemPageShareFieldComponent,
   providers: [
     ...ENTRY_COMPONENTS.map((component) => ({provide: component}))
   ],
+  exports: [
+    // oriol - 20251016 - statistics table
+    // Export components for accessing reports
+    StatisticsTable2Component,
+  ]
 })
 /**
  * This module is included in the main bundle that gets downloaded at first page load. So it should
