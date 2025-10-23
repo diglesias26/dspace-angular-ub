@@ -58,7 +58,7 @@
 
                     .card-body {
                         // Make the card body a perfect square using aspect-ratio
-                        aspect-ratio: 1 / .8;
+                        aspect-ratio: 1 / .5;
                         width: 100%;
                         min-width: 0;
                         min-height: 0;
@@ -79,7 +79,7 @@
                         }
                         .community-card {
                             margin: 0;
-                            position: absolute;
+                            // position: absolute;
                             // bottom: 0.5rem;
                             right: 0.75rem;
                             padding: 0.25rem 0.5rem;
@@ -88,7 +88,7 @@
                                 font-size: 1.2rem;
                                 font-weight: 600;
                                 margin: 1rem 1rem 0 1rem;
-                                text-align: left;
+                                // text-align: left;
                             }
                             .community-description {
                                 padding: 0 1rem 1rem 1rem;

@@ -5266,7 +5266,7 @@
 
   "item.page.use_identifier": "Por favor, use este identificador para citar o enlazar este documento",
 
-  "item.page.export": "Exportar",
+  "item.page.export": "Exportar metadatos",
 
   "item.page.type": "Tipo de documento",
 
@@ -5314,5 +5314,5 @@
 
   "item.page.version.otherversion": "Otra versión",
 
-  "item.page.share": "Compartir",
+  "item.page.share": "Compartir registro",
 }

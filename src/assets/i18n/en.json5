@@ -5452,7 +5452,7 @@
 
   "item.page.use_identifier": "Please use this identifier to cite or link to this item",
 
-  "item.page.export": "Export",
+  "item.page.export": "Export metadata",
 
   "item.page.type": "Document type",
 
@@ -5500,5 +5500,5 @@
 
   "item.page.version.otherversion": "Other version",
 
-  "item.page.share": "Share",
+  "item.page.share": "Share record",
 }

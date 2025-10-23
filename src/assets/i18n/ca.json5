@@ -6926,7 +6926,7 @@
 
   "item.page.use_identifier": "Si us plau utilitzeu sempre aquest identificador per citar o enllaçar aquest document",
 
-  "item.page.export": "Exportar",
+  "item.page.export": "Exportar metadades",
 
   "item.page.type": "Tipus de document",
 
@@ -6974,5 +6974,5 @@
 
   "item.page.version.otherversion": "Altra versió",
 
-  "item.page.share": "Compartir",
+  "item.page.share": "Compartir registre",
 }

@@ -50,7 +50,7 @@
   "item.page.date": "Publication date",
   "item.page.ccrights": "Publication license",
   "item.page.use_identifier": "Please use this identifier to cite or link to this item",
-  "item.page.export": "Export",
+  "item.page.export": "Export metadata",
 
   "item.page.type": "Document type",
   "item.page.type.article": "Article",
@@ -76,6 +76,6 @@
   "item.page.version.submittedversion": "Submitted version",
   "item.page.version.draftversion": "Draft version",
   "item.page.version.otherversion": "Other version",
-  "item.page.share": "Share",
+  "item.page.share": "Share record",
 
 }
