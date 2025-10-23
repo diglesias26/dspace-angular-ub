@@ -1,11 +1,5 @@
 <div class="container">
 
-    <!-- oriol prova codi fora tema
-    <h1>prova des de tema</h1>
-    <div>
-    <pre>{{ reports$ | async | json }}</pre>
-    </div>
-    --->
     <ng-container *ngVar="(scope$ | async) as scope">
       <h1 *ngIf="scope"
           class="header"
@@ -13,13 +7,13 @@
         {{ 'statistics.header' | translate: { scope: getName(scope) } }}
       </h1>
     </ng-container>
-  
+
     <ng-container *ngVar="reports$ | async as reports">
-  
+
       <ng-container *ngIf="!reports">
         <ds-themed-loading></ds-themed-loading>
       </ng-container>
-  
+
       <ng-container *ngIf="reports">
         <ds-statistics-table2 *ngFor="let report of reports"
                              [report]="report"
@@ -29,7 +23,7 @@
           {{ 'statistics.page.no-data' | translate }}
         </div>
       </ng-container>
-  
+
     </ng-container>
-  
+
   </div>
