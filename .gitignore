@@ -43,9 +43,10 @@ junit.xml
 /src/mirador-viewer/config.local.js
 
 # fitxers de backup
-<<<<<<< HEAD
-=======
-.gitignore
->>>>>>> 8ade6713a (modificació formulari de cerca global)
+*back
 *~
 
+# logs .devcontainer
+.dspace-angular-dev.log
+.dspace-angular-dev.pid
+.dspace-angular-ready.log
