@@ -440,6 +440,9 @@
   "item.page.version.otherversion": "Altra versió",
   "item.page.share": "Compartir registre",
 
+  "item.page.subject.classification": "Matèria",
+  "item.page.subject.other": "Subject",
+
   "item.preview.dc.publisher": "Editorial:",
   "item.preview.oairecerif.identifier.url": "URL",
   "item.preview.organization.address.addressCountry": "País",

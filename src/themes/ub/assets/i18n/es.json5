@@ -86,8 +86,9 @@
   "item.page.version.submittedversion": "Versión enviada",
   "item.page.version.draftversion": "Versión borrador",
   "item.page.version.otherversion": "Otra versión",
-
   "item.page.share": "Compartir registro",
 
+  "item.page.subject.classification": "Matèria",
+  "item.page.subject.other": "Subject",
 
 }

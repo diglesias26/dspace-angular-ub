@@ -5501,4 +5501,8 @@
   "item.page.version.otherversion": "Other version",
 
   "item.page.share": "Share record",
+
+  "item.page.subject.classification": "Matèria",
+
+  "item.page.subject.other": "Subject",
 }

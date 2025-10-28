@@ -126,10 +126,24 @@
       [label]="'item.page.description'">
     </ds-generic-item-page-field>
 
+    <!--
     <ds-generic-item-page-field [item]="object"
         [fields]="['dc.subject', 'dc.subject.classification', 'dc.subject.other']"
         [separator]="', '"
         [label]="'item.page.subject'">
+    </ds-generic-item-page-field>
+  -->
+
+    <ds-generic-item-page-field [item]="object"
+        [fields]="['dc.subject.classification']"
+        [separator]="', '"
+        [label]="'item.page.subject.classification'">
+    </ds-generic-item-page-field>
+
+    <ds-generic-item-page-field [item]="object"
+        [fields]="['dc.subject.other']"
+        [separator]="', '"
+        [label]="'item.page.subject.other'">
     </ds-generic-item-page-field>
 
     <ds-generic-item-page-field [item]="object"
