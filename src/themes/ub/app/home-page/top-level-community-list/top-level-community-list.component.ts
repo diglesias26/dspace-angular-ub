@@ -42,4 +42,18 @@ getCommunityDescription(community: any) {
   return description.value;
 }
 
+getCommunityLogo(community: any) {
+  switch (community['_name']) {
+    case 'Dades': return '/assets/ub/images/ico-dades.png';
+    case 'Docència': return '/assets/ub/images/ico-docencia.png';
+    case 'Institucional': return '/assets/ub/images/ico-institucional.png';
+    case 'Mediateca': return '/assets/ub/images/ico-mediateca.png';
+    case 'Programari': return '/assets/ub/images/ico-programari.png';
+    case 'Recerca': return '/assets/ub/images/ico-recerca.png';
+    case 'Tesis Doctorals': return '/assets/ub/images/ico-tesis-doctorals.png';
+    case 'Treballs de l\'alumnat': return '/assets/ub/images/ico-treballs-alumnat.png';
+    default: return '';
+  }
+}
+
 }

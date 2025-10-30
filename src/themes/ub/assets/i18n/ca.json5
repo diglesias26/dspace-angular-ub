@@ -440,8 +440,8 @@
   "item.page.version.otherversion": "Altra versió",
   "item.page.share": "Compartir registre",
 
-  "item.page.subject.classification": "Matèria",
-  "item.page.subject.other": "Subject",
+  "item.page.subject.classification": "Matèries",
+  "item.page.subject.other": "Matèries (anglès)",
 
   "item.preview.dc.publisher": "Editorial:",
   "item.preview.oairecerif.identifier.url": "URL",
