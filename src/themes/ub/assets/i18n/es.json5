@@ -91,4 +91,6 @@
   "item.page.subject.classification": "Materias",
   "item.page.subject.other": "Materias (inglés)",
 
+  "browse.thesaurusub": "El DDUB utiliza las materias del ",
+  "browse.thesaurusub.url": "https://vocabularis.crai.ub.edu/es/thub",
 }

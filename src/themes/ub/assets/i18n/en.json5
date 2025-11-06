@@ -81,4 +81,7 @@
   "item.page.subject.classification": "Subject",
   "item.page.subject.other": "Subject (English)",
 
+  "browse.thesaurusub": "The DDUB uses the subjects of the ",
+  "browse.thesaurusub.url": "https://vocabularis.crai.ub.edu/en/thub",
+
 }

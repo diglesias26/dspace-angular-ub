@@ -880,7 +880,7 @@
 
   "browse.comcol.head": "Examinar",
 
-  "browse.empty": "No hi ha ítems per mostrar.",
+  "browse.empty": "No hi ha ítems per mostrar",
 
   "browse.metadata.author": "Autor",
 
@@ -6979,4 +6979,8 @@
   "item.page.subject.classification": "Matèries",
 
   "item.page.subject.other": "Matèries (anglès)",
+
+  "browse.thesaurusub": "El DDUB utilitza les matèries del ",
+
+  "browse.thesaurusub.url": "https://vocabularis.crai.ub.edu/ca/thub",
 }
