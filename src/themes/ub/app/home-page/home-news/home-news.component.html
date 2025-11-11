@@ -6,14 +6,9 @@
             <h1 class="display-3">Dipòsit Digital de la Universitat de Barcelona</h1>
 <!--
             <p class="lead">{{ 'home.news.text' | translate  | htmlSafe }}</p>
--->
-<!--
             <p class="lead" data-ng-bind-html="'home.news.text' | translate"></p>
--->
             <p class="lead" [innerHtml]="'home.news.text' | translate"></p>
-<!--
             <p class="lead" translate="home.news.text"></p>
-
             <p class="lead">{{ m }}</p>
 -->
           </div>
@@ -28,7 +23,7 @@
       <source type="image/jpg" srcset="assets/dspace/images/banner.jpg 2000w, assets/dspace/images/banner-half.jpg 1200w, assets/dspace/images/banner-tall.jpg 768w">
       <img alt="" [src]="'assets/dspace/images/banner.jpg'"/>
 -->
-<img alt="" [src]="'assets/ub/images/FonsDD.jpg'"/>
+<img alt="" [src]="'assets/ub/images/fons.png'"/>
       <!-- without the []="''" Firefox downloads both the fallback and the resolved image -->
 
     </picture>

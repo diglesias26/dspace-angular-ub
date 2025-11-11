@@ -1,56 +1,65 @@
+#summary {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0 1rem -1rem 1rem;
+}
+
 .row{
         div{
                 /*
+                */
                 // Use a palette of harmonious pastel colors for a pleasant look
                 &:nth-child(1) .card{
-                    background-color: #fceabb; // soft yellow
+                    background-color: #4ba173;
                 }
                 &:nth-child(2) .card{
-                    background-color: #e0c3fc; // light lavender
+                    background-color: #0c8261;
                 }
                 &:nth-child(3) .card{
-                    background-color: #b5ead7; // mint green
+                    background-color: #0b6c55;
                 }
                 &:nth-child(4) .card{
-                    background-color: #ffb7b2; // light coral
+                    background-color: #267a6f;
                 }
                 &:nth-child(5) .card{
-                    background-color: #b2cefe; // soft blue
+                    background-color: #418071;
                 }
                 &:nth-child(6) .card{
-                    background-color: #f7d6e0; // pale pink
+                    background-color: #4f9f79;
                 }
-                */
+                &:nth-child(7) .card{
+                    background-color: #0d8753;
+                }
+                &:nth-child(8) .card{
+                    background-color: #116151;
+                }
                 // Use bolder, more vibrant but still pleasant colors for each card
+                /*
                 &:nth-child(1) .card:hover .card-body{
                     background-color: #ffd600; // bold yellow
-                    color: #000 !important;
                 }
                 &:nth-child(2) .card:hover .card-body{
                     background-color: #a259f7; // vibrant purple
-                    color: #fff !important;
                 }
                 &:nth-child(3) .card:hover .card-body{
                     background-color: #00b894; // strong teal green
-                    color: #fff;
                 }
                 &:nth-child(4) .card:hover .card-body{
                     background-color: #ff7675; // vivid coral red
-                    color: #fff;
                 }
                 &:nth-child(5) .card:hover .card-body{
                     background-color: #0984e3; // bright blue
-                    color: #fff !important;
                 }
                 &:nth-child(6) .card:hover .card-body{
                     background-color: #fd79a8; // bold pink
-                    color: #fff;
                 }
+                */
                 .card {
                     &:hover, &:focus-within {
                         transform: translateY(-8px) scale(1.04);
                         box-shadow: 0 8px 24px rgba(0,0,0,0.15);
                         transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+                        background-color: #0a3739;
                     }
 
                     margin-bottom: 1rem;
@@ -67,7 +76,7 @@
                         align-items: stretch;
                         justify-content: stretch;
                         padding: 0;
-                        background-color: #b9b8b4;
+                        // background-color: #b9b8b4;
 
                         a {
                             text-decoration: none;
@@ -87,8 +96,9 @@
                             // background: rgba(255,255,255,0.7); // subtle background for readability
                             h2 {
                                 font-size: 1.2rem;
-                                font-weight: 600;
+                                font-weight: 555;
                                 margin: 0;
+                                color: #fff;
                                 // text-align: left;
                             }
                             .community-description {
