@@ -1,0 +1,11 @@
+.btn-verd {
+    background-color: #0a3739;
+    border-color: #0a3739;
+    color: #ffffff;
+}
+
+.btn-verd {
+    &:hover, &:focus-within {
+        background-color: #0a3739;
+    }
+}

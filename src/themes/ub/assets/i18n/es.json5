@@ -12,6 +12,7 @@
   // text news home
   //"home.news.text": "El <strong>Dipòsit Digital de la Universitat de Barcelona</strong> és el repositori institucional que conté en format digital les publicacions en accés obert derivades de l'activitat docent, investigadora i institucional del professorat i d'altres membres de la comunitat universitària. Els documents d'aquest repositori també es recullen en els repositoris cooperatius de Catalunya segons el tipus de document: <a href=\"https://www.recercat.cat/\" target=\"_blank\">RECERCAT</a>, <a href=\"https://mdx.cat/\" target=\"_blank\">Materials Docents en Xarxa (MDX)</a> i <a href=\"https://tdx.cat/\" target=\"_blank\">Tesis Doctorals en Xarxa (TDX)</a>.",
   "home.news.text": "El Dipòsit Digital de la Universitat de Barcelona es el repositorio institucional que contiene en formato digital los materiales derivados de la actividad docente, investigadora e institucional de la comunidad universitaria.",
+  "home.news.text.top": "Recursos digitals produïts per la comunitat docent, investigadora i institucional de la Universitat de Barcelona",
   "menu.header.image.ublogo": "Universitat de Barcelona",
 
     // "login.form.oidc": "Log in with OIDC",
