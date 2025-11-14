@@ -17,39 +17,41 @@
 
 </video>
 <div class="buttons" *ngIf="medias?.length > 1">
-  <button
-    class="btn btn-primary previous"
-    [dsBtnDisabled]="currentIndex === 0"
-    (click)="prevMedia()"
-  >
-    {{ "media-viewer.previous" | translate }}
-  </button>
-
-  <button
-    class="btn btn-primary next"
-    [dsBtnDisabled]="currentIndex === medias.length - 1"
-    (click)="nextMedia()"
-  >
-    {{ "media-viewer.next" | translate }}
-  </button>
-  <div ngbDropdown class="d-inline-block">
-  <br/>
+  <table><tr><td>
     <button
-      class="btn btn-outline-primary playlist"
-      id="dropdownBasic1"
-      ngbDropdownToggle
+        class="btn btn-primary previous"
+        [dsBtnDisabled]="currentIndex === 0"
+        (click)="prevMedia()"
     >
-      {{ "media-viewer.playlist" | translate }}
+        {{ "media-viewer.previous" | translate }}
     </button>
-    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-      <button
-        ngbDropdownItem
-        *ngFor="let item of medias; index as indexOfelement"
-        class="list-element"
-        (click)="selectedMedia(indexOfelement)"
-      >
-        {{ dsoNameService.getName(item.bitstream) }}
-      </button>
+
+    <button
+        class="btn btn-primary next"
+        [dsBtnDisabled]="currentIndex === medias.length - 1"
+        (click)="nextMedia()"
+    >
+        {{ "media-viewer.next" | translate }}
+    </button>
+  </td></tr>
+  <tr><td>
+    <div ngbDropdown class="d-inline-block">
+        <button
+        class="btn btn-outline-primary playlist"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+        >
+        {{ "media-viewer.playlist" | translate }}
+        </button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button
+            ngbDropdownItem
+            *ngFor="let item of medias; index as indexOfelement"
+            class="list-element"
+            (click)="selectedMedia(indexOfelement)"
+        >
+            {{ dsoNameService.getName(item.bitstream) }}
+        </button>
     </div>
-  </div>
+  </td></tr></table>
 </div>
