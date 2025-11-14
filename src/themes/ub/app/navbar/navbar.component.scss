@@ -9,11 +9,20 @@
   }
 
   /** Mobile menu styling **/
+  /*
+  he de posar ', md' i no ', lg' perquè
+  quan la pantalla és menor que LG_MIN (992px) desapareix el menú i NO apareix el botó hamburguesa
+  el menú hamburguesa apareix quan la pantalla és menor que MD_MIN (768px)
+  això controla quan desapareix el menú, però quan apareix el botó hamburguesa
+  sembla que la mida de la pantalla que fa aparèixer el botó hamburguesa (MD_MIN) està fixat en una altre css
+  */
   @media screen and (max-width: map-get($grid-breakpoints, md)) {
     .navbar {
       width: 100vw;
       /* background-color: var(--bs-white); */
       background-color: $gray-200;
+      margin-top: 11px;
+      padding-top: 3px !important;
       position: absolute;
       overflow: hidden;
       height: 0;
@@ -34,6 +43,8 @@
   }
 
   /* TODO remove when https://github.com/twbs/bootstrap/issues/24726 is fixed */
+  /*
+  */
   .navbar-expand-md.navbar-container {
     @media screen and (max-width: map-get($grid-breakpoints, md)) {
       > .navbar-inner-container {

@@ -1,7 +1,9 @@
 #summary {
-    font-size: 1.1rem;
-    color: #333;
-    margin: 0 1rem -1rem 1rem;
+//    font-size: clamp(0.8rem, 2vw + 0.75rem, 1.5rem);
+    font-size: min(3vw, 1.1rem); /* Use 3vw, but never exceed 1.1rem */
+
+    color: #0a3739;
+    margin: 0 1rem -2rem 1rem;
 }
 
 .row{

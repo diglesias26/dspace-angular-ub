@@ -14,7 +14,8 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: top;
+        // clip-path: inset(0 0); /* 20% from top and bottom */
+        object-position: center;
       }
 
       .container {
