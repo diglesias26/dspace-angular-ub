@@ -1,13 +1,14 @@
 # The URL to the DSpace sitemaps
 # XML sitemap is listed first as it is preferred by most search engines
-Sitemap: <%= origin %>/sitemap_index.xml
-Sitemap: <%= origin %>/sitemap_index.html
+Sitemap: https://diposit.ub.edu/sitemap_index.xml
+Sitemap: https://diposit.ub.edu/sitemap_index.html
 
 ##########################
 # Default Access Group
 # (NOTE: blank lines are not allowable in a group record)
 ##########################
 User-agent: *
+Crawl-delay: 3
 # Disable access to Discovery search and filters; admin pages; processes; submission; workspace; workflow & profile page
 Disallow: /search
 Disallow: /admin/*
@@ -21,19 +22,19 @@ Disallow: /entities/*?f
 
 # Optionally uncomment the following line ONLY if sitemaps are working
 # and you have verified that your site is being indexed correctly.
-# Disallow: /browse/*
+Disallow: /browse/*
 #
 # If you have configured DSpace (Solr-based) Statistics to be publicly
 # accessible, then you may not want this content to be indexed
-# Disallow: /statistics
+Disallow: /statistics
 #
 # You also may wish to disallow access to the following paths, in order
 # to stop web spiders from accessing user-based content
-# Disallow: /contact
-# Disallow: /feedback
-# Disallow: /forgot
-# Disallow: /login
-# Disallow: /register
+Disallow: /contact
+Disallow: /feedback
+Disallow: /forgot
+Disallow: /login
+Disallow: /register
 
 
 ##############################
@@ -126,8 +127,8 @@ Disallow: /
 # If your own faculty is bringing down your dspace with recursive wget,
 # you can advise them to use the --wait option to set the delay between hits.
 #
-#User-agent: wget
-#Disallow: /
+User-agent: wget
+Disallow: /
 
 #
 # The 'grub' distributed client has been *very* poorly behaved.
