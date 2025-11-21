@@ -21,3 +21,10 @@ input#dc_subject {
  border-radius: .25rem;
  padding-left: 0.5rem;
 }
+
+ds-themed-file-download-link {
+  a {
+    display: block;
+    margin-top: 1rem;
+  }
+}
