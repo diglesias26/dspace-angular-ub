@@ -444,6 +444,8 @@
   "item.page.subject.classification": "Matèries",
   "item.page.subject.other": "Matèries (anglès)",
 
+  "item.embargo.until": "Document embargat fins el",
+
   "browse.thesaurusub": "El DDUB utilitza les matèries del ",
   "browse.thesaurusub.url": "https://vocabularis.crai.ub.edu/ca/thub",
 

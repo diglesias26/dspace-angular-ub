@@ -81,7 +81,7 @@ import { ItemPageExportFieldComponent } from './app/item-page/simple/field-compo
 // oriol i miquel - 20251002 - types
 import { ItemPageTypeFieldComponent } from './app/item-page/simple/field-components/specific-field/type/item-page-type-field.component';
 
-// oriol i miquel - 20251002 - types
+// oriol i miquel - 20251002 - versions
 import { ItemPageVersionFieldComponent } from './app/item-page/simple/field-components/specific-field/version/item-page-version-field.component';
 
 // oriol - 20250925 - share field
@@ -89,6 +89,9 @@ import { ItemPageShareFieldComponent } from './app/item-page/simple/field-compon
 
 // oriol - 20251016 - statistics table
 import { StatisticsTable2Component } from './app/statistics-page/statistics-table/statistics-table2.component';
+
+// miquel - 20251126 - embargo field
+import { ItemPageEmbargoFieldComponent } from './app/item-page/simple/field-components/specific-field/embargo/item-page-embargo-field.component';
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -145,11 +148,15 @@ const DECLARATIONS = [
 
   // oriol i miquel - 20251002 - types
   ItemPageVersionFieldComponent,
-// oriol - 20250925 - share field
-ItemPageShareFieldComponent,
 
-// oriol - 20251016 - statistics table
-StatisticsTable2Component,
+  // oriol - 20250925 - share field
+  ItemPageShareFieldComponent,
+
+  // oriol - 20251016 - statistics table
+  StatisticsTable2Component,
+
+  // miquel - 20251126 - embargo field
+  ItemPageEmbargoFieldComponent,
 ];
 
 @NgModule({

@@ -1,0 +1,4 @@
+<div *ngIf="getDateEmbargoLift()" class="simple-view-version">
+  <h4 class="simple-view-element-header">{{ label | translate }}</h4>
+  <span>{{ 'item.embargo.until' | translate }} {{ getDateEmbargoLift() }}</span>
+</div>

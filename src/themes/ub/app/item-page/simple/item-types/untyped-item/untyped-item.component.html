@@ -39,6 +39,11 @@
     <!-- files section -->
     <ds-themed-item-page-file-section [item]="object"></ds-themed-item-page-file-section>
 
+    <!-- dc.embargo.lift -->
+    <ds-item-page-embargo-field [item]="object"
+      [label]="'access-status.embargo.listelement.badge'">
+    </ds-item-page-embargo-field>
+
     <!-- dc.type -->
     <ds-item-page-type-field [item]="object" [label]="'item.page.type' | translate"></ds-item-page-type-field>
 
@@ -47,7 +52,6 @@
 
     <!-- date -->
     <ds-item-page-date-field [item]="object"></ds-item-page-date-field>
-
 
     <!-- ccrights image -->
     <ds-item-page-ccrights-field
@@ -66,12 +70,10 @@
       <a href="{{ object?.firstMetadataValue('dc.identifier.uri') }}">{{ object?.firstMetadataValue('dc.identifier.uri') }}</a>
     </div>
 
-
     <!-- ds-item-page-uri-field [item]="object"
         [fields]="['dc.identifier.uri']"
         [label]="'item.page.uri'">
     </ds-item-page-uri-field> -->
-
 
     <ds-themed-item-page-title-field [item]="object" class="mr-auto"></ds-themed-item-page-title-field>
     <ds-dso-edit-menu></ds-dso-edit-menu>
