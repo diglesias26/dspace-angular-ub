@@ -96,4 +96,7 @@
 
   "browse.thesaurusub": "El DDUB utiliza las materias del ",
   "browse.thesaurusub.url": "https://vocabularis.crai.ub.edu/es/thub",
+
+  "relationships.isAdvisorOf": "Director/Tutor",
+
 }

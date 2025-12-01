@@ -449,6 +449,8 @@
   "browse.thesaurusub": "El DDUB utilitza les matèries del ",
   "browse.thesaurusub.url": "https://vocabularis.crai.ub.edu/ca/thub",
 
+  "relationships.isAdvisorOf": "Director/Tutor",
+
   "item.preview.dc.publisher": "Editorial:",
   "item.preview.oairecerif.identifier.url": "URL",
   "item.preview.organization.address.addressCountry": "País",
