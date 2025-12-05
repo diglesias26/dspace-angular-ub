@@ -83,6 +83,8 @@
   "item.page.subject.classification": "Subject",
   "item.page.subject.other": "Subject (English)",
 
+  "item.page.relation.uri": "dc.relation.uri",
+
   "item.embargo.until": "Item embargoed until",
 
   "browse.thesaurusub": "The DDUB uses the subjects of the ",

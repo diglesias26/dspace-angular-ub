@@ -5517,4 +5517,6 @@
   "relationships.isAdvisorOf": "Director/Tutor",
 
   "item.page.ccrights.no-rights": "All rights reserved",
+
+  "item.page.relation.uri": "dc.relation.uri",
 }

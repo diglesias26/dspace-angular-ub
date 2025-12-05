@@ -93,6 +93,8 @@
   "item.page.subject.classification": "Materias",
   "item.page.subject.other": "Materias (inglés)",
 
+  "item.page.relation.uri": "dc.relation.uri",
+
   "item.embargo.until": "Documento embargado hasta el",
 
   "browse.thesaurusub": "El DDUB utiliza las materias del ",
