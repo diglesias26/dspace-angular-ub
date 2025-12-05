@@ -55,6 +55,10 @@ export class ItemPageCCrightsFieldComponent extends ItemPageUriFieldComponent {
    */
   @Input() rightsUri: string;
 
+  hasNoRightsUri(): boolean {
+    return !this.rightsUri || this.rightsUri.trim() === '';
+  }
+
   parseUri():string {
     if (this.rightsUri) {
       const uri = this.rightsUri.trim();

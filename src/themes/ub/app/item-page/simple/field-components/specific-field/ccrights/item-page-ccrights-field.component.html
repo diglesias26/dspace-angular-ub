@@ -1,6 +1,9 @@
-<h4  *ngIf="getImageSrc()" class="simple-view-element-header">{{ label }}</h4>
+
+<h4 *ngIf="getImageSrc()" class="simple-view-element-header">{{ label }}</h4>
 <div class="item-page-field">
   <a class="item-page-field-ccrights" [href]="rightsUri" target="_blank" [title]="rights">
     <img *ngIf="getImageSrc()" class="img-item-page-field-ccrights" [src]="getImageSrc()" [alt]="rights"/>
   </a>
 </div>
+
+<h4 *ngIf="hasNoRightsUri()" class="simple-view-element-header">{{ 'item.page.ccrights.no-rights' | translate }}</h4>

@@ -5329,4 +5329,6 @@
   "item.embargo.until": "Documento embargado hasta el",
 
   "relationships.isAdvisorOf": "Director/Tutor",
+
+  "item.page.ccrights.no-rights": "Todos los derechos reservados",
 }
