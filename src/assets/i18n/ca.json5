@@ -6993,4 +6993,28 @@
   "item.page.ccrights.no-rights": "Tots els drets reservats",
 
   "item.page.relation.uri": "Recurs relacionat",
+
+  "menu.section.browse_global_by_dateaccessioned": "Per data de lliurament",
+
+  "browse.metadata.dateaccessioned": "Data de lliurament",
+
+  "search.filters.filter.dateaccessioned.head": "Data de lliurament",
+
+  "search.filters.filter.dateaccessioned.max.placeholder": "Data màxima",
+
+  "search.filters.filter.dateaccessioned.max.label": "Fi",
+
+  "search.filters.filter.dateaccessioned.min.placeholder": "Data mínima",
+
+  "search.filters.filter.dateaccessioned.min.label": "Començament",
+
+  "search.filters.filter.dateAccessioned.head": "Data de lliurament",
+
+  "search.filters.filter.dateAccessioned.max.placeholder": "Data màxima",
+
+  "search.filters.filter.dateAccessioned.max.label": "Fi",
+
+  "search.filters.filter.dateAccessioned.min.placeholder": "Data mínima",
+
+  "search.filters.filter.dateAccessioned.min.label": "Començament",
 }

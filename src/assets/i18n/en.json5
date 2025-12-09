@@ -5519,4 +5519,28 @@
   "item.page.ccrights.no-rights": "All rights reserved",
 
   "item.page.relation.uri": "Related resource",
+
+  "menu.section.browse_global_by_dateaccessioned": "By Submit Date",
+
+  "browse.metadata.dateaccessioned": "Submit Date",
+
+  "search.filters.filter.dateaccessioned.head": "Submit Date",
+
+  "search.filters.filter.dateaccessioned.max.placeholder": "Maximum Date",
+
+  "search.filters.filter.dateaccessioned.max.label": "End",
+
+  "search.filters.filter.dateaccessioned.min.placeholder": "Minimum Date",
+
+  "search.filters.filter.dateaccessioned.min.label": "Start",
+
+  "search.filters.filter.dateAccessioned.head": "Submit Date",
+
+  "search.filters.filter.dateAccessioned.max.placeholder": "Maximum Date",
+
+  "search.filters.filter.dateAccessioned.max.label": "End",
+
+  "search.filters.filter.dateAccessioned.min.placeholder": "Minimum Date",
+
+  "search.filters.filter.dateAccessioned.min.label": "Start",
 }

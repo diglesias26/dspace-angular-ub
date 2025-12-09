@@ -2814,7 +2814,7 @@
 
   "menu.section.browse_community_by_issue_date": "Por fecha de publicación",
 
-  "menu.section.browse_community_by_title": "Por titulo",
+  "menu.section.browse_community_by_title": "Por título",
 
   "menu.section.browse_global": "Navega por el DD",
 
@@ -5333,4 +5333,18 @@
   "item.page.ccrights.no-rights": "Todos los derechos reservados",
 
   "item.page.relation.uri": "Recurso relacionado",
+
+  "menu.section.browse_global_by_dateaccessioned": "Por fecha de envío",
+
+  "browse.metadata.dateaccessioned": "Fecha de envío",
+
+  "search.filters.filter.dateAccessioned.head": "Fecha de envío",
+
+  "search.filters.filter.dateAccessioned.max.placeholder": "Fecha máxima",
+
+  "search.filters.filter.dateAccessioned.max.label": "Fin",
+
+  "search.filters.filter.dateAccessioned.min.placeholder": "Fecha mínima",
+
+  "search.filters.filter.dateAccessioned.min.label": "Comienzo",
 }
