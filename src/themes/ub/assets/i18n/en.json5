@@ -83,7 +83,7 @@
   "item.page.subject.classification": "Subject",
   "item.page.subject.other": "Subject (English)",
 
-  "item.page.relation.uri": "dc.relation.uri",
+  "item.page.relation.uri": "Related resource",
 
   "item.embargo.until": "Item embargoed until",
 
