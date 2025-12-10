@@ -19,6 +19,8 @@
   "search.filters.filter.dateAccessioned.min.placeholder": "Fecha mínima",
   "search.filters.filter.dateAccessioned.min.label": "Comienzo",
 
+  "browse.comcol.by.dateaccessioned": "Por fecha de envío",
+
   // DSpace default: "DSpace Angular :: "
   "repository.title.prefix": "Dipòsit Digital de la Universitat de Barcelona :: ",
   // text news home

@@ -7017,4 +7017,6 @@
   "search.filters.filter.dateAccessioned.min.placeholder": "Data mínima",
 
   "search.filters.filter.dateAccessioned.min.label": "Començament",
+
+  "browse.comcol.by.dateaccessioned": "Per data de lliurament",
 }

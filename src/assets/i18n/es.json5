@@ -5347,4 +5347,6 @@
   "search.filters.filter.dateAccessioned.min.placeholder": "Fecha mínima",
 
   "search.filters.filter.dateAccessioned.min.label": "Comienzo",
+
+  "browse.comcol.by.dateaccessioned": "Por fecha de envío",
 }
