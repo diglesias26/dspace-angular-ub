@@ -7,14 +7,14 @@
   "menu.section.browse_global": "Browse DD",
   "menu.section.browse_global_by_dateaccessioned": "By Submit Date",
   "browse.metadata.dateaccessioned": "Submit Date",
+  "browse.metadata.dateaccessioned.breadcrumbs": "Browse by Submit Date",
+  "browse.comcol.by.dateaccessioned": "By Submit Date",
 
   "search.filters.filter.dateAccessioned.head": "Submit Date",
   "search.filters.filter.dateAccessioned.max.placeholder": "Maximum Date",
   "search.filters.filter.dateAccessioned.max.label": "End",
   "search.filters.filter.dateAccessioned.min.placeholder": "Minimum Date",
   "search.filters.filter.dateAccessioned.min.label": "Start",
-
-  "browse.comcol.by.dateaccessioned": "By Submit Date",
 
   // DSpace default: "DSpace Angular :: "
   "repository.title.prefix": "Dipòsit Digital de la Universitat de Barcelona :: ",

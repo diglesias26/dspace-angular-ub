@@ -7019,4 +7019,6 @@
   "search.filters.filter.dateAccessioned.min.label": "Començament",
 
   "browse.comcol.by.dateaccessioned": "Per data de lliurament",
+
+  "browse.metadata.dateaccessioned.breadcrumbs": "Examinar per data de lliurament",
 }

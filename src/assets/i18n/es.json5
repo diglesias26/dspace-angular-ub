@@ -5349,4 +5349,6 @@
   "search.filters.filter.dateAccessioned.min.label": "Comienzo",
 
   "browse.comcol.by.dateaccessioned": "Por fecha de envío",
+
+  "browse.metadata.dateaccessioned.breadcrumbs": "Examinar por fecha de envío",
 }

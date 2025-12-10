@@ -12,14 +12,14 @@
 
   "menu.section.browse_global_by_dateaccessioned": "Por fecha de envío",
   "browse.metadata.dateaccessioned": "Fecha de envío",
+  "browse.metadata.dateaccessioned.breadcrumbs": "Examinar por fecha de envío",
+  "browse.comcol.by.dateaccessioned": "Por fecha de envío",
 
   "search.filters.filter.dateAccessioned.head": "Fecha de envío",
   "search.filters.filter.dateAccessioned.max.placeholder": "Fecha máxima",
   "search.filters.filter.dateAccessioned.max.label": "Fin",
   "search.filters.filter.dateAccessioned.min.placeholder": "Fecha mínima",
   "search.filters.filter.dateAccessioned.min.label": "Comienzo",
-
-  "browse.comcol.by.dateaccessioned": "Por fecha de envío",
 
   // DSpace default: "DSpace Angular :: "
   "repository.title.prefix": "Dipòsit Digital de la Universitat de Barcelona :: ",

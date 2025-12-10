@@ -8,14 +8,14 @@
   "menu.section.browse_global": "Navega per tot el DD",
   "menu.section.browse_global_by_dateaccessioned": "Per data de lliurament",
   "browse.metadata.dateaccessioned": "Data de lliurament",
+  "browse.metadata.dateaccessioned.breadcrumbs": "Examinar per data de lliurament",
+  "browse.comcol.by.dateaccessioned": "Per data de lliurament",
 
   "search.filters.filter.dateAccessioned.head": "Data de lliurament",
   "search.filters.filter.dateAccessioned.max.placeholder": "Data màxima",
   "search.filters.filter.dateAccessioned.max.label": "Fi",
   "search.filters.filter.dateAccessioned.min.placeholder": "Data mínima",
   "search.filters.filter.dateAccessioned.min.label": "Començament",
-
-  "browse.comcol.by.dateaccessioned": "Per data de lliurament",
 
   // DSpace default: "DSpace Angular :: "
   "repository.title.prefix": "Dipòsit Digital de la Universitat de Barcelona :: ",

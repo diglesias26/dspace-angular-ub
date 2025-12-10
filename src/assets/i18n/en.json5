@@ -5545,4 +5545,6 @@
   "search.filters.filter.dateAccessioned.min.label": "Start",
 
   "browse.comcol.by.dateaccessioned": "By Submit Date",
+
+  "browse.metadata.dateaccessioned.breadcrumbs": "Browse by Submit Date",
 }
