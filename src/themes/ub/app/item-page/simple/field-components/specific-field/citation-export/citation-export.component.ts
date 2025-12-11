@@ -56,7 +56,9 @@ export class CitationExportComponent implements OnInit {
    getUserLocale(): string {
     // navigator.language returns the browser's primary language setting
     // If not available, default to 'ca_ES'
-    let locale = navigator.language || 'ca';
+    if (typeof navigator === 'undefined') return 'ca';
+
+    let locale = (navigator.language || (navigator.languages && navigator.languages[0]) || 'ca').toString();
     locale = locale.substring(0, 2);
     return locale;
   }
@@ -542,14 +544,19 @@ EJEMPLO
     let formattedAuthors = '';
       for (const author of authors) {
         const parts = author.split(',');
-        if (parts.length >= 2) {
+        if (parts.length > 1) {
           const lastName = parts[0].trim();
           const firstName = parts[1].trim();
           formattedAuthors += `${lastName.toUpperCase()}, ${firstName[0].toUpperCase() + firstName.slice(1).toLowerCase()}, `;
+        } else {
+          formattedAuthors += `${author}, `;
         }
     }
     // clean the last comma and space
-    return formattedAuthors.slice(0, -2);
+    if (formattedAuthors.endsWith(', ')) {
+      formattedAuthors = formattedAuthors.slice(0, -2);
+    }
+    return formattedAuthors;
   }
 
   /**
