@@ -139,10 +139,23 @@
       </div>
     </ds-truncatable>
 
+    <ds-truncatable>
+      <div *ngIf="object?.firstMetadataValue('dc.description')">
+        <h4 class="simple-view-element-header">{{ 'item.page.description' | translate }}</h4>
+        <ds-truncatable-part [minLines]="3" class="item-list-abstract">
+          <span [ngClass]="{'text-muted': !object.firstMetadataValue('dc.description')}"
+            [innerHTML]="object?.firstMetadataValue('dc.description')"></span>
+        </ds-truncatable-part>
+        <p></p>
+      </div>
+    </ds-truncatable>
+
+    <!--
     <ds-generic-item-page-field [item]="object"
       [fields]="['dc.description']"
       [label]="'item.page.description'">
     </ds-generic-item-page-field>
+    -->
 
     <!--
     <ds-generic-item-page-field [item]="object"
