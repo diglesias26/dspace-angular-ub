@@ -46,6 +46,15 @@
   "info.feedback.email-label": "La vostra adreça de correu electrònic:",
   "info.feedback.comments": "Missatge",
 
+  "collection.edit.item.authorizations.load-more-button": "Carregar-ne més",
+  "item.page.collections.load-more": "Carregar-ne més",
+  "vocabulary-treeview.load-more": "Carregar-ne més",
+  "communityList.showMore": "Mostrar-ne més",
+  "item.page.bitstreams.view-more": "Mostrar-ne més",
+  "search.filters.filter.show-more": "Mostrar-ne més",
+  "quality-assurance.event.table.less": "Mostrar-ne menys",
+  "quality-assurance.event.table.more": "Mostrar-ne més",
+
 
   "menu.section.how_to_publish": "Com publicar",
 

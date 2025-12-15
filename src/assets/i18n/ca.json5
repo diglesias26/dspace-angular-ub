@@ -1056,7 +1056,7 @@
 
   "collection.edit.item.authorizations.load-bundle-button": "Carregar més paquets",
 
-  "collection.edit.item.authorizations.load-more-button": "Carregar més",
+  "collection.edit.item.authorizations.load-more-button": "Carregar-ne més",
 
   "collection.edit.item.authorizations.show-bitstreams-button": "Mostrar les autoritzacions dels fitxers del paquet",
 
@@ -1222,7 +1222,7 @@
 
   "communityList.title": "Llista de comunitats",
 
-  "communityList.showMore": "Mostrar més",
+  "communityList.showMore": "Mostrar-ne més",
 
   "community.create.head": "Crear una comunitat",
 
@@ -2300,7 +2300,7 @@
 
   "item.page.collections.loading": "Carregant...",
 
-  "item.page.collections.load-more": "Carregar més",
+  "item.page.collections.load-more": "Carregar-ne més",
 
   "item.page.date": "Data de publicació",
 
@@ -2346,7 +2346,7 @@
 
   "item.page.uri": "URI",
 
-  "item.page.bitstreams.view-more": "Mostrar més",
+  "item.page.bitstreams.view-more": "Mostrar-ne més",
 
   "item.page.bitstreams.collapse": "Contraure",
 
@@ -3628,7 +3628,7 @@
 
   "search.filters.filter.show-less": "Contraure",
 
-  "search.filters.filter.show-more": "Mostrar més",
+  "search.filters.filter.show-more": "Mostrar-ne més",
 
   "search.filters.filter.subject.head": "Matèries",
 
@@ -4476,7 +4476,7 @@
 
   "vocabulary-treeview.header": "Vista d'arbre jeràrquic",
 
-  "vocabulary-treeview.load-more": "Carregar més",
+  "vocabulary-treeview.load-more": "Carregar-ne més",
 
   "vocabulary-treeview.search.form.reset": "Reiniciar",
 
