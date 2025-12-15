@@ -22,4 +22,12 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UntypedItemComponent extends BaseComponent {
+  get concatenatedDescription(): string {
+    const descriptions = this.object?.allMetadataValues(['dc.description']) || [];
+    return descriptions.join('<br>');
+  }
+  get concatenatedAbstract(): string {
+    const abstracts = this.object?.allMetadataValues(['dc.description.abstract']) || [];
+    return abstracts.join('<br>');
+  }
 }

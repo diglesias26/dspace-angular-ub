@@ -128,23 +128,37 @@
     <!-- copio abstract breu de
      D:\dspace7-source\dspace-angular-ub\src\app\shared\object-list\my-dspace-result-list-element\item-list-preview\item-list-preview.component.html
      -->
-    <ds-truncatable>
+    <!-- el primer dc.description.abstract -->
+    <!--
+    <ds-truncatable id="abstract">
       <div *ngIf="object?.firstMetadataValue('dc.description.abstract')">
         <h4 class="simple-view-element-header">{{ 'item.page.abstract' | translate }}</h4>
-        <ds-truncatable-part [minLines]="3" class="item-list-abstract">
+        <ds-truncatable-part [id]="'abstract'" [minLines]="3" class="item-list-abstract">
           <span [ngClass]="{'text-muted': !object.firstMetadataValue('dc.description.abstract')}"
             [innerHTML]="object?.firstMetadataValue('dc.description.abstract')"></span>
         </ds-truncatable-part>
         <p></p>
       </div>
     </ds-truncatable>
+    -->
 
-    <ds-truncatable>
-      <div *ngIf="object?.firstMetadataValue('dc.description')">
+    <!-- tots dc.description.abstract concatenats -->
+    <ds-truncatable id="abstract">
+      <div *ngIf="concatenatedAbstract">
+        <h4 class="simple-view-element-header">{{ 'item.page.abstract' | translate }}</h4>
+        <ds-truncatable-part [id]="'abstract'" [minLines]="3" class="item-list-abstract">
+          <span [innerHTML]="concatenatedAbstract"></span>
+        </ds-truncatable-part>
+        <p></p>
+      </div>
+    </ds-truncatable>
+
+    <!-- tots dc.description concatenats -->
+    <ds-truncatable id="description">
+      <div *ngIf="concatenatedDescription">
         <h4 class="simple-view-element-header">{{ 'item.page.description' | translate }}</h4>
-        <ds-truncatable-part [minLines]="3" class="item-list-abstract">
-          <span [ngClass]="{'text-muted': !object.firstMetadataValue('dc.description')}"
-            [innerHTML]="object?.firstMetadataValue('dc.description')"></span>
+        <ds-truncatable-part [id]="'description'" [minLines]="3" class="item-list-abstract">
+          <span [innerHTML]="concatenatedDescription"></span>
         </ds-truncatable-part>
         <p></p>
       </div>
