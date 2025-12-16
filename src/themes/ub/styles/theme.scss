@@ -16,6 +16,7 @@ div[id^="navbar-section-statistics"] {
   display: none;
 }
 
+
 input#dc_subject {
  border: 1px solid #ced4da !important;
  border-radius: .25rem;
@@ -27,4 +28,9 @@ ds-themed-file-download-link {
     display: block;
     margin-top: 0.4rem;
   }
+}
+
+// Hide the fifth filter div inside ds-search-filters: "Has Files"
+ds-search-filters div div:nth-child(5) {
+  display: none;
 }
