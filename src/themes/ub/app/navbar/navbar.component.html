@@ -1,0 +1,38 @@
+<nav [ngClass]="{'open': !(menuCollapsed | async)}"
+     [@slideMobileNav]="!(windowService.isXsOrSm() | async) ? 'default' : ((menuCollapsed | async) ? 'collapsed' : 'expanded')"
+     class="navbar navbar-light navbar-expand-md px-md-0 pt-md-0 pt-3 navbar-container" role="navigation"
+     [attr.aria-label]="'nav.main.description' | translate" id="main-navbar">
+  <!-- TODO remove navbar-container class when https://github.com/twbs/bootstrap/issues/24726 is fixed -->
+  <div class="navbar-inner-container w-100" [class.container]="!(isMobile$ | async)">
+    <div class="w-100">
+      <div id="collapsingNav">
+        <ng-container *ngIf="(isMobile$ | async) && (isAuthenticated$ | async)">
+          <ds-themed-user-menu [inExpandableNavbar]="true"></ds-themed-user-menu>
+        </ng-container>
+        <div class="navbar-nav align-items-md-center mr-auto shadow-none gapx-3">
+          <ng-container *ngFor="let section of (sections | async)">
+            <ng-container
+              *ngComponentOutlet="(sectionMap$ | async).get(section.id)?.component; injector: (sectionMap$ | async).get(section.id)?.injector;"></ng-container>
+          </ng-container>
+
+          <!-- afegim enllaç 'How to publish'  -->
+          <div class="ds-menu-item-wrapper text-md-center ng-star-inserted" id="navbar-how-to-publish">
+            <a target="_blank" role="menuitem" href="https://crai.ub.edu/ca/que-ofereix-el-crai/publicar-repositoris-ub/instruccions" class="ds-menu-item">
+                {{ 'menu.section.how_to_publish' | translate}}
+            </a>
+          </div>
+          <!-- final afegim enllaç 'How to publish'  -->
+
+          <!-- afegim enllaç al formulari de contacte / feedback (i el treiem de \src\themes\ub\app\footer\footer.component.html) -->
+          <div class="ds-menu-item-wrapper text-md-center ng-star-inserted" id="feedback_form">
+            <a role="menuitem" routerLink="info/feedback" class="ds-menu-item">
+                {{ 'footer.link.feedback' | translate}}
+            </a>
+          </div>
+          <!-- final afegim enllaç al formulari de contacte / feedback  -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

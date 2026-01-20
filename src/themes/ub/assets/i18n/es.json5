@@ -1,0 +1,119 @@
+
+{
+
+  // ub theme
+  "info.about.title": "Sobre el DD",
+  "menu.header.image.ublogo": "Universitat de Barcelona",
+  // DSpace default: "All of DSpace"
+  "menu.section.browse_global": "Navega por el DD",
+
+  "menu.section.browse_community_by_title": "Por título",
+  "search.filters.filter.dateIssued.head": "Fecha",
+
+  "menu.section.browse_global_by_dateaccessioned": "Por fecha de envío",
+  "browse.metadata.dateaccessioned": "Fecha de envío",
+  "browse.metadata.dateaccessioned.breadcrumbs": "Examinar por fecha de envío",
+  "browse.comcol.by.dateaccessioned": "Por fecha de envío",
+
+  "search.filters.filter.dateAccessioned.head": "Fecha de envío",
+  "search.filters.filter.dateAccessioned.max.placeholder": "Fecha máxima",
+  "search.filters.filter.dateAccessioned.max.label": "Fin",
+  "search.filters.filter.dateAccessioned.min.placeholder": "Fecha mínima",
+  "search.filters.filter.dateAccessioned.min.label": "Comienzo",
+
+  // DSpace default: "DSpace Angular :: "
+  "repository.title.prefix": "Dipòsit Digital de la Universitat de Barcelona :: ",
+  // text news home
+  //"home.news.text": "El <strong>Dipòsit Digital de la Universitat de Barcelona</strong> és el repositori institucional que conté en format digital les publicacions en accés obert derivades de l'activitat docent, investigadora i institucional del professorat i d'altres membres de la comunitat universitària. Els documents d'aquest repositori també es recullen en els repositoris cooperatius de Catalunya segons el tipus de document: <a href=\"https://www.recercat.cat/\" target=\"_blank\">RECERCAT</a>, <a href=\"https://mdx.cat/\" target=\"_blank\">Materials Docents en Xarxa (MDX)</a> i <a href=\"https://tdx.cat/\" target=\"_blank\">Tesis Doctorals en Xarxa (TDX)</a>.",
+  "home.news.text": "El Dipòsit Digital de la Universitat de Barcelona es el repositorio institucional que contiene en formato digital los materiales derivados de la actividad docente, investigadora e institucional de la comunidad universitaria.",
+  "home.news.text.top": "Recursos digitals produïts per la comunitat docent, investigadora i institucional de la Universitat de Barcelona",
+  "menu.header.image.ublogo": "Universitat de Barcelona",
+
+    // "login.form.oidc": "Log in with OIDC",
+  "login.form.oidc": "Identificación UB",
+
+    // footer
+  "footer.lv1.coordinacio": "Coordinación: ",
+  "footer.lv1.avis": "Aviso legal",
+  "footer.lv1.metadades": "Metadatos sujetos a: ",
+
+// estadístiques
+  "statistics.table.title.TopCountries": "Visitas por país",
+  "statistics.table.title.TopCities": "Visitas por ciudad",
+
+// formulari de contacte
+  "info.feedback.info": "Consultas y comentarios",
+  "info.feedback.email-label": "Su dirección de correo electrónico:",
+  "info.feedback.comments": "Mensaje",
+
+  "menu.section.how_to_publish": "Cómo publicar",
+
+  "footer.link.feedback": "Contacto",
+
+  "info.feedback.breadcrumbs": "Formulario de contacto",
+
+  "info.feedback.head": "Formulario de contacto",
+
+  "info.feedback.title": "Formulario de contacto",
+
+  "info.feedback.send": "Enviar",
+
+  "form.date-picker.placeholder.year": "Año",
+  "form.date-picker.placeholder.month": "Mes",
+  "form.date-picker.placeholder.day": "Día",
+
+  "citation-export.title": "Citación",
+  "citation-export.format.label": "Formato de la citación",
+  "citation-export.copy.tooltip": "Copiar la citación",
+  "citation-export.copy.label": "Copiar la citación",
+  "citation-export.download.tooltip": "Bajar la citación",
+  "citation-export.download.label": "Bajar la citación",
+  "citation-export.preview.title": "Esta cita se ha generado automáticamente",
+
+  "menu.section.browse_global_by_subject": "Por materia",
+
+  "item.page.date": "Fecha de publicación",
+  "item.page.ccrights": "Licencia de publicación",
+  "item.page.ccrights.no-rights": "Todos los derechos reservados",
+  "item.page.use_identifier": "Por favor, use este identificador para citar o enlazar este documento",
+  "item.page.export": "Exportar metadatos",
+
+  "item.page.type": "Tipo de documento",
+  "item.page.type.article": "Artículo",
+  "item.page.type.bachelorthesis": "Trabajo de fin de grado",
+  "item.page.type.masterthesis": "Trabajo de fin de máster",
+  "item.page.type.doctoralthesis": "Tesis",
+  "item.page.type.book": "Libro",
+  "item.page.type.bookpart": "Parte del libro",
+  "item.page.type.review": "Reseña",
+  "item.page.type.conferenceobject": "Objeto de conferencia",
+  "item.page.type.lecture": "Conferencia",
+  "item.page.type.workingpaper": "Documento de trabajo",
+  "item.page.type.preprint": "Prepublicación",
+  "item.page.type.report": "Informe",
+  "item.page.type.annotation": "Anotación",
+  "item.page.type.contributiontoperiodical": "Contribución a publicación periódica",
+  "item.page.type.patent": "Patente",
+  "item.page.type.other": "Otro",
+
+  "item.page.version": "Versión",
+  "item.page.version.publishedversion": "Versión publicada",
+  "item.page.version.acceptedversion": "Versión aceptada",
+  "item.page.version.submittedversion": "Versión enviada",
+  "item.page.version.draftversion": "Versión borrador",
+  "item.page.version.otherversion": "Otra versión",
+  "item.page.share": "Compartir registro",
+
+  "item.page.subject.classification": "Materias",
+  "item.page.subject.other": "Materias (inglés)",
+
+  "item.page.relation.uri": "Recurso relacionado",
+
+  "item.embargo.until": "Documento embargado hasta el",
+
+  "browse.thesaurusub": "El DDUB utiliza las materias del ",
+  "browse.thesaurusub.url": "https://vocabularis.crai.ub.edu/es/thub",
+
+  "relationships.isAdvisorOf": "Director/Tutor",
+
+}

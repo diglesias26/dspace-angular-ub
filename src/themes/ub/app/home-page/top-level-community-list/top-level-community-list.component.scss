@@ -1,0 +1,145 @@
+#summary {
+//    font-size: clamp(0.8rem, 2vw + 0.75rem, 1.5rem);
+    font-size: min(3vw, 1.1rem); /* Use 3vw, but never exceed 1.1rem */
+
+    color: #0a3739;
+    margin: 0 1rem -2rem 1rem;
+}
+
+.row{
+        div{
+                /*
+                */
+                // Use a palette of harmonious pastel colors for a pleasant look
+                &:nth-child(1) .card{
+                    background-color: #18aa69;
+                }
+                &:nth-child(2) .card{
+                    background-color: #129671;
+                }
+                &:nth-child(3) .card{
+                    background-color: #0b6c55;
+                }
+                &:nth-child(4) .card{
+                    background-color: #267a6f;
+                }
+                &:nth-child(5) .card{
+                    background-color: #418071;
+                }
+                &:nth-child(6) .card{
+                    background-color: #60ad97;
+                }
+                &:nth-child(7) .card{
+                    background-color: #0d8753;
+                }
+                &:nth-child(8) .card{
+                    background-color: #116151;
+                }
+                // Use bolder, more vibrant but still pleasant colors for each card
+                /*
+                &:nth-child(1) .card:hover .card-body{
+                    background-color: #ffd600; // bold yellow
+                }
+                &:nth-child(2) .card:hover .card-body{
+                    background-color: #a259f7; // vibrant purple
+                }
+                &:nth-child(3) .card:hover .card-body{
+                    background-color: #00b894; // strong teal green
+                }
+                &:nth-child(4) .card:hover .card-body{
+                    background-color: #ff7675; // vivid coral red
+                }
+                &:nth-child(5) .card:hover .card-body{
+                    background-color: #0984e3; // bright blue
+                }
+                &:nth-child(6) .card:hover .card-body{
+                    background-color: #fd79a8; // bold pink
+                }
+                */
+                .card {
+                    &:hover, &:focus-within {
+                        transform: translateY(-8px) scale(1.04);
+                        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+                        transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+                        background-color: #0a3739;
+                    }
+
+                    margin-bottom: 1rem;
+                    border-radius: 2px;
+
+                    .card-body {
+                        // Make the card body a perfect square using aspect-ratio
+                        aspect-ratio: 1 / .5;
+                        width: 100%;
+                        min-width: 0;
+                        min-height: 0;
+                        position: relative; // Needed for absolute positioning of h2
+                        display: flex;
+                        align-items: stretch;
+                        justify-content: stretch;
+                        padding: 0;
+                        // background-color: #b9b8b4;
+
+                        a {
+                            text-decoration: none;
+                            color: #000;
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            overflow: hidden;
+                        }
+                        .community-card {
+                            margin: 0;
+                            // position: absolute;
+                            // bottom: 0.5rem;
+                            right: 0.75rem;
+                            padding: 0.25rem 0.5rem;
+                            // background: rgba(255,255,255,0.7); // subtle background for readability
+                            h2 {
+                                font-size: 1.2rem;
+                                font-weight: 555;
+                                margin: 0;
+                                color: #fff;
+                                // text-align: left;
+                            }
+                            .community-description {
+                                padding: 0 1rem 1rem 1rem;
+                                font-size: 0.9rem;
+                                // margin-top: 0.25rem;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                            }
+                            .comunity-logo {
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                                width: 60%;
+                                height: auto;
+                                opacity: 0.2;
+                            }
+                            .community-logo > img {
+                                width: 55px;
+                                height: auto;
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                            }
+                        }
+                    }
+
+                    // Add a pop-up effect on hover
+                    .card:hover, .card:focus-within {
+                        transform: translateY(-8px) scale(1.04);
+                        box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+                        transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+                    }
+                    .card {
+                        transition: transform 0.2s cubic-bezier(.4,2,.6,1), box-shadow 0.2s;
+                    }
+         }
+    }
+}

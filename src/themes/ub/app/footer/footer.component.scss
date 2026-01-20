@@ -1,0 +1,29 @@
+footer{
+    background-color: $dark;
+
+    .cc-zero img{
+        width: 5rem;
+    }
+
+    .footer-info > li {
+        margin: 0px 11px;
+    }
+
+    .logo-container{
+        float: right;
+        margin-left: 33px;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+            display: block;
+        }
+
+    }
+
+    .text-white {
+//    font-size: clamp(0.8rem, 2vw + 0.75rem, 1.5rem);
+      font-size: min(2vw, 0.9rem); /* Use 2vw, but never exceed 0.8rem */
+    }
+}

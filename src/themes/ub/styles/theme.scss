@@ -1,0 +1,36 @@
+// This file combines the other scss files in to one. You usually shouldn't edit this file directly
+
+@import './_theme_sass_variable_overrides.scss';
+@import '../../../styles/_variables.scss';
+@import '../../../styles/_mixins.scss';
+@import '../../../styles/helpers/font_awesome_imports.scss';
+@import '../../../styles/_vendor.scss';
+@import '../../../styles/_custom_variables.scss';
+@import './_theme_css_variable_overrides.scss';
+@import '../../../styles/bootstrap_variables_mapping.scss';
+@import '../../../styles/_truncatable-part.component.scss';
+@import './_global-styles.scss';
+
+/* miquel 2025-09-25 Hide statistics section */
+div[id^="navbar-section-statistics"] {
+  display: none;
+}
+
+
+input#dc_subject {
+ border: 1px solid #ced4da !important;
+ border-radius: .25rem;
+ padding-left: 0.5rem;
+}
+
+ds-themed-file-download-link {
+  a {
+    display: block;
+    margin-top: 0.4rem;
+  }
+}
+
+// Hide the fifth filter div inside ds-search-filters: "Has Files"
+ds-search-filters div div:nth-child(5) {
+  display: none;
+}

@@ -1,0 +1,18 @@
+header{
+    display: flex;
+    background-color: $gray-200;
+    .logo-dd{
+        float: left;
+        margin:0 !important;
+    }
+    .logo-ub{
+        float: right;
+    }
+    .navbar-brand img{
+        width: 10rem;
+    }
+    .logo-ub.navbar-brand img{
+        width: 13rem;
+    }
+    .navbar{width: 100%;}
+}
