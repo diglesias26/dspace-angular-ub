@@ -1,0 +1,74 @@
+{
+  "name": "Frontend (Next.js + npm) - xavi-adds",
+  "version": "1.0.0",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  /* use image instead of feature
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/node:1": { "version": "20" }
+    "ghcr.io/devcontainers/features/yarn:1": { "version": "2.0.0" }
+  },
+  */
+
+ //"workspaceMount": "source=${localWorkspaceFolder}/xavi-adds,target=/workspace,type=bind",
+ /* mount the .devcontainer folder readonly (readonly is optional) to access the scripts */
+ "mounts": [
+  "source=${localWorkspaceFolder}/.devcontainer,target=/workspace/.devcontainer,type=bind,readonly"
+],
+"workspaceFolder": "/workspace",
+ 
+
+  // Opcional: expose and open port de Dspace-angular
+  "forwardPorts": [4000],
+  "portsAttributes": {
+    "4000": { "label": "Dspace-angular", "onAutoForward": "openBrowser" }
+  },
+
+  // Automatically install dependencies: if there is a lockfile, use 'ci'
+  //"postCreateCommand": "bash -lc 'npm install -g yarn && if [ -f yarn.lock ]; then yarn install --immutable; else yarn install; fi'",
+  "postCreateCommand": "bash -lc 'yarn install'",
+
+"postStartCommand": "bash -lc '/workspace/.devcontainer/dev-start.sh'",
+"onStopCommand":   "bash -lc '/workspace/.devcontainer/dev-stop.sh'",
+// temp log to check the environment variables
+//"updateContentCommand": "bash -lc 'echo ===ENV===; env | egrep -i \"NODE_OPTIONS|YARN|npm_config_node_options\" || true; echo ===NODE===; node -v; node -p \"process.arch\"; echo ===V8 FLAGS old_space===; node --v8-options | grep -i old_space || true'",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        // Help the terminal to open directly to the project folder
+        "terminal.integrated.cwd": "/workspace",
+        "dev.containers.openBrowser": "http://localhost:4000"
+        
+      }
+    }
+  },
+
+  // Minor improvements to DX
+  "containerEnv": {
+    "DEV_PORT": "4000",
+
+    "NODE_OPTIONS": "",
+    "YARN_NODE_OPTIONS": "",
+    "npm_config_node_options": ""
+    //"NODE_OPTIONS": "--max-old-space-size=6144"
+    //"NODE_OPTIONS": "--max_old_space_size=4096",
+    //"NG_BUILD_MAX_WORKERS": "2"    // limita paral·lelisme -> menys RAM
+  },
+  "remoteEnv": {
+    "NODE_OPTIONS": "--max_old_space_size=8192",
+    "NG_BUILD_MAX_WORKERS": "2"
+  },
+  "runArgs": [
+    "--memory=8g",                 // memòria pel contenidor (ajusta si cal)
+    "--cpus=4"
+  ],
+  /*"remoteUser": "vscode"*/
+  /* use node instead of vscode */
+  "remoteUser": "node"
+}

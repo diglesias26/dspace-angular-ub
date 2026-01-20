@@ -167,6 +167,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { AdminSearchPageComponent } from './app/admin/admin-search-page/admin-search-page.component';
 import { AdminWorkflowPageComponent } from './app/admin/admin-workflow-page/admin-workflow-page.component';
 
+
 // oriol - 20251016 - statistics table
 import { EagerThemeModule as UBEagerThemeModule } from './eager-theme.module';
 
@@ -263,9 +264,11 @@ const DECLARATIONS = [
   UserMenuComponent,
   BrowseByComponent,
   RegisterEmailFormComponent,
+
   // oriol - 20260120 - canvis custom 7.6.6
   AdminSearchPageComponent,
   AdminWorkflowPageComponent,
+
 // oriol orcid
 //ItemPageOrcidFieldComponent,
 ];
