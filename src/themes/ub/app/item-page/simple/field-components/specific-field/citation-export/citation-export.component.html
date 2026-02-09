@@ -53,7 +53,8 @@
   <div class="citation-preview" *ngIf="selectedFormat">
     <!-- h6>{{ 'citation-export.preview.title' | translate }}</h6 -->
     <div class="citation-preview-content">
-      <pre>{{ getCitationPreview() }}</pre>
+      <pre [innerHTML]="getCitationPreview()"></pre>
+      <!-- <div class="citacio">{{ getCitationPreview() }}</div> -->
     </div>
   </div>
   </div>

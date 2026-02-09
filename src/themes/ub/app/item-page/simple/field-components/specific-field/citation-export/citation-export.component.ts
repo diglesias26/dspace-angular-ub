@@ -159,7 +159,7 @@ EJEMPLO
 ​GÓMEZ I BLANCH, Guillem. Superfícies selectives per a la transformació tèrmica de l'energia solar. En: Revista de física [en línea]. 2010. Vol. 4, n.º 6, págs. 10─24. ISSN 2013-9845 [consulta: 29 de noviembre de 2019]. Disponible en: https://www.raco.cat/index.php/RevistaFisica/article/view/174205
     */
     const authors = this.item.allMetadataValues('dc.contributor.author');
-    const title = this.item.firstMetadataValue('dc.title');
+    let title = this.item.firstMetadataValue('dc.title');
     //dc.relation.ispartof	Collectanea Botanica, 1946, vol. 1, num. 8, p. 95-105
     const relationIsPartOf = this.item.firstMetadataValue('dc.relation.ispartof');
     const date = this.item.firstMetadataValue('dc.date.issued');
@@ -192,7 +192,8 @@ EJEMPLO
 
     // title
     if (title) {
-      citation += `${title}. `;
+      title = title.replace(/\.+$/, ''); // remove trailing dots
+      citation += `<i>${title}</i>. `;
     }
 
     // Cursive _journal title_

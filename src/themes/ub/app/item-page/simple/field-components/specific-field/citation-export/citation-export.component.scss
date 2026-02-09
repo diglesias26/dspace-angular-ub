@@ -30,6 +30,7 @@
       color: #6c757d;
       font-size: 0.9rem;
       transition: transform 0.2s ease;
+      font-style: italic;
     }
   }
 
@@ -88,6 +89,7 @@
 
         i {
           font-size: 0.875rem;
+          font-style: italic;
         }
       }
     }
@@ -122,8 +124,26 @@
         white-space: pre-wrap;
         word-wrap: break-word;
       }
+
+      pre i {
+        font-style: italic;
+      }
     }
   }
+}
+
+.citacio {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: #212529;
+//  white-space: pre;
+  font-family: "Courier New", monospace;
+  display: block; /* Ensures it behaves like a block element */
+}
+
+.citacio i {
+  font-style: italic;
 }
 
 #citationFormat {
@@ -175,6 +195,7 @@
 
       i {
         color: #adb5bd;
+        font-style: italic;
       }
     }
 
