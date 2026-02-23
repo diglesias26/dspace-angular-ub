@@ -14,6 +14,46 @@ export interface CitationFormat {
   styleUrls: ['./citation-export.component.scss']
 })
 
+/*
+exemples de citacions:
+https://biblioteca.uoc.edu/en/page/ISO-690-style/
+
+quin tipus de document és? (dc.type)
+copiat de D:\dspace7-source\dspace-angular-ub\src\app\item-page\field-components\specific-field\type\item-page-type-field.component.ts
+  prefix = 'item.page.type.';
+  types = [
+    'article',
+    'bachelorthesis',
+    'masterthesis',
+    'doctoralthesis',
+    'book',
+    'bookpart',
+    'review',
+    'conferenceobject',
+    'lecture',
+    'workingpaper',
+    'preprint',
+    'report',
+    'annotation',
+    'contributiontoperiodical',
+    'patent',
+    'other',
+  ];
+
+  getType() {
+    for (const type of this.item.allMetadata('dc.type')) {
+      let parts = type.value.split('/');
+      let last = parts[parts.length - 1];
+      last = last.toLowerCase();
+      if (this.types.includes(last)) {
+        return this.prefix + last;
+      }
+    }
+    return this.prefix + 'other';
+  }
+
+*/
+
 /**
  * Component to export the citation of an item in different formats
  * Oriol Olivé
