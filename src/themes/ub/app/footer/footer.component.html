@@ -80,10 +80,20 @@
         </p>
         -->
         <ul class="footer-info list-unstyled small d-flex justify-content-center mb-0">
+          <!-- oriol 20260225 - ShowCookieSettings ara és booleà, i el mètode openCookieSettings() és el que obre el popup 
+
           <li>
               <a class="text-white" href="javascript:void(0);"
                (click)="showCookieSettings()">{{ 'footer.link.cookies' | translate}}</a>
           </li>
+
+        -->
+        <li *ngIf="showCookieSettings">
+          <a class="text-white" href="javascript:void(0);"
+           (click)="openCookieSettings()">{{ 'footer.link.cookies' | translate}}</a>
+      </li>
+                     
+
           <li *ngIf="showPrivacyPolicy">
             <a class="text-white"
                routerLink="info/privacy">{{ 'footer.link.privacy-policy' | translate}}</a>
