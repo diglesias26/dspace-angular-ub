@@ -1,4 +1,5 @@
 {
+
   "401.help": "You're not authorized to access this page. You can use the button below to get back to the home page.",
 
   "401.link.home-page": "Take me to the home page",
@@ -1691,7 +1692,7 @@
 
   "footer.link.end-user-agreement": "End User Agreement",
 
-  "footer.link.feedback": "Send Feedback",
+  "footer.link.feedback": "Contact us",
 
   "forgot-email.form.header": "Forgot Password",
 
@@ -1975,21 +1976,21 @@
 
   "info.privacy.title": "Privacy Statement",
 
-  "info.feedback.breadcrumbs": "Feedback",
+  "info.feedback.breadcrumbs": "Contact Form",
 
-  "info.feedback.head": "Feedback",
+  "info.feedback.head": "Contact Form",
 
-  "info.feedback.title": "Feedback",
+  "info.feedback.title": "Contact Form",
 
-  "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
+  "info.feedback.info": "Queries and comments",
 
   "info.feedback.email_help": "This address will be used to follow up on your feedback.",
 
-  "info.feedback.send": "Send Feedback",
+  "info.feedback.send": "Send",
 
-  "info.feedback.comments": "Comments",
+  "info.feedback.comments": "Message",
 
-  "info.feedback.email-label": "Your Email",
+  "info.feedback.email-label": "Your Email Address:",
 
   "info.feedback.create.success": "Feedback Sent Successfully!",
 
@@ -2523,7 +2524,7 @@
 
   "item.page.collections.load-more": "Load more",
 
-  "item.page.date": "Date",
+  "item.page.date": "Publication date",
 
   "item.page.edit": "Edit this item",
 
@@ -2593,7 +2594,7 @@
 
   "item.preview.dc.description.abstract": "Abstract:",
 
-  "item.preview.dc.identifier.other": "Other identifier:",
+  "item.preview.dc.identifier.other": "Other Identifier",
 
   "item.preview.dc.language.iso": "Language:",
 
@@ -2612,8 +2613,6 @@
   "item.preview.dc.relation.ispartofseries": "Is part of series",
 
   "item.preview.dc.rights": "Rights",
-
-  "item.preview.dc.identifier.other": "Other Identifier",
 
   "item.preview.dc.relation.issn": "ISSN",
 
@@ -2975,7 +2974,7 @@
 
   "menu.section.browse_community_by_title": "By Title",
 
-  "menu.section.browse_global": "All of DSpace",
+  "menu.section.browse_global": "Browse DD",
 
   "menu.section.browse_global_by_author": "By Author",
 
@@ -3677,7 +3676,7 @@
 
   "repository.title": "DSpace Repository",
 
-  "repository.title.prefix": "DSpace Repository :: ",
+  "repository.title.prefix": "Dipòsit Digital de la Universitat de Barcelona :: ",
 
   "resource-policies.add.button": "Add",
 
@@ -4131,9 +4130,9 @@
 
   "statistics.table.title.TotalDownloads": "File Visits",
 
-  "statistics.table.title.TopCountries": "Top country views",
+  "statistics.table.title.TopCountries": "Country Views",
 
-  "statistics.table.title.TopCities": "Top city views",
+  "statistics.table.title.TopCities": "City Views",
 
   "statistics.table.header.views": "Views",
 
@@ -4963,7 +4962,7 @@
 
   "thumbnail.person.placeholder": "No Profile Picture Available",
 
-  "title": "DSpace",
+  title: "DSpace",
 
   "vocabulary-treeview.header": "Hierarchical tree view",
 
@@ -5498,4 +5497,122 @@
   "dynamic-form-array.sortable-list.label": "Sortable list",
 
   "metadata-export-search.submit.error.limit-exceeded": "Only the first {{limit}} items will be exported",
+
+  "info.about.title": "About DD",
+
+  "menu.header.image.ublogo": "Universitat de Barcelona",
+
+  "menu.section.browse_global_by_dateaccessioned": "By Submit Date",
+
+  "browse.metadata.dateaccessioned": "Submit Date",
+
+  "browse.metadata.dateaccessioned.breadcrumbs": "Browse by Submit Date",
+
+  "browse.comcol.by.dateaccessioned": "By Submit Date",
+
+  "search.filters.filter.dateAccessioned.head": "Submit Date",
+
+  "search.filters.filter.dateAccessioned.max.placeholder": "Maximum Date",
+
+  "search.filters.filter.dateAccessioned.max.label": "End",
+
+  "search.filters.filter.dateAccessioned.min.placeholder": "Minimum Date",
+
+  "search.filters.filter.dateAccessioned.min.label": "Start",
+
+  "home.news.text": "The Dipòsit Digital de la Universitat de Barcelona is the institutional repository that contains, in digital format, materials resulting from teaching, research and institutional activities of members of the university community.",
+
+  "home.news.text.top": "Recursos digitals produïts per la comunitat docent, investigadora i institucional de la Universitat de Barcelona",
+
+  "footer.lv1.coordinacio": "Coordination: ",
+
+  "footer.lv1.avis": "Legal notice",
+
+  "footer.lv1.metadades": "Metadata subject to: ",
+
+  "menu.section.how_to_publish": "How to publish",
+
+  "citation-export.title": "Citation",
+
+  "citation-export.format.label": "Citation format",
+
+  "citation-export.copy.tooltip": "Copy citation",
+
+  "citation-export.copy.label": "Copy citation",
+
+  "citation-export.download.tooltip": "Download citation",
+
+  "citation-export.download.label": "Download citation",
+
+  "citation-export.preview.title": "This citation was generated automatically",
+
+  "item.page.ccrights": "Publication license",
+
+  "item.page.ccrights.no-rights": "All rights reserved",
+
+  "item.page.use_identifier": "Please use this identifier to cite or link to this item",
+
+  "item.page.export": "Export metadata",
+
+  "item.page.type": "Document type",
+
+  "item.page.type.article": "Article",
+
+  "item.page.type.bachelorthesis": "Bachelor thesis",
+
+  "item.page.type.masterthesis": "Master thesis",
+
+  "item.page.type.doctoralthesis": "Doctoral thesis",
+
+  "item.page.type.book": "Book",
+
+  "item.page.type.bookpart": "Book part",
+
+  "item.page.type.review": "Review",
+
+  "item.page.type.conferenceobject": "Conference object",
+
+  "item.page.type.lecture": "Lecture",
+
+  "item.page.type.workingpaper": "Working paper",
+
+  "item.page.type.preprint": "Preprint",
+
+  "item.page.type.report": "Report",
+
+  "item.page.type.annotation": "Annotation",
+
+  "item.page.type.contributiontoperiodical": "Contribution to periodical",
+
+  "item.page.type.patent": "Patent",
+
+  "item.page.type.other": "Other",
+
+  "item.page.version": "Version",
+
+  "item.page.version.publishedversion": "Published version",
+
+  "item.page.version.acceptedversion": "Accepted version",
+
+  "item.page.version.submittedversion": "Submitted version",
+
+  "item.page.version.draftversion": "Draft version",
+
+  "item.page.version.otherversion": "Other version",
+
+  "item.page.share": "Share record",
+
+  "item.page.subject.classification": "Subject",
+
+  "item.page.subject.other": "Subject (English)",
+
+  "item.page.relation.uri": "Related resource",
+
+  "item.embargo.until": "Item embargoed until",
+
+  "browse.thesaurusub": "The DDUB uses the subjects of the ",
+
+  "browse.thesaurusub.url": "https://vocabularis.crai.ub.edu/en/thub",
+
+  "relationships.isAdvisorOf": "Director/Tutor",
 }
