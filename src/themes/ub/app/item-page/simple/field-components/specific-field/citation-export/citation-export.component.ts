@@ -39,6 +39,7 @@ export class CitationExportComponent implements OnInit {
     { value: 'apa', label: 'APA' },
     { value: 'mla', label: 'MLA' },
     { value: 'chicago', label: 'Chicago/Turabian' },
+    { value: 'vancouver', label: 'Vancouver' },
     //{ value: 'turabian', label: 'Turabian' },
     { value: 'ieee', label: 'IEEE' },
     { value: 'bibtex', label: 'BibTeX' },
@@ -131,6 +132,8 @@ export class CitationExportComponent implements OnInit {
         return this.generateMLA();
       case 'chicago':
         return this.generateChicago();
+      case 'vancouver':
+        return this.generateVancouver();
       case 'turabian':
         return this.generateTurabian();
       case 'ieee':
@@ -425,6 +428,110 @@ export class CitationExportComponent implements OnInit {
     }
 
     return citation;
+  }
+
+  private generateVancouver(): string {
+    const authors = this.item.allMetadataValues('dc.contributor.author');
+    let title = this.item.firstMetadataValue('dc.title');
+    const relationIsPartOf = this.item.firstMetadataValue('dc.relation.ispartof');
+    const date = this.item.firstMetadataValue('dc.date.issued');
+    const doi = this.item.firstMetadataValue('dc.identifier.doi');
+    const uri = this.item.firstMetadataValue('dc.identifier.uri');
+
+    let citation = '';
+
+    if (authors.length > 0) {
+      citation += this.formatAuthorsVancouver(authors);
+      if (!citation.endsWith('.')) {
+        citation += '.';
+      }
+      citation += ' ';
+    }
+
+    if (title) {
+      if (!title.endsWith('.')) {
+        title += '.';
+      }
+      citation += `${title} `;
+    }
+
+    if (relationIsPartOf) {
+      const parts = relationIsPartOf.split(',');
+      const journalTitle = parts[0] ? parts[0].trim() : '';
+      const journalYear = parts[1] ? parts[1].trim() : '';
+      const volume = parts[2] ? parts[2].replace('.', '').trim() : '';
+      let number = parts[3] ? parts[3].replace('.', '').trim() : '';
+      let pages = parts[4] ? parts[4].replace('.', '').trim() : '';
+
+      if (journalTitle) {
+        citation += `<i>${journalTitle}</i>`;
+      }
+
+      if (journalYear) {
+        citation += journalTitle ? ` ${journalYear}` : `${journalYear}`;
+      }
+
+      if (volume) {
+        citation += `;${volume}`;
+      }
+
+      if (number) {
+        citation += `(${number})`;
+      }
+
+      if (pages) {
+        citation += `:${pages}`;
+      }
+
+      if (citation.endsWith(':') || citation.endsWith(')') || citation.endsWith(' ')) {
+        citation += '.';
+      } else {
+        citation += '. ';
+      }
+    } else if (date) {
+      const year = new Date(date).getFullYear();
+      citation += `${year}. `;
+    }
+
+    if (!citation.endsWith(' ')) {
+      citation += ' ';
+    }
+
+    if (doi) {
+      citation += `doi:${doi}.`;
+    } else if (uri) {
+      if (this.locale == 'ca') {
+        citation += 'Disponible a: ';
+      } else if (this.locale == 'es') {
+        citation += 'Disponible en: ';
+      } else {
+        citation += 'Available from: ';
+      }
+      citation += `${uri}.`;
+    }
+
+    return citation.trim();
+  }
+
+  private formatAuthorsVancouver(authors: string[]): string {
+    if (authors.length === 0) {
+      return '';
+    }
+
+    const formatted = authors.slice(0, 6).map(author => {
+      const parts = author.split(',');
+      const lastName = parts[0].trim();
+      const firstNames = parts[1] ? parts[1].trim() : '';
+      const initials = firstNames
+        .split(/\s+/)
+        .filter(Boolean)
+        .map(name => `${name.charAt(0).toUpperCase()}.`)
+        .join('');
+      return initials ? `${lastName} ${initials}` : lastName;
+    });
+
+    const authorList = formatted.join(', ');
+    return authors.length > 6 ? `${authorList}, et al` : authorList;
   }
 
   private generateTurabian(): string {
@@ -725,6 +832,7 @@ export class CitationExportComponent implements OnInit {
       'apa': 'txt',
       'mla': 'txt',
       'chicago': 'txt',
+      'vancouver': 'txt',
       'turabian': 'txt',
       'ieee': 'txt',
       'bibtex': 'bib',
