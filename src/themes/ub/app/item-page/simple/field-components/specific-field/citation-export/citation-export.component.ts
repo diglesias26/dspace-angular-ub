@@ -147,25 +147,27 @@ export class CitationExportComponent implements OnInit {
   /**
    * Generate the ISO 690 citation
    * @returns text
+   * https://en.wikipedia.org/wiki/ISO_690
+   * https://biblioteca.uoc.edu:8080/ca/plana/Estil-ISO-690/
    */
   private generateISO690(): string {
 
     // TODO: Implement ISO 690 citation generation
     /*
-    *MODELO DE ESTRUCTURA
-APELLIDO/S DEL AUTOR/A, Nombre del autor/a. Título del artículo electrónico. En: Título de la revista en cursiva [en línea]. Año de publicación. Vol., n.º, págs. número de página inicial─número de página final. ISSN [consulta: ]. Disponible en: URL
-
-EJEMPLO
-​GÓMEZ I BLANCH, Guillem. Superfícies selectives per a la transformació tèrmica de l'energia solar. En: Revista de física [en línea]. 2010. Vol. 4, n.º 6, págs. 10─24. ISSN 2013-9845 [consulta: 29 de noviembre de 2019]. Disponible en: https://www.raco.cat/index.php/RevistaFisica/article/view/174205
+    The ISO 690 citation format is quite complex and can vary depending on the type of resource (book, journal article, website, etc.).
+    Below is a simplified implementation that covers some common metadata fields.
+    You may need to adjust the formatting based on specific requirements or edge cases.
     */
     const authors = this.item.allMetadataValues('dc.contributor.author');
-    const title = this.item.firstMetadataValue('dc.title');
+    let title = this.item.firstMetadataValue('dc.title');
     //dc.relation.ispartof	Collectanea Botanica, 1946, vol. 1, num. 8, p. 95-105
-    const relationIsPartOf = this.item.firstMetadataValue('dc.relation.ispartof');
+    const relationIsPartOf = this.item.firstMetadataValue('dc.relation.ispartof'); // metadatavalue.metadatafield_id = 42
     const date = this.item.firstMetadataValue('dc.date.issued');
     const publisher = this.item.firstMetadataValue('dc.publisher');
     const doi = this.item.firstMetadataValue('dc.identifier.doi');
     const handle = this.item.firstMetadataValue('dc.identifier.uri');
+    const issn = this.item.firstMetadataValue('dc.identifier.issn');
+    const isbn = this.item.firstMetadataValue('dc.identifier.isbn');
 
     let citation = '';
 
@@ -186,24 +188,25 @@ EJEMPLO
       formattedDate = `[consulted: ${day} of ${monthName} of ${year}]`;
     }
 
-    if (authors.length > 0) {
-      citation += this.formatAuthorsISO690(authors) + '. ';
-    }
+    citation += this.formatAuthorsISO690(authors);
 
     // title
     if (title) {
-      citation += `${title}. `;
+      if (!title.endsWith('.')) {
+        title += '.';
+      }
+      if (!relationIsPartOf) {
+        title = `<i>${title}</i>`;
+      }
+      citation += `${title} `;
     }
-
-    // Cursive _journal title_
-    // substitute the underscores by <i> in html
 
     if (relationIsPartOf) {
       const parts = relationIsPartOf.split(',');
 
       const journalTitle = parts[0] || '';
       if (journalTitle) {
-        citation += `_${journalTitle}_. `;
+        citation += `<i>${journalTitle}</i>. `;
       }
 
       let year = parts[1] || '';
@@ -263,15 +266,19 @@ EJEMPLO
       }
     }
 
+    // issn
+    if (issn) {
+      citation += `ISSN ${issn}. `;
+    }
+
+    // isbn
+    if (isbn) {
+      citation += `ISBN ${isbn}. `;
+    }
+
     // consulted
     if (formattedDate) {
       citation += `${formattedDate}. `;
-    }
-
-    // issn
-    const issn = this.item.firstMetadataValue('dc.identifier.issn');
-    if (issn) {
-      citation += `ISSN: ${issn}. `;
     }
 
     // handle
@@ -303,7 +310,7 @@ EJEMPLO
    */
   private generateAPA(): string {
     const authors = this.item.allMetadataValues('dc.contributor.author');
-    const title = this.item.firstMetadataValue('dc.title');
+    let title = this.item.firstMetadataValue('dc.title');
     const date = this.item.firstMetadataValue('dc.date.issued');
     const publisher = this.item.firstMetadataValue('dc.publisher');
     const doi = this.item.firstMetadataValue('dc.identifier.doi');
@@ -320,11 +327,18 @@ EJEMPLO
     }
 
     if (title) {
-      citation += `${title}. `;
+      if (!title.endsWith('.')) {
+        title += '.';
+      }
+      citation += `${title} `;
     }
 
     if (publisher) {
-      citation += `${publisher}. `;
+      citation += publisher;
+      if (!publisher.endsWith('.')) {
+        citation += '.';
+      }
+      citation += ' ';
     }
 
     if (doi) {
@@ -342,7 +356,7 @@ EJEMPLO
    */
   private generateMLA(): string {
     const authors = this.item.allMetadataValues('dc.contributor.author');
-    const title = this.item.firstMetadataValue('dc.title');
+    let title = this.item.firstMetadataValue('dc.title');
     const date = this.item.firstMetadataValue('dc.date.issued');
     const publisher = this.item.firstMetadataValue('dc.publisher');
     const uri = this.item.firstMetadataValue('dc.identifier.uri');
@@ -354,7 +368,10 @@ EJEMPLO
     }
 
     if (title) {
-      citation += `"${title}." `;
+      if (!title.endsWith('.')) {
+        title += '.';
+      }
+      citation += `"${title}" `;
     }
 
     if (publisher) {
@@ -366,7 +383,7 @@ EJEMPLO
     }
 
     if (uri) {
-      citation += `Web. ${uri}`;
+      citation += uri;
     }
 
     return citation;
@@ -377,7 +394,7 @@ EJEMPLO
    */
   private generateChicago(): string {
     const authors = this.item.allMetadataValues('dc.contributor.author');
-    const title = this.item.firstMetadataValue('dc.title');
+    let title = this.item.firstMetadataValue('dc.title');
     const date = this.item.firstMetadataValue('dc.date.issued');
     const publisher = this.item.firstMetadataValue('dc.publisher');
     const uri = this.item.firstMetadataValue('dc.identifier.uri');
@@ -389,7 +406,10 @@ EJEMPLO
     }
 
     if (title) {
-      citation += `"${title}." `;
+      if (!title.endsWith('.')) {
+        title += '.';
+      }
+      citation += `"${title}" `;
     }
 
     if (publisher) {
@@ -541,22 +561,46 @@ EJEMPLO
    * Format the authors for ISO 690 citation
    */
   private formatAuthorsISO690(authors: string[]): string {
+    if (authors.length === 0) {
+      return '';
+    }
     let formattedAuthors = '';
-      for (const author of authors) {
-        const parts = author.split(',');
-        if (parts.length > 1) {
-          const lastName = parts[0].trim();
-          const firstName = parts[1].trim();
-          formattedAuthors += `${lastName.toUpperCase()}, ${firstName[0].toUpperCase() + firstName.slice(1).toLowerCase()}, `;
+    let count = 0;
+    let separator = ', ';
+    for (const author of authors) {
+      count++;
+      if (count === authors.length - 1) {
+        if (this.locale == 'ca') {
+          separator = ' i ';
+        } else if (this.locale == 'es') {
+          separator = ' y ';
         } else {
-          formattedAuthors += `${author}, `;
+          separator = ' and ';
         }
+      } else if (count === authors.length) {
+        separator = '';
+      }
+      const parts = author.split(',');
+      if (parts.length > 1) {
+        const lastName = parts[0].trim();
+        const firstName = parts[1].trim();
+        // formattedAuthors += `${lastName.toUpperCase()}, ${firstName[0].toUpperCase() + firstName.slice(1).toLowerCase()}`;
+        // formattedAuthors += `${lastName.toUpperCase()}, ${firstName.charAt(0).toUpperCase()}.`;
+        formattedAuthors += `${lastName.toUpperCase()}, ${firstName}`;
+      } else {
+        formattedAuthors += author;
+      }
+      // si hi ha més de tres autors, només mostrar el primer
+      if (authors.length > 3 ) {
+        formattedAuthors += ', et al';
+        break;
+      };
+      formattedAuthors += separator;
     }
-    // clean the last comma and space
-    if (formattedAuthors.endsWith(', ')) {
-      formattedAuthors = formattedAuthors.slice(0, -2);
+    if (!formattedAuthors.endsWith('.')) {
+      formattedAuthors += '.';
     }
-    return formattedAuthors;
+    return formattedAuthors + ' ';
   }
 
   /**
