@@ -229,9 +229,10 @@
 
 </div>
 
-<ng-container *ngIf="item">
-  <ds-media-viewer
-    [item]="item"
-    [mediaOptions]="{ image: false, video: true }">
-  </ds-media-viewer>
-</ng-container>
+<br />
+    <ng-container *ngIf="object">
+      <ds-themed-media-viewer
+        [item]="object"
+        [mediaOptions]="{ image: false, video: true }">
+      </ds-themed-media-viewer>
+    </ng-container>

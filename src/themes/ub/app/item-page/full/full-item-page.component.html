@@ -27,13 +27,6 @@
           </table>
         </div>
 
-<ng-container *ngIf="item">
-  <ds-media-viewer
-    [item]="item"
-    [mediaOptions]="{ image: false, video: true }">
-  </ds-media-viewer>
-</ng-container>
-
         <ds-themed-item-page-full-file-section [item]="item"></ds-themed-item-page-full-file-section>
         <ds-item-page-collections [item]="item"></ds-item-page-collections>
         <ds-item-versions class="mt-2" [item]="item"></ds-item-versions>
