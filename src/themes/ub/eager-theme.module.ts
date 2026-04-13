@@ -93,6 +93,9 @@ import { StatisticsTable2Component } from './app/statistics-page/statistics-tabl
 // miquel - 20251126 - embargo field
 import { ItemPageEmbargoFieldComponent } from './app/item-page/simple/field-components/specific-field/embargo/item-page-embargo-field.component';
 
+// miquel - 20260409 - player per a video a full item page
+// import { MediaViewerComponent } from './app/item-page/media-viewer/media-viewer.component';
+
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
  * This will ensure that decorator gets picked up when the app loads
@@ -174,6 +177,8 @@ const DECLARATIONS = [
     FormsModule,
     ClipboardModule,
     // end oriol - 20250728 - citation export
+    // miquel - 20260409 - player per a video a full item page
+    // MediaViewerComponent,
   ],
   declarations: DECLARATIONS,
   providers: [

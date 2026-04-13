@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { fadeInOut } from '../../../../../app/shared/animations/fade';
 import { FullItemPageComponent as BaseComponent } from '../../../../../app/item-page/full/full-item-page.component';
+// import { MediaViewerComponent } from '../../../../../app/item-page/media-viewer/media-viewer.component';
 
 /**
  * This component renders a full item page.
@@ -11,8 +12,8 @@ import { FullItemPageComponent as BaseComponent } from '../../../../../app/item-
   selector: 'ds-full-item-page',
   // styleUrls: ['./full-item-page.component.scss'],
   styleUrls: ['../../../../../app/item-page/full/full-item-page.component.scss'],
-  // templateUrl: './full-item-page.component.html',
-  templateUrl: '../../../../../app/item-page/full/full-item-page.component.html',
+  templateUrl: './full-item-page.component.html',
+  // templateUrl: '../../../../../app/item-page/full/full-item-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [fadeInOut]
 })

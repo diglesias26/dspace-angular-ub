@@ -525,7 +525,7 @@ export class CitationExportComponent implements OnInit {
       const initials = firstNames
         .split(/\s+/)
         .filter(Boolean)
-        .map(name => `${name.charAt(0).toUpperCase()}.`)
+        .map(name => `${name.charAt(0).toUpperCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')}`)
         .join('');
       return initials ? `${lastName} ${initials}` : lastName;
     });
