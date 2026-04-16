@@ -34,7 +34,10 @@
         video: false
      -->
     <!-- ds-themed-thumbnail [thumbnail]="object?.thumbnail | async"></ds-themed-thumbnail -->
-    <ds-themed-media-viewer [item]="object"></ds-themed-media-viewer>
+    <ds-themed-media-viewer
+      [item]="object"
+      [mediaOptions]="{ image: true, video: true }">
+    </ds-themed-media-viewer>
 
     <!-- files section -->
     <ds-themed-item-page-file-section [item]="object"></ds-themed-item-page-file-section>
