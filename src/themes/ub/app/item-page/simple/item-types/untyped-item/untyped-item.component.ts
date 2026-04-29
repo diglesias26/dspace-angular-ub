@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, AfterViewInit } from '@angular/core';
 import { Item } from '../../../../../../../app/core/shared/item.model';
 import { ViewMode } from '../../../../../../../app/core/shared/view-mode.model';
 import {
@@ -21,7 +21,26 @@ import {
   // templateUrl: '../../../../../../../app/item-page/simple/item-types/untyped-item/untyped-item.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class UntypedItemComponent extends BaseComponent {
+
+export class UntypedItemComponent extends BaseComponent implements AfterViewInit {
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.updateHrVisibility();
+    }, 500);
+  }
+
+  private updateHrVisibility(): void {
+    const hrElement = document.getElementById('visorhr') as HTMLElement | null;
+    const videoElement = document.querySelector('video') as HTMLVideoElement | null;
+    const audioElement = document.querySelector('audio') as HTMLAudioElement | null;
+
+    if (hrElement) {
+      if (videoElement || audioElement) {
+        hrElement.style.display = 'block';
+      }
+    }
+  }
+
   get concatenatedDescription(): string {
     const descriptions = this.object?.allMetadataValues(['dc.description']) || [];
     return descriptions.join('<br>');

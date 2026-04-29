@@ -1,3 +1,4 @@
+<!--
 <video
   crossorigin="anonymous"
   [src]="medias[currentIndex].bitstream._links.content.href"
@@ -7,6 +8,20 @@
     replacements[medias[currentIndex].format]
   "
   preload="none"
+  preload="metadata"
+  controls
+>
+-->
+
+<video
+  crossorigin="anonymous"
+  [src]="medias[currentIndex].bitstream._links.content.href"
+  id="singleVideo"
+  [poster]="
+    medias[currentIndex].thumbnail ||
+    replacements[medias[currentIndex].format]
+  "
+  preload="auto"
   controls
 >
   <ng-container *ngIf="getMediaCap(medias[currentIndex].bitstream.name, captions) as capInfos">

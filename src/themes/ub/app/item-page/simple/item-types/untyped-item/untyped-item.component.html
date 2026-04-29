@@ -232,10 +232,11 @@
 
 </div>
 
-<br />
-    <ng-container *ngIf="object">
-      <ds-themed-media-viewer
-        [item]="object"
-        [mediaOptions]="{ image: false, video: true }">
-      </ds-themed-media-viewer>
-    </ng-container>
+<!-- visor de vídeos -->
+<hr id="visorhr" />
+  <ng-container *ngIf="object">
+    <ds-themed-media-viewer
+      [item]="object"
+      [mediaOptions]="{ image: false, video: true }">
+    </ds-themed-media-viewer>
+  </ng-container>
