@@ -26,7 +26,7 @@ export class UntypedItemComponent extends BaseComponent implements AfterViewInit
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.updateHrVisibility();
-    }, 500);
+    }, 999);
   }
 
   private updateHrVisibility(): void {

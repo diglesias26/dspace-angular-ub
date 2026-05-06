@@ -287,11 +287,11 @@ export class CitationExportComponent implements OnInit {
     // handle
     if (handle) {
       if (this.locale == 'ca') {
-        citation += `[Disponible a: ${handle}]`;
+        citation += `Disponible a: ${handle}`;
       } else if (this.locale == 'es') {
-        citation += `[Disponible en: ${handle}]`;
+        citation += `Disponible en: ${handle}`;
       } else {
-        citation += `[Available at: ${handle}]`;
+        citation += `Available at: ${handle}`;
       }
     }
 
@@ -318,6 +318,7 @@ export class CitationExportComponent implements OnInit {
     const publisher = this.item.firstMetadataValue('dc.publisher');
     const doi = this.item.firstMetadataValue('dc.identifier.doi');
     const uri = this.item.firstMetadataValue('dc.identifier.uri');
+    const relationIsPartOf = this.item.firstMetadataValue('dc.relation.ispartof'); // metadatavalue.metadatafield_id = 42
 
     let citation = '';
 
@@ -334,6 +335,40 @@ export class CitationExportComponent implements OnInit {
         title += '.';
       }
       citation += `${title} `;
+    }
+
+    if (relationIsPartOf) {
+      const parts = relationIsPartOf.split(',');
+      const journalTitle = parts[0] ? parts[0].trim() : '';
+      const journalYear = parts[1] ? parts[1].trim() : '';
+      const volume = parts[2] ? parts[2].replace(/vol/i, '').replace(/v/i, '').replace('.', '').trim() : '';
+      let number = parts[3] ? parts[3].replace(/(num|núm|no|n)/i, '').replace('.', '').trim() : '';
+      let pages = parts[4] ? parts[4].replace(/(pág|pàg|pag|pp|p)/i, '').replace('.', '').trim() : '';
+
+      if (journalTitle) {
+        citation += `<i>${journalTitle}</i>, `;
+      }
+
+      if (volume) {
+        citation += `${volume}`;
+      }
+
+      if (number) {
+        citation += `(${number})`;
+      }
+
+      if (pages) {
+        if (!citation.endsWith(' ')) {
+          citation += ', ';
+        }
+        citation += `${pages}`;
+      }
+      citation = citation.replace(/,\s*$/, '');
+
+      if (!citation.endsWith('.')) {
+        citation += '.';
+      }
+      citation += ' ';
     }
 
     if (publisher) {
@@ -363,6 +398,7 @@ export class CitationExportComponent implements OnInit {
     const date = this.item.firstMetadataValue('dc.date.issued');
     const publisher = this.item.firstMetadataValue('dc.publisher');
     const uri = this.item.firstMetadataValue('dc.identifier.uri');
+    const relationIsPartOf = this.item.firstMetadataValue('dc.relation.ispartof');
 
     let citation = '';
 
@@ -375,6 +411,41 @@ export class CitationExportComponent implements OnInit {
         title += '.';
       }
       citation += `"${title}" `;
+    }
+
+    if (relationIsPartOf) {
+      const parts = relationIsPartOf.split(',');
+      const journalTitle = parts[0] ? parts[0].trim() : '';
+      const journalYear = parts[1] ? parts[1].trim() : '';
+      const volume = parts[2] ? parts[2].trim() : '';
+      let number = parts[3] ? parts[3].trim() : '';
+      let pages = parts[4] ? parts[4].trim() : '';
+
+      if (journalTitle) {
+        citation += `${journalTitle}`;
+      }
+
+      if (volume) {
+        citation += `, ${volume}`;
+      }
+
+      if (number) {
+        citation += `, ${number}`;
+      }
+
+      if (journalYear) {
+        citation += `, ${journalYear}`;
+      }
+
+      if (pages) {
+        citation += `, ${pages}`;
+      }
+
+      citation = citation.trim();
+      if (!citation.endsWith('.')) {
+        citation += '.';
+      }
+      citation += ' ';
     }
 
     if (publisher) {
@@ -459,16 +530,16 @@ export class CitationExportComponent implements OnInit {
       const parts = relationIsPartOf.split(',');
       const journalTitle = parts[0] ? parts[0].trim() : '';
       const journalYear = parts[1] ? parts[1].trim() : '';
-      const volume = parts[2] ? parts[2].replace('.', '').trim() : '';
-      let number = parts[3] ? parts[3].replace('.', '').trim() : '';
-      let pages = parts[4] ? parts[4].replace('.', '').trim() : '';
+      const volume = parts[2] ? parts[2].replace(/vol/i, '').replace(/v/i, '').replace('.', '').trim() : '';
+      let number = parts[3] ? parts[3].replace(/(num|núm|no|n)/i, '').replace('.', '').trim() : '';
+      let pages = parts[4] ? parts[4].replace(/(pág|pàg|pag|pp|p)/i, '').replace('.', '').trim() : '';
 
       if (journalTitle) {
-        citation += `<i>${journalTitle}</i>`;
+        citation += `<i>${journalTitle}</i>. `;
       }
 
       if (journalYear) {
-        citation += journalTitle ? ` ${journalYear}` : `${journalYear}`;
+        citation += `${journalYear}`;
       }
 
       if (volume) {
@@ -483,11 +554,11 @@ export class CitationExportComponent implements OnInit {
         citation += `:${pages}`;
       }
 
-      if (citation.endsWith(':') || citation.endsWith(')') || citation.endsWith(' ')) {
+      citation = citation.trim();
+      if (!citation.endsWith('.')) {
         citation += '.';
-      } else {
-        citation += '. ';
       }
+      citation += ' ';
     } else if (date) {
       const year = new Date(date).getFullYear();
       citation += `${year}. `;
