@@ -220,8 +220,7 @@ where i.in_archive=true and i.withdrawn=false;
     const isbn = this.item.firstMetadataValue('dc.identifier.isbn');
     const type = this.getType();
 
-    // let citation = '';
-    let citation = type;
+    let citation = '';
 
     // today's date
     const today = new Date();
