@@ -102,6 +102,14 @@
       [label]="'relationships.isAdvisorOf' | translate">
     </ds-themed-metadata-representation-list>
 
+    <!-- dc.contributor sense qualificar -->
+    <ds-themed-metadata-representation-list class="ds-item-page-mixed-author-field"
+      [parentItem]="object"
+      [itemType]="'Person'"
+      [metadataFields]="['dc.contributor']"
+      [label]="'relationships.isContributorOf' | translate">
+    </ds-themed-metadata-representation-list>
+
     <ds-generic-item-page-field [item]="object"
       [fields]="['journal.identifier.issn']"
       [label]="'item.page.journal-issn'">

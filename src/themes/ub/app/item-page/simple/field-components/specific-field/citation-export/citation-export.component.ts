@@ -117,6 +117,53 @@ export class CitationExportComponent implements OnInit {
       console.error('Failed to copy citation to clipboard');
     }
   }
+
+/*
+-- per cada item: primer dc.type i primer dc.relation.ispartof
+select
+i.uuid
+,tt.tip
+,m42.text_value
+from item i
+left join metadatavalue m42 on i.uuid=m42.dspace_object_id and m42.metadata_field_id=42 and m42.place=0
+left join (select dspace_object_id, split_part(string_agg(split_part(text_value, '/', -1),' ' order by place), ' ', 1) tip
+from metadatavalue where metadata_field_id=66 and text_value not ilike '%version' and text_value not like '%/' and text_value not like '%dataset' and text_value not like '%image' group by dspace_object_id) tt on i.uuid=tt.dspace_object_id
+where i.in_archive=true and i.withdrawn=false;
+*/
+
+
+  types = [
+    'article',
+    'bachelorthesis',
+    'masterthesis',
+    'doctoralthesis',
+    'book',
+    'bookpart',
+    'review',
+    'conferenceobject',
+    'lecture',
+    'workingpaper',
+    'preprint',
+    'report',
+    'annotation',
+    'contributiontoperiodical',
+    'patent',
+    'other',
+  ];
+
+  private getType(): string {
+    for (const type of this.item.allMetadata('dc.type')) {
+      let parts = type.value.split('/');
+      let last = parts[parts.length - 1];
+      last = last.toLowerCase();
+      if (this.types.includes(last)) {
+        return last;
+      }
+    }
+    return 'article';
+  }
+
+
   /**
    * Generate the citation in the selected format
    * @param format
@@ -171,8 +218,10 @@ export class CitationExportComponent implements OnInit {
     const handle = this.item.firstMetadataValue('dc.identifier.uri');
     const issn = this.item.firstMetadataValue('dc.identifier.issn');
     const isbn = this.item.firstMetadataValue('dc.identifier.isbn');
+    const type = this.getType();
 
-    let citation = '';
+    // let citation = '';
+    let citation = type;
 
     // today's date
     const today = new Date();

@@ -472,6 +472,7 @@
   "browse.thesaurusub.url": "https://vocabularis.crai.ub.edu/ca/thub",
 
   "relationships.isAdvisorOf": "Director/Tutor",
+  "relationships.isContributorOf": "Contribució addicional",
 
   "item.preview.dc.publisher": "Editorial:",
   "item.preview.oairecerif.identifier.url": "URL",

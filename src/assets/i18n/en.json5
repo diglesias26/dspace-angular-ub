@@ -3664,7 +3664,7 @@
 
   "relationships.isVolumeOf": "Journal Volumes",
 
-  "relationships.isContributorOf": "Contributors",
+  "relationships.isContributorOf": "Additional contribution",
 
   "relationships.isContributorOf.OrgUnit": "Contributor (Organizational Unit)",
 

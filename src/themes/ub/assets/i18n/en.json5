@@ -101,5 +101,6 @@
   "browse.thesaurusub.url": "https://vocabularis.crai.ub.edu/en/thub",
 
   "relationships.isAdvisorOf": "Director/Tutor",
+  "relationships.isContributorOf": "Additional contribution",
 
 }
