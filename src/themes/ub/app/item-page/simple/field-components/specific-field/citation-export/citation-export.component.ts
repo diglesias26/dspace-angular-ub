@@ -86,13 +86,15 @@ export class CitationExportComponent implements OnInit {
   }
 
   /**
-   * Download the citation in the selected format
+   * Download the citation in the selected format.
+   * Uses HTML for rich formatting in the file content and plain text as fallback.
    */
   downloadCitation(): void {
     const citation = this.generateCitation(this.selectedFormat);
+    const plainText = this.stripHtmlTags(citation);
     const filename = this.getFilename(this.selectedFormat);
 
-    this.downloadFile(citation, filename);
+    this.downloadFile(plainText, filename);
   }
 
   /**
@@ -103,18 +105,38 @@ export class CitationExportComponent implements OnInit {
   }
 
   /**
-   * Copy the citation to the clipboard
+   * Copy the citation to the clipboard.
+   * Uses text/html when available so rich formatting is preserved,
+   * and falls back to plain text for compatibility.
    */
-  copyToClipboard(): void {
-    const citation = this.generateCitation(this.selectedFormat);
-    const successful = this.clipboard.copy(citation);
+  async copyToClipboard(): Promise<void> {
+    const richText = this.generateCitation(this.selectedFormat);
+    const plainText = this.stripHtmlTags(richText);
 
-    if (successful) {
-      // TODO: Add success notification
-      console.log('Citation copied to clipboard');
-    } else {
-      // TODO: Add error notification
-      console.error('Failed to copy citation to clipboard');
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard && typeof ClipboardItem !== 'undefined') {
+        const clipboardItem = new ClipboardItem({
+          'text/plain': new Blob([plainText], { type: 'text/plain' }),
+          'text/html': new Blob([richText], { type: 'text/html' })
+        });
+
+        await navigator.clipboard.write([clipboardItem]);
+        console.log('Citation copied to clipboard with rich formatting');
+        return;
+      }
+
+      const successful = this.clipboard.copy(plainText);
+      if (successful) {
+        console.log('Citation copied to clipboard');
+      } else {
+        console.error('Failed to copy citation to clipboard');
+      }
+    } catch (error) {
+      console.error('Failed to copy citation to clipboard', error);
+      const successful = this.clipboard.copy(plainText);
+      if (!successful) {
+        console.error('Fallback plain-text copy also failed');
+      }
     }
   }
 
@@ -128,12 +150,33 @@ from item i
 left join metadatavalue m42 on i.uuid=m42.dspace_object_id and m42.metadata_field_id=42 and m42.place=0
 left join (select dspace_object_id, split_part(string_agg(split_part(text_value, '/', -1),' ' order by place), ' ', 1) tip
 from metadatavalue where metadata_field_id=66 and text_value not ilike '%version' and text_value not like '%/' and text_value not like '%dataset' and text_value not like '%image' group by dspace_object_id) tt on i.uuid=tt.dspace_object_id
-where i.in_archive=true and i.withdrawn=false;
-*/
+where i.in_archive=true and i.withdrawn=false and m42.text_value is not null;
 
+diferents dc.type el dia 2026-05-27:
+null  22
+other	131
+contributionToPeriodical	823
+preprint	2
+article	54418
+book	404
+bookPart	1309
+conferenceObject	1492
+masterThesis	6
+report	45
+workingPaper	1707
 
+bachelorthesis  0
+doctoralthesis  0
+lecture  0
+review  0
+annotation  0
+patent  0
+
+possibles valors:
   types = [
     'article',
+    'other',
+    'contributiontoperiodical',
     'bachelorthesis',
     'masterthesis',
     'doctoralthesis',
@@ -146,18 +189,35 @@ where i.in_archive=true and i.withdrawn=false;
     'preprint',
     'report',
     'annotation',
-    'contributiontoperiodical',
     'patent',
-    'other',
   ];
 
+*/
   private getType(): string {
     for (const type of this.item.allMetadata('dc.type')) {
       let parts = type.value.split('/');
       let last = parts[parts.length - 1];
       last = last.toLowerCase();
-      if (this.types.includes(last)) {
-        return last;
+      switch (last) {
+        case 'other':
+        case 'review':
+        case 'annotation':
+        case 'lecture':
+        case 'patent':
+        case 'preprint':
+        case 'contributiontoperiodical':
+        case 'article':
+          return 'article';
+        case 'bachelorthesis':
+        case 'masterthesis':
+        case 'doctoralthesis':
+          return 'thesis';
+        case 'book':
+        case 'bookpart':
+        case 'conferenceobject':
+        case 'workingpaper':
+        case 'report':
+          return last;
       }
     }
     return 'article';
@@ -221,6 +281,7 @@ where i.in_archive=true and i.withdrawn=false;
     const type = this.getType();
 
     let citation = '';
+    // citation += this.textToHtml(type) + '. ';
 
     // today's date
     const today = new Date();
@@ -936,6 +997,13 @@ where i.in_archive=true and i.withdrawn=false;
       return `${firstName.charAt(0)}. ${lastName}`;
     }
     return author;
+  }
+
+  /**
+   * Convert HTML-formatted citation text to plain text for clipboard copy.
+   */
+  private stripHtmlTags(value: string): string {
+    return value.replace(/<[^>]+>/g, '');
   }
 
   /**
