@@ -18,3 +18,7 @@
   /* background-color: #cbf1de; */
   display: none;
 }
+
+:host ::ng-deep .ds-item-page-mixed-author-field .simple-view-element {
+  margin-bottom: 0 !important;
+}
