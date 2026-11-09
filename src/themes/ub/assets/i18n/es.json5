@@ -32,6 +32,9 @@
     // "login.form.oidc": "Log in with OIDC",
   "login.form.oidc": "Identificación UB",
 
+  // submission form
+  "submission.sections.upload.drop-message": "La mida del fitxer no pot superar els 500 MB. En cas que el document superi aquesta mida, contacteu amb nosaltres. Suelte archivos para adjuntarlos al ítem",
+
     // footer
   "footer.lv1.coordinacio": "Coordinación: ",
   "footer.lv1.avis": "Aviso legal",
