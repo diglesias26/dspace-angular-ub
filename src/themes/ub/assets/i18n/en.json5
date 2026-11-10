@@ -25,7 +25,7 @@
   "menu.header.image.ublogo": "Universitat de Barcelona",
 
   // submission form
-  "submission.sections.upload.drop-message": "La mida del fitxer no pot superar els 500 MB. En cas que el document superi aquesta mida, contacteu amb nosaltres. Drop files to attach them to the item",
+  "submission.sections.upload.drop-message": "La mida del fitxer no pot superar els 500 MB (en cas que el document superi aquesta mida, contacteu amb nosaltres)La mida del fitxer no pot superar els 500 MB (en cas que el document superi aquesta mida, contacteu amb nosaltres). Drop files to attach them to the item",
 
     // footer
   "footer.lv1.coordinacio": "Coordination: ",
