@@ -11067,4 +11067,23 @@
   "item.preview.organization.alternateName": "Alternative name",
 
 
+
+  // UB 9: citations generated from item metadata.
+  "citation-export.title": "Citación",
+  "citation-export.format.label": "Formato de la citación",
+  "citation-export.copy.tooltip": "Copiar la citación",
+  "citation-export.copy.label": "Copiar la citación",
+  "citation-export.download.tooltip": "Bajar la citación",
+  "citation-export.download.label": "Bajar la citación",
+  "citation-export.preview.title": "Esta cita se ha generado automáticamente",
+  "citation-export.copy.success": "Citación copiada.",
+  "citation-export.copy.error": "No se ha podido copiar la citación. Puedes seleccionar y copiar el texto.",
+
+  // UB 9: institutional home banner and footer.
+  "menu.header.image.ublogo": "Universitat de Barcelona",
+  "home.news.text": "El Dipòsit Digital de la Universitat de Barcelona es el repositorio institucional que contiene en formato digital los materiales derivados de la actividad docente, investigadora e institucional de la comunidad universitaria.",
+  "footer.lv1.coordinacio": "Coordinación: ",
+  "footer.lv1.avis": "Aviso legal",
+  "footer.lv1.metadades": "Metadatos sujetos a: ",
+  "ub.home.title": "Dipòsit Digital de la Universitat de Barcelona",
 }

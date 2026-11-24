@@ -1,0 +1,58 @@
+<footer class="ub-footer">
+  <div class="container py-4">
+    <div class="ub-footer-content">
+      <div class="ub-footer-information">
+        <div class="ub-footer-credits">
+          <p class="mb-0">
+            {{ 'footer.lv1.coordinacio' | translate }}
+            <a href="https://crai.ub.edu/">CRAI UB</a>
+          </p>
+          <a href="https://web.ub.edu/avis-legal" target="_blank" rel="noopener noreferrer">
+            {{ 'footer.lv1.avis' | translate }}
+          </a>
+          <p class="mb-0">
+            {{ 'footer.lv1.metadades' | translate }}
+            <a class="cc-zero" href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/ub-9/images/cc0.png" alt="Creative Commons CC0" width="80" height="28" />
+            </a>
+          </p>
+        </div>
+        <ul class="footer-info list-unstyled d-flex flex-wrap mb-0">
+          @if (showCookieSettings) {
+            <li>
+              <button class="btn btn-link" type="button" (click)="openCookieSettings()">
+                {{ 'footer.link.cookies' | translate }}
+              </button>
+            </li>
+          }
+          <li>
+            <a class="btn btn-link" routerLink="/info/accessibility">{{ 'footer.link.accessibility' | translate }}</a>
+          </li>
+          @if (showPrivacyPolicy) {
+            <li>
+              <a class="btn btn-link" routerLink="/info/privacy">{{ 'footer.link.privacy-policy' | translate }}</a>
+            </li>
+          }
+          @if (showEndUserAgreement) {
+            <li>
+              <a class="btn btn-link" routerLink="/info/end-user-agreement">{{ 'footer.link.end-user-agreement' | translate }}</a>
+            </li>
+          }
+          @if (showSendFeedback$ | async) {
+            <li>
+              <a class="btn btn-link" routerLink="/info/feedback">{{ 'footer.link.feedback' | translate }}</a>
+            </li>
+          }
+          @if (coarLdnEnabled$ | async) {
+            <li>
+              <a class="btn btn-link" routerLink="/info/coar-notify-support">{{ 'footer.link.coar-notify-support' | translate }}</a>
+            </li>
+          }
+        </ul>
+      </div>
+      <a class="ub-footer-logo" href="https://ub.edu" target="_blank" rel="noopener noreferrer">
+        <img src="assets/ub-9/images/UB_logo.png" [alt]="'menu.header.image.ublogo' | translate" width="300" height="90" />
+      </a>
+    </div>
+  </div>
+</footer>

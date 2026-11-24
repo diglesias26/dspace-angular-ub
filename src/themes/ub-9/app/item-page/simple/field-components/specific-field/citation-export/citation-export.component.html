@@ -1,0 +1,34 @@
+@if (item) {
+  <section class="simple-view-element citation-export">
+    <h2 class="simple-view-element-header">{{ 'citation-export.title' | translate }}</h2>
+    <div class="d-flex flex-wrap align-items-end gap-2 mb-2">
+      <label class="mb-0">
+        <span class="d-block mb-1">{{ 'citation-export.format.label' | translate }}</span>
+        <select class="form-select" [(ngModel)]="selectedFormat" (ngModelChange)="onFormatChange()">
+          @for (format of citationFormats; track format.value) {
+            <option [value]="format.value">{{ format.label }}</option>
+          }
+        </select>
+      </label>
+      <button type="button" class="btn btn-outline-secondary" (click)="copyToClipboard()">
+        <i class="fas fa-copy me-1" aria-hidden="true"></i>
+        {{ 'citation-export.copy.label' | translate }}
+      </button>
+      <button type="button" class="btn btn-outline-secondary" (click)="downloadCitation()">
+        <i class="fas fa-download me-1" aria-hidden="true"></i>
+        {{ 'citation-export.download.label' | translate }}
+      </button>
+    </div>
+    <p class="small text-muted">{{ 'citation-export.preview.title' | translate }}</p>
+    @if (isPlainTextFormat) {
+      <pre class="citation-preview">{{ getCitationPreview() }}</pre>
+    } @else {
+      <div class="citation-preview" [innerHTML]="getCitationPreview()"></div>
+    }
+    <p class="small mb-0" role="status" aria-live="polite">
+      @if (copyStatus !== 'idle') {
+        {{ ('citation-export.copy.' + copyStatus) | translate }}
+      }
+    </p>
+  </section>
+}
