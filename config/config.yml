@@ -3,3 +3,32 @@ rest:
   host: sandbox.dspace.org
   port: 443
   nameSpace: /server
+
+# UB 9 inherits DSpace 9.4 components and assets.
+themes:
+  - name: ub-9
+    extends: dspace
+    prefetch: true
+
+  # Parent theme used for component and head tag fallback.
+  - name: dspace
+    prefetch: true
+    headTags:
+    - tagName: link
+      attributes:
+        rel: icon
+        href: assets/dspace/images/favicons/favicon.ico
+        sizes: any
+    - tagName: link
+      attributes:
+        rel: icon
+        href: assets/dspace/images/favicons/favicon.svg
+        type: image/svg+xml
+    - tagName: link
+      attributes:
+        rel: apple-touch-icon
+        href: assets/dspace/images/favicons/apple-touch-icon.png
+    - tagName: link
+      attributes:
+        rel: manifest
+        href: assets/dspace/images/favicons/manifest.webmanifest
